@@ -1,0 +1,41 @@
+.navbar {
+    @include full-width;
+    @include flex-row;
+    justify-content: center;
+
+    &__container {
+        @include flex-row;
+        width: 95rem;
+        height: 14.5rem;
+        position: relative;
+        justify-content: space-between;
+        align-items: center;
+        // Logo
+        & .navbar__logo {
+            width: 3.2rem;
+            height: 3.2rem;
+        }
+
+        // Nav links
+        & ul {
+            @include flex-row;
+            justify-content: space-between;
+            width: 34rem;
+
+            li {
+                @include circular-std-regular;
+            }
+        }
+
+        // Actions (like login)
+        & .navbar__actions {
+            & .navbar__login {
+                @include secondary-button;
+            }
+
+            & .navbar__signup {
+                @include primary-button;
+            }
+        }
+    }
+}

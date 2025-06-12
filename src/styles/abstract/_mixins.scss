@@ -1,3 +1,24 @@
+// properties
+@mixin full-width {
+    width: 100%;
+    max-width: 100vw;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin images-cover {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+}
 // Font mixin
 @mixin font-face(
     $name,

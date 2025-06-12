@@ -1,1 +1,14 @@
-// TODO: Add styles as per the requirement
+// base imports
+@import './base/reset.scss';
+@import './base/fonts.scss';
+@import './base/typography';
+
+// abstracts imports
+@import './abstract/mixins';
+@import './abstract/variables';
+
+// components imports
+@import './components/buttons';
+
+// layout imports
+@import './layout/navbar';

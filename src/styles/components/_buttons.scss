@@ -1,1 +1,16 @@
-// TODO
+@mixin button-template {
+    padding: 1.3rem 2.6rem;
+    border-radius: 100px;
+    @include circular-std-regular;
+}
+
+@mixin primary-button {
+    @include button-template;
+    background-color: $primary-color;
+    color: #ffffff;
+}
+
+@mixin secondary-button {
+    @include button-template;
+    color: $custom-light-gray;
+}

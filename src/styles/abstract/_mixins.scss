@@ -8,6 +8,7 @@
 /// @param {String} $style       - Font style (default: normal).
 /// @param {String} $display     - Font display strategy for performance (default: swap).
 ///
+// Font mixin
 @mixin font-face(
     $name,
     $file,
@@ -23,5 +24,27 @@
         font-weight: $weight;
         font-style: $style;
         font-display: $display;
+    }
+}
+
+@mixin images-cover {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+}
+
+@mixin flex($direction, $justify, $align, $wrap: nowrap) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    flex-wrap: $wrap;
+}
+
+@mixin responsive-layout() {
+    width: 100%;
+    @include flex(column, center, center);
+    @include breakpoint(large) {
+        flex-direction: $flex-direction;
     }
 }

@@ -1,1 +1,8 @@
-// TODO
+@mixin circular-std-regular {
+    font-family: 'circular-std-bold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.1rem;
+    line-height: 120%;
+    letter-spacing: 0%;
+}

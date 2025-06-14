@@ -1,25 +1,25 @@
 @font-face {
     font-family: 'icomoon';
-    src: url('./fonts/icomoon.eot?cb5ral');
+    src: url('fonts/icomoon.eot?cb5ral');
     src:
-        url('./fonts/icomoon.eot?cb5ral#iefix') format('embedded-opentype'),
-        url('./fonts/icomoon.ttf?cb5ral') format('truetype'),
-        url('./fonts/icomoon.woff?cb5ral') format('woff'),
-        url('./fonts/icomoon.svg?cb5ral#icomoon') format('svg');
+        url('fonts/icomoon.eot?cb5ral#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?cb5ral') format('truetype'),
+        url('fonts/icomoon.woff?cb5ral') format('woff'),
+        url('fonts/icomoon.svg?cb5ral#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
-    font-display: block;
+    font-display: swap;
 }
 
 [class^='icon-'],
 [class*=' icon-'] {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'icomoon' !important;
-    speak: never;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
     text-transform: none;
+    font-display: inline-block;
     line-height: 1;
 
     /* Better Font Rendering =========== */
@@ -34,11 +34,11 @@
     content: '\e901';
     color: #fff;
 }
-.icon-breifcase:before {
+.icon-box:before {
     content: '\e902';
     color: #f85e9f;
 }
-.icon-calender:before {
+.icon-calendar:before {
     content: '\e903';
     color: #fff;
 }

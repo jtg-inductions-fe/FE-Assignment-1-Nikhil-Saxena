@@ -1,4 +1,4 @@
-$primary-color: #5d50c6;
-$secondary-color: #f85e9f;
-$custom-black: #191825;
-$custom-light-gray: #19182580;
+$primary-color: var(--color-primary);
+$secondary-color: var(--color-secondary);
+$custom-black: var(--color-black);
+$custom-light-gray: var(--color-light-gray);

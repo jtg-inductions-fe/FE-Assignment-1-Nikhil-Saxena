@@ -1,14 +1,9 @@
 // base imports
-@import './base/reset.scss';
-@import './base/fonts.scss';
-@import './base/typography';
+@use 'base/reset.scss';
+@use 'base/fonts.scss';
 
 // abstracts imports
-@import './abstract/mixins';
-@import './abstract/variables';
+@use 'abstract/variables' as vars;
 
-// components imports
-@import './components/buttons';
-
-// layout imports
-@import './layout/navbar';
+// themes
+@use 'themes/themes';

@@ -1,16 +1,18 @@
+@use '../base/typography' as typography;
+@use '../abstract/variables' as vars;
 @mixin button-template {
     padding: 1.3rem 2.6rem;
     border-radius: 100px;
-    @include circular-std-regular;
+    @include typography.circular-std-regular;
 }
 
 @mixin primary-button {
     @include button-template;
-    background-color: $primary-color;
+    background-color: vars.$primary-color;
     color: #ffffff;
 }
 
 @mixin secondary-button {
     @include button-template;
-    color: $custom-light-gray;
+    color: vars.$custom-light-gray;
 }

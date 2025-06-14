@@ -1,15 +1,20 @@
+@use '../abstract/mixins' as abstract;
+@use '../base/typography' as typography;
+@use '../components/buttons' as buttons;
+
 .navbar {
-    @include full-width;
-    @include flex-row;
+    @include abstract.full-width;
+    @include abstract.flex-row;
     justify-content: center;
 
     &__container {
-        @include flex-row;
+        @include abstract.flex-row;
         width: 95rem;
         height: 14.5rem;
         position: relative;
         justify-content: space-between;
         align-items: center;
+        padding-left: 2rem;
         // Logo
         & .navbar__logo {
             width: 3.2rem;
@@ -18,23 +23,26 @@
 
         // Nav links
         & ul {
-            @include flex-row;
+            @include abstract.flex-row;
             justify-content: space-between;
             width: 34rem;
-
+            position: relative;
+            left: 1rem;
             li {
-                @include circular-std-regular;
+                @include typography.circular-std-regular;
             }
         }
 
         // Actions (like login)
         & .navbar__actions {
+            position: relative;
+            left: 2rem;
             & .navbar__login {
-                @include secondary-button;
+                @include buttons.secondary-button;
             }
 
             & .navbar__signup {
-                @include primary-button;
+                @include buttons.primary-button;
             }
         }
     }

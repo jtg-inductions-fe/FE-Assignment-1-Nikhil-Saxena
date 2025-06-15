@@ -1,17 +1,9 @@
-// properties
-@mixin full-width {
-    width: 100%;
-    max-width: 100vw;
-}
-
-@mixin flex-row {
+@mixin flex($direction, $justify, $align, $wrap: nowrap) {
     display: flex;
-    flex-direction: row;
-}
-
-@mixin flex-col {
-    display: flex;
-    flex-direction: column;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    flex-wrap: $wrap;
 }
 
 @mixin images-cover {

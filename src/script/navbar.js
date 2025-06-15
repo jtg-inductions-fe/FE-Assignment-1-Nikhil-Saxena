@@ -26,4 +26,12 @@ export function initNavbarToggle() {
             isMenuOpen,
         );
     });
+
+    // Enter Key Function of Navbar Toggle Button
+    navbarMenuButton.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            navbarMenuButton.click();
+        }
+    });
 }

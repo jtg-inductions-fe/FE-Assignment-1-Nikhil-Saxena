@@ -2,7 +2,8 @@
     font-family: 'circular-std-bold';
     font-style: normal;
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: #{$font-size}px;
     line-height: 120%;
     letter-spacing: 0%;
+    font-family: 'circular-std';
 }

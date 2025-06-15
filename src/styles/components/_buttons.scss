@@ -1,18 +1,22 @@
-@use '../base/typography' as typography;
-@use '../abstract/variables' as vars;
-@mixin button-template {
-    padding: 1.3rem 2.6rem;
+@use '../base/' as base;
+@use '../abstract/' as abs;
+
+@mixin button-template(
+    $padding-y,
+    $padding-x,
+    $font-size: 8,
+    $button-type: primary
+) {
+    padding: #{$padding-y}rem #{$padding-x}rem;
     border-radius: 100px;
-    @include typography.circular-std-regular;
-}
 
-@mixin primary-button {
-    @include button-template;
-    background-color: vars.$primary-color;
-    color: #ffffff;
-}
+    @if $button-type == primary {
+        color: abs.$custom-light-gray;
+    } @else {
+        background-color: abs.$primary-color;
+        color: #ffffff;
+        border: 1px solid abs.$custom-light-gray;
+    }
 
-@mixin secondary-button {
-    @include button-template;
-    color: vars.$custom-light-gray;
+    @include base.circular-std-regular($font-size);
 }

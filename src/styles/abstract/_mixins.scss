@@ -41,10 +41,8 @@
     flex-wrap: $wrap;
 }
 
-@mixin responsive-layout() {
+@mixin images-cover {
+    height: 100%;
     width: 100%;
-    @include flex(column, center, center);
-    @include breakpoint(large) {
-        flex-direction: $flex-direction;
-    }
+    background-size: cover;
 }

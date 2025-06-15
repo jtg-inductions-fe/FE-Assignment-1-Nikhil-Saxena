@@ -11,7 +11,10 @@ export function initNavbarToggle() {
     navbarMenuButton.addEventListener('click', () => {
         const screenWidth = window.innerWidth;
         isMenuOpen = !isMenuOpen;
+<<<<<<< HEAD
         navbarMenuButton.setAttribute('aria-expanded', String(isMenuOpen));
+=======
+>>>>>>> 0f85a24 (Added Trasition for Links and Actions)
         // For Large Screens
         if (screenWidth > 1440) return;
         // For Medium Screens
@@ -27,6 +30,7 @@ export function initNavbarToggle() {
             isMenuOpen,
         );
     });
+<<<<<<< HEAD
 
     // Enter Key Function of Navbar Toggle Button
     navbarMenuButton.addEventListener('keydown', (e) => {
@@ -35,4 +39,6 @@ export function initNavbarToggle() {
             navbarMenuButton.click();
         }
     });
+=======
+>>>>>>> 0f85a24 (Added Trasition for Links and Actions)
 }

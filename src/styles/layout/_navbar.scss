@@ -6,6 +6,13 @@
     display: flex;
     @include abs.flex(row, center, center);
 
+    &__background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
     &__container {
         @include abs.flex(column, center, center);
         width: 100%;
@@ -69,7 +76,7 @@
             position: absolute;
             top: 7rem;
             left: 0rem;
-            border: solid white 2rem;
+            border: solid transparent 2rem;
         }
 
         @include abs.breakpoint(large) {
@@ -81,7 +88,6 @@
             @include abs.flex(row, space-between, center);
             width: 100%;
             max-width: 31rem;
-            background-color: #ffffff;
         }
     }
 

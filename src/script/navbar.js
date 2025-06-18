@@ -30,7 +30,6 @@ export function initNavbarToggle() {
             isMenuOpen,
         );
     });
-<<<<<<< HEAD
 
     // Enter Key Function of Navbar Toggle Button
     navbarMenuButton.addEventListener('keydown', (e) => {
@@ -39,6 +38,4 @@ export function initNavbarToggle() {
             navbarMenuButton.click();
         }
     });
-=======
->>>>>>> 0f85a24 (Added Trasition for Links and Actions)
 }

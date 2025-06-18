@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @use './variables' as *;
 /// Breakpoint Mixin
 /// Provides media queries for 4 screen sizes:
@@ -24,19 +23,6 @@
         }
     } @else if $point == desktop {
         @media (min-width: $breakpoint-desktop) {
-=======
-@mixin breakpoint($point) {
-    @if $point == small {
-        @media (min-width: 600px) {
-            @content;
-        }
-    } @else if $point == medium {
-        @media (min-width: 900px) {
-            @content;
-        }
-    } @else if $point == large {
-        @media (min-width: 1200px) {
->>>>>>> 0f85a24 (Added Trasition for Links and Actions)
             @content;
         }
     }

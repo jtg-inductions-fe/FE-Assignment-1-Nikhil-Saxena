@@ -6,32 +6,77 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </head>
     <body>
-        <header class="navbar">
+        <!-- Navbar -->
+        <header class="navbar" aria-label="Navigation bar">
             <div class="navbar__container">
                 <div class="navbar__left-sub-container">
-                    <button id="navbar__menu" href="#" class="navbar__menu">
-                        <img src="/assets/menu.png" alt="Menu  Bar" />
+                    <button
+                        id="navbar__menu"
+                        href="#"
+                        class="navbar__menu"
+                        aria-label="Menu Button"
+                    >
+                        <img src="/assets/menu.png" alt="Menu  Bar Button" />
                     </button>
 
-                    <a href="#" class="navbar__logo">
+                    <a href="#" class="navbar__logo" aria-label="logo">
                         <img src="./assets/logo.png" alt="Logo" />
                     </a>
                 </div>
 
-                <ul id="navbar__links" class="navbar__links">
+                <!-- Navigation Links -->
+                <ul
+                    id="navbar__links"
+                    class="navbar__links"
+                    aria-label="navigation links"
+                >
                     <li>
-                        <a href="#" class="navbar__link navbar__link--active"
+                        <a
+                            href="#"
+                            class="navbar__link navbar__link--active"
+                            aria-label="Home Page"
                             >Home</a
                         >
                     </li>
-                    <li><a href="#" class="navbar__link">Discover</a></li>
-                    <li><a href="#" class="navbar__link">Special Deals</a></li>
-                    <li><a href="#" class="navbar__link">Contact</a></li>
+                    <li>
+                        <a
+                            href="#"
+                            class="navbar__link"
+                            aria-label="Discover Page"
+                            >Discover</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="navbar__link"
+                            aria-label="Special Deals Page"
+                            >Special Deals</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="navbar__link"
+                            aria-label="Contact Information Pgae"
+                            >Contact</a
+                        >
+                    </li>
                 </ul>
 
                 <div id="navbar__actions" class="navbar__actions">
-                    <a href="#" class="navbar__login">Log In</a>
-                    <a href="#" class="navbar__signup">Sign Up</a>
+                    <a
+                        href="#"
+                        class="navbar__login"
+                        aria-label="Log in to your account"
+                        >Log In</a
+                    >
+                    <a
+                        href="#"
+                        class="navbar__signup"
+                        aria-label="Create a new account"
+                        >Sign Up</a
+                    >
                 </div>
             </div>
         </header>

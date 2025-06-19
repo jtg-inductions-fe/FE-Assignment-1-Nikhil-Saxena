@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 @use '../abstract' as abs;
-=======
-@use '../abstract/' as abs;
->>>>>>> ccb9872 (folder restructure)
 
 @mixin circular-std-regular($font-size) {
     font-style: normal;

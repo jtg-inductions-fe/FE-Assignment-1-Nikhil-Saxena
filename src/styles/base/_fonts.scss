@@ -1,10 +1,10 @@
 @use '../abstract/' as *;
 
 // Circular Std
-@include font-face('circular-std', '../../assets/fonts/CircularStd-Book', 400);
-@include font-face('circular-std', '../../assets/fonts/CircularStd-Book', 450);
-@include font-face('circular-std', '../../assets/fonts/CircularStd-Bold', 700);
-@include font-face('circular-std', '../../assets/fonts/CircularStd-Black', 900);
+@include font-face('circular-std', '../assets/fonts/CircularStd-Book', 400);
+@include font-face('circular-std', '../assets/fonts/CircularStd-Book', 450);
+@include font-face('circular-std', '../assets/fonts/CircularStd-Bold', 700);
+@include font-face('circular-std', '../assets/fonts/CircularStd-Black', 900);
 
 // Inter
-@include font-face('inter', '../../assets/fonts/Inter-Regular', 400);
+@include font-face('inter', '../assets/fonts/Inter-Regular', 400);

@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 @use '../abstract' as abs;
+=======
+@use '../abstract/mixins' as abs;
+>>>>>>> 2cf2840 (layout and typography fixes)
 
 @mixin circular-std-regular($font-size) {
     font-style: normal;
     font-weight: 700;
+<<<<<<< HEAD
     font-size: #{$font-size}rem;
     line-height: 120%;
     letter-spacing: 0;
@@ -38,4 +43,10 @@ h1 {
 
 body {
     @extend .base-font;
+=======
+    font-size: #{$font-size}px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    font-family: 'circular-std';
+>>>>>>> 2cf2840 (layout and typography fixes)
 }

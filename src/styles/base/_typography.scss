@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-@use '../abstract' as abs;
-=======
 @use '../abstract/' as abs;
->>>>>>> ccb9872 (folder restructure)
 
 @mixin circular-std-regular($font-size) {
     font-style: normal;
@@ -40,31 +36,6 @@ h1 {
     font-family: 'circular-std';
 }
 
-<<<<<<< HEAD
 body {
     @extend .base-font;
-=======
-@mixin card-description-regular {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 160%;
-    letter-spacing: 0%;
-    font-family: 'inter';
-    color: abs.$custom-light-gray;
-    text-align: center;
-    @include abs.breakpoint(medium) {
-        font-size: 18px;
-    }
-}
-
-h1 {
-    @include circular-std-regular(40);
-    @include abs.breakpoint(medium) {
-        @include circular-std-regular(57);
-    }
-    @include abs.breakpoint(large) {
-        @include circular-std-regular(66);
-    }
->>>>>>> ccb9872 (folder restructure)
 }

@@ -1,5 +1,6 @@
+
 @use '../abstract' as abs;
-<<<<<<< HEAD
+
 @use '../components' as comp;
 @use '../base' as base;
 
@@ -32,26 +33,11 @@
             @include abs.flex(row-reverse, center, center);
             max-width: 100rem;
             min-height: 50rem;
-=======
-@use '../components/' as comp;
-@use '../base/' as base;
-
-.hero {
-    &__container {
-        width: 100%;
-        padding-top: 1.8rem;
-
-        @include abs.breakpoint(large) {
-            padding: 0 6rem;
-            @include abs.flex(row-reverse, center, center);
-            height: 50rem;
->>>>>>> ccb9872 (folder restructure)
         }
     }
 
     &__left-container {
         width: 100%;
-<<<<<<< HEAD
         padding: 0 0.6rem 0 1.2rem;
         position: relative;
         overflow: hidden;
@@ -89,37 +75,10 @@
             min-height: 50rem;
             width: 55%;
             padding: 5.5rem 0 0 2.3rem;
-=======
-        padding: 0 0.6rem 0 0.9rem;
-        position: relative;
-
-        @include abs.breakpoint(medium) {
-            padding: 2rem 7rem 0rem 8rem;
-            margin-bottom: 1rem;
-        }
-        @include abs.breakpoint(large) {
-            height: 100%;
-            padding: 2rem 0 0 1rem;
-        }
-    }
-
-    &__right-container {
-        @include abs.flex(column, center, center);
-
-        @include abs.breakpoint(medium) {
-            width: 100%;
-        }
-
-        @include abs.breakpoint(large) {
-            @include abs.flex(column, flex-start, flex-start);
-            height: 100%;
-            width: 55%;
->>>>>>> ccb9872 (folder restructure)
         }
     }
 
     &__explore-button {
-<<<<<<< HEAD
         @include base.circular-std-regular(1);
         @extend %hero-button;
         border: 0;
@@ -170,29 +129,6 @@
 
         &--highlighted {
             color: abs.$secondary-color;
-=======
-        @include base.circular-std-regular(15);
-        @include comp.button-template(1, 2, 14);
-        @include abs.flex(row, center, center);
-        color: abs.$secondary-color;
-        gap: 1.4rem;
-        box-shadow: 0px 41px 90px #{abs.$custom-box-shadow};
-        margin-bottom: 1.1rem;
-
-        @include abs.breakpoint(medium) {
-            margin-bottom: 3rem;
-        }
-
-        @include abs.breakpoint(large) {
-            position: relative;
-            top: 5.8rem;
-            left: 2.2rem;
-
-            margin-bottom: 9rem;
-        }
-        i {
-            font-size: 1.3rem;
->>>>>>> ccb9872 (folder restructure)
         }
     }
 
@@ -201,7 +137,6 @@
         padding: 0 1rem;
         margin-bottom: 2rem;
         @include base.card-description-regular;
-<<<<<<< HEAD
 
         @include abs.breakpoint(tablet) {
             letter-spacing: 0.01rem;
@@ -216,25 +151,12 @@
             text-align: left;
             max-width: 28rem;
             margin-bottom: 4.2rem;
-=======
-        @include abs.breakpoint(medium) {
-            padding: 0;
-            max-width: 28rem;
-            margin-bottom: 2.7rem;
-        }
-        @include abs.breakpoint(large) {
-            padding-left: 2rem;
-            text-align: left;
-            max-width: 28rem;
-            margin-bottom: 5rem;
->>>>>>> ccb9872 (folder restructure)
         }
     }
 
     &__actions {
         @include abs.flex(column, center, center);
         gap: 1.6rem;
-<<<<<<< HEAD
 
         @include abs.breakpoint(tablet) {
             width: 100%;
@@ -246,21 +168,10 @@
         @include abs.breakpoint(desktop) {
             justify-content: flex-start;
             gap: 1.2rem;
-=======
-        @include abs.breakpoint(medium) {
-            width: 100%;
-            @include abs.flex(row, center, center);
-            max-width: 28rem;
-        }
-        @include abs.breakpoint(large) {
-            justify-content: flex-start;
-            padding-left: 2rem;
->>>>>>> ccb9872 (folder restructure)
         }
     }
 
     &__get-started {
-<<<<<<< HEAD
         @extend %hero-button;
         background-color: abs.$primary-color;
         color: abs.$white;
@@ -292,53 +203,6 @@
         @include abs.breakpoint(desktop) {
             left: 2.5rem;
             top: 43rem;
-=======
-        @include comp.button-template(1.5, 10, 14);
-        background-color: abs.$primary-color;
-        color: #fff;
-        box-shadow: 0px 41px 90px #{abs.$custom-box-shadow};
-        @include abs.breakpoint(medium) {
-            @include comp.button-template(1, 2.1, 14);
-            color: #fff;
-        }
-    }
-
-    &__watch-demo {
-        @include abs.flex(row, center, center);
-        @include comp.button-template(1.5, 9, 14);
-        background-color: #fff;
-        color: abs.$custom-black;
-        border: 1px solid #eeeeee;
-        gap: 0.6rem;
-        i {
-            font-size: 1.2rem;
-        }
-        @include abs.breakpoint(medium) {
-            @include comp.button-template(1, 2, 14);
-        }
-    }
-
-    &__main-heading {
-        width: 100%;
-        max-width: 24rem;
-        text-align: center;
-        margin-bottom: 1.5rem;
-
-        @include abs.breakpoint(medium) {
-            max-width: 37rem;
-            margin-bottom: 2rem;
-        }
-
-        @include abs.breakpoint(large) {
-            text-align: left;
-            padding-left: 2rem;
-            font-style: bold;
-            margin-bottom: 2.7rem;
-        }
-
-        &--highlighted {
-            color: abs.$secondary-color;
->>>>>>> ccb9872 (folder restructure)
         }
     }
 }

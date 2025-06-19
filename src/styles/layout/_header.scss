@@ -48,7 +48,7 @@
     @include abs.flex(row, center, center);
 
     &__background {
-        position: fixed;
+        position: absolute;
         top: 0;
         left: 0;
         z-index: -1;
@@ -133,7 +133,8 @@
     }
 
     &__link {
-        @include base.circular-std-regular(14);
+        font-family: 'circular-std-semibold';
+        font-size: 14px;
         color: #19182580;
         padding: 1rem;
         cursor: pointer;
@@ -144,11 +145,11 @@
         }
 
         &:hover {
-            color: abs.$custom-black;
+            color: abs.$dark;
         }
 
         &--active {
-            color: abs.$custom-black;
+            color: abs.$dark;
             font-weight: bold;
         }
     }
@@ -173,7 +174,6 @@
             visibility: visible;
             @include abs.flex(row, center, center);
             width: fit-content;
-            background-color: #ffffff;
             display: flex;
             padding-left: 3.8rem;
             gap: 0rem;
@@ -190,7 +190,7 @@
 
         &:hover {
             background-color: rgba(abs.$secondary-color, 0.9);
-            color: abs.$custom-black;
+            color: abs.$dark;
         }
     }
 }

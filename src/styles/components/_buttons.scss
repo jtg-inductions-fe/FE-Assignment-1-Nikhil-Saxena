@@ -1,5 +1,5 @@
 @use '../base/' as base;
-@use '../abstract/' as abs;
+@use '../abstract/' as *;
 
 @mixin button-template(
     $padding-y,
@@ -12,12 +12,12 @@
     white-space: nowrap;
 
     @if $button-type == primary {
-        color: abs.$custom-light-gray;
+        color: $deep-gray;
     } @else {
-        background-color: abs.$primary-color;
+        background-color: $primary-color;
         color: #ffffff;
-        border: 1px solid abs.$custom-light-gray;
     }
-
-    @include base.circular-std-regular($font-size);
+    font-family: 'circular-std', 'sans-serif';
+    font-weight: 400;
+    font-size: $font-size;
 }

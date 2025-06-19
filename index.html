@@ -4,12 +4,13 @@
         <title>FE-Assignment-1-Nikhil-Saxena</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./src/assets/icomoon.css" />
     </head>
     <body>
         <!-- Navbar -->
         <header class="navbar" aria-label="Navigation bar">
             <div class="navbar__background">
-                <img src="./assets/navbar-bg.png" alt="Ellipse background" />
+                <img src="./assets/section-images/navbar-bg.png" alt="Ellipse background" />
             </div>
             <div class="navbar__container">
                 <div class="navbar__left-sub-container">
@@ -19,11 +20,11 @@
                         class="navbar__menu"
                         aria-label="Menu Button"
                     >
-                        <img src="/assets/menu.png" alt="Menu  Bar Button" />
+                        <img src="/assets/icons/menu.png" alt="Menu  Bar Button" />
                     </button>
 
                     <a href="#" class="navbar__logo" aria-label="logo">
-                        <img src="./assets/logo.png" alt="Logo" />
+                        <img src="./assets/icons/logo.png" alt="Logo" />
                     </a>
                 </div>
 
@@ -83,6 +84,37 @@
                 </div>
             </div>
         </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero__container">
+                <div class="hero__left-container">
+                    <img src="/assets/hero.png" alt="Hero Section Image" />
+                </div>
+                <div class="hero__right-container">
+                    <a class="hero__explore-button"
+                        >Explore the world! <i class="icon-box"></i
+                    ></a>
+                    <h1 class="hero__main-heading">
+                        Travel
+                        <span class="hero__main-heading--highlighted"
+                            >top destination
+                        </span>
+                        of the world
+                    </h1>
+                    <p class="hero__description">
+                        We always make our customers happy by providing as many
+                        choice as possible
+                    </p>
+                    <div class="hero__actions">
+                        <a href="#" class="hero__get-started">Get Started</a>
+                        <a href="#" class="hero__watch-demo">
+                            <i class="icon-play"></i>Watch Demo</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
         <script type="module" src="./src/script/index.js"></script>
     </body>
 </html>

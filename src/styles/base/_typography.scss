@@ -7,3 +7,27 @@
     letter-spacing: 0%;
     font-family: 'circular-std';
 }
+
+@mixin card-description-regular {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    letter-spacing: 0%;
+    font-family: 'inter';
+    color: abs.$custom-light-gray;
+    text-align: center;
+    @include abs.breakpoint(medium) {
+        font-size: 18px;
+    }
+}
+
+h1 {
+    @include circular-std-regular(40);
+    @include abs.breakpoint(medium) {
+        @include circular-std-regular(57);
+    }
+    @include abs.breakpoint(large) {
+        @include circular-std-regular(66);
+    }
+}

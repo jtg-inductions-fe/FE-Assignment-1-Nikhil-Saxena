@@ -9,6 +9,7 @@
 ) {
     padding: #{$padding-y}rem #{$padding-x}rem;
     border-radius: 100px;
+    white-space: nowrap;
 
     @if $button-type == primary {
         color: abs.$custom-light-gray;

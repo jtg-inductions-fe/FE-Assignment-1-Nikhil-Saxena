@@ -64,3 +64,27 @@ body {
         @include circular-std-regular(2.75);
     }
 }
+
+@mixin section-name-heading {
+    @include circular-std-regular(16);
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    color: abs.$secondary-color;
+
+    @include abs.breakpoint(medium) {
+        @include circular-std-regular(25);
+    }
+}
+
+@mixin section-description {
+    @include circular-std-regular(32);
+    color: abs.$dark;
+
+    @include abs.breakpoint(medium) {
+        @include circular-std-regular(41);
+    }
+
+    @include abs.breakpoint(large) {
+        @include circular-std-regular(45);
+    }
+}

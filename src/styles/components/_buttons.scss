@@ -8,6 +8,7 @@
     $button-type: primary
 ) {
     padding: #{$padding-y}rem #{$padding-x}rem;
+<<<<<<< HEAD
     border-radius: 5rem;
     border: 0;
     white-space: nowrap;
@@ -15,6 +16,10 @@
     font-weight: 450;
     font-size: #{$font-size}rem;
     cursor: pointer;
+=======
+    border-radius: 100px;
+    white-space: nowrap;
+>>>>>>> ccb9872 (folder restructure)
 
     @if $button-type == primary {
         color: $deep-gray;

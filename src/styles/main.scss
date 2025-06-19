@@ -1,9 +1,9 @@
-// base imports
-@use 'base/reset.scss';
-@use 'base/fonts.scss';
+// Core layer imports
+@use 'abstract' as *;
+@use 'base' as *;
+@use 'themes' as *;
+@use 'vendors' as *;
 
-// abstracts imports
-@use 'abstract/variables' as vars;
-
-// themes
-@use 'themes/themes';
+// Layout and Components
+@use 'layout' as *;
+@use 'components' as *;

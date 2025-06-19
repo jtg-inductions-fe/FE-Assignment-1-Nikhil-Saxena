@@ -1,20 +1,10 @@
-// Fonts Imports
-@font-face {
-    font-family: 'circular-std';
-    src:
-        url('../fonts/CircularStd-Book.woff2') format('woff2'),
-        url('../fonts/CircularStd-Book.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
+@use '../abstract/' as *;
 
-@font-face {
-    font-family: 'inter';
-    src:
-        url('../fonts/Inter-Regular.woff2') format('woff2'),
-        url('../fonts/Inter-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
+// Circular Std
+@include font-face('circular-std', '../../assets/fonts/CircularStd-Book', 400);
+@include font-face('circular-std', '../../assets/fonts/CircularStd-Book', 450);
+@include font-face('circular-std', '../../assets/fonts/CircularStd-Bold', 700);
+@include font-face('circular-std', '../../assets/fonts/CircularStd-Black', 900);
+
+// Inter
+@include font-face('inter', '../../assets/fonts/Inter-Regular', 400);

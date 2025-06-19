@@ -1,4 +1,16 @@
+$icomoon-font-family: 'icomoon';
+$icomoon-font-path: '../../assets/icomoon' !default;
+
 $primary-color: var(--color-primary);
 $secondary-color: var(--color-secondary);
-$custom-black: var(--color-black);
-$custom-light-gray: var(--color-light-gray);
+
+$accent-orange: var(--color-accent-orange);
+$accent-yellow: var(--color-accent-yellow);
+
+$black: var(--color-black);
+$dark: var(--color-dark);
+$deep-gray: var(--color-deep-gray);
+$light-gray: var(--color-light-gray);
+$transparent-gray: var(--color-transparent-gray);
+$shadow-color: var(--color-shadow);
+$white: var(--color-white);

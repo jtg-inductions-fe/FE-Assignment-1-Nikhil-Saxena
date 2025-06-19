@@ -1,7 +1,16 @@
 :root {
     --color-primary: #5d50c6;
     --color-secondary: #f85e9f;
+
+    --color-accent-orange: #ff5722;
+    --color-accent-yellow: #facd49;
+
+    --color-black: #000000;
+    --color-dark: #222831;
+    --color-deep-gray: #191825;
+    --color-light-gray: #eeeeee;
+    --color-transparent-gray: #19182580; // 50% transparent dark
+    --color-shadow: #0000001a; // 10% black for shadows
+
     --color-white: #ffffff;
-    --color-black: #191825;
-    --color-light-gray: #19182580;
 }

@@ -130,7 +130,6 @@
         }
     }
 
-<<<<<<< HEAD
     &__description {
         width: 100%;
         padding: 0 1rem;
@@ -202,19 +201,6 @@
         @include abs.breakpoint(desktop) {
             left: 2.5rem;
             top: 43rem;
-=======
-    &__object {
-        position: absolute;
-        display: none;
-        @include abs.breakpoint(medium) {
-            display: block;
-            top: 79rem;
-            left: 2.3rem;
-        }
-        @include abs.breakpoint(large) {
-            left: 2.5rem;
-            top: 54.2rem;
->>>>>>> faa0894 (layout and typography fixes)
         }
     }
 }

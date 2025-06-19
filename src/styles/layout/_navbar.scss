@@ -97,11 +97,11 @@
         }
 
         &:hover {
-            color: abs.$custom-black;
+            color: abs.$dark;
         }
 
         &--active {
-            color: abs.$custom-black;
+            color: abs.$dark;
             font-weight: bold;
         }
     }
@@ -143,7 +143,7 @@
 
         &:hover {
             background-color: rgba(abs.$secondary-color, 0.9);
-            color: abs.$custom-black;
+            color: abs.$dark;
         }
     }
 }

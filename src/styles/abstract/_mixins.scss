@@ -38,3 +38,11 @@
     width: 100%;
     background-size: cover;
 }
+
+@mixin responsive-layout() {
+    width: 100%;
+    @include flex(column, center, center);
+    @include breakpoint(large) {
+        flex-direction: $flex-direction;
+    }
+}

@@ -1,10 +1,10 @@
-@use '../abstract/' as *;
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
 
-// Circular Std
-@include font-face('circular-std', '../assets/fonts/CircularStd-Book', 400);
-@include font-face('circular-std', '../assets/fonts/CircularStd-Book', 450);
-@include font-face('circular-std', '../assets/fonts/CircularStd-Bold', 700);
-@include font-face('circular-std', '../assets/fonts/CircularStd-Black', 900);
-
-// Inter
-@include font-face('inter', '../assets/fonts/Inter-Regular', 400);
+@each $key, $font in $fonts {
+    @include font-face(
+        map-get($font, name),
+        map-get($font, path),
+        map-get($font, weight)
+    );
+}

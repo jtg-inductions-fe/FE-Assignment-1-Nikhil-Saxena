@@ -1,4 +1,13 @@
-// Font mixin
+/// Font-Face Mixin
+/// ---------------
+/// Dynamically generates a @font-face rule for custom fonts.
+///
+/// @param {String} $name        - Font family name to be used in CSS.
+/// @param {String} $file        - Path to the font file (excluding extension).
+/// @param {String} $weight      - Font weight (default: normal).
+/// @param {String} $style       - Font style (default: normal).
+/// @param {String} $display     - Font display strategy for performance (default: swap).
+///
 @mixin font-face(
     $name,
     $file,

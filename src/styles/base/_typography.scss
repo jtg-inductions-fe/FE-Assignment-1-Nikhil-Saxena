@@ -15,7 +15,7 @@
     line-height: 160%;
     letter-spacing: 0;
     font-family: 'inter';
-    color: abs.$custom-light-gray;
+    color: abs.$transparent-gray;
     text-align: center;
     @include abs.breakpoint(tablet) {
         font-size: 1.2rem;

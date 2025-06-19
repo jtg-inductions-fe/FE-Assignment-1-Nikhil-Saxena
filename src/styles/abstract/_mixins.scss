@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+@use './variables' as *;
 /// Font-Face Mixin
 /// Dynamically generates a @font-face rule for custom fonts.
 ///
@@ -8,7 +8,23 @@
 /// @param {String} $style       - Font style (default: normal).
 /// @param {String} $display     - Font display strategy for performance (default: swap).
 ///
-=======
+@mixin font-face(
+    $name,
+    $file,
+    $weight: normal,
+    $style: normal,
+    $display: swap
+) {
+    @font-face {
+        font-family: $name;
+        src:
+            url('#{$file}.woff2') format('woff2'),
+            url('#{$file}.woff') format('woff');
+        font-weight: $weight;
+        font-style: $style;
+        font-display: $display;
+    }
+}
 @mixin flex($direction, $justify, $align, $wrap: nowrap) {
     display: flex;
     flex-direction: $direction;
@@ -33,44 +49,6 @@
     width: 100%;
     background-size: cover;
 }
-// Font mixin
->>>>>>> 2cf2840 (layout and typography fixes)
-@mixin font-face(
-    $name,
-    $file,
-    $weight: normal,
-    $style: normal,
-    $display: swap
-) {
-    @font-face {
-        font-family: $name;
-        src:
-            url('#{$file}.woff2') format('woff2'),
-            url('#{$file}.woff') format('woff');
-        font-weight: $weight;
-        font-style: $style;
-        font-display: $display;
-    }
-}
 
-@mixin flex($direction, $justify, $align, $wrap: nowrap) {
-    display: flex;
-    flex-direction: $direction;
-    justify-content: $justify;
-    align-items: $align;
-    flex-wrap: $wrap;
-}
 
-@mixin images-cover {
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-}
 
-@mixin responsive-layout() {
-    width: 100%;
-    @include flex(column, center, center);
-    @include breakpoint(large) {
-        flex-direction: $flex-direction;
-    }
-}

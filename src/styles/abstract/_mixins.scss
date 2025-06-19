@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @use './variables' as *;
 <<<<<<< HEAD
 /// Font-Face Mixin
@@ -10,6 +11,8 @@
 /// @param {String} $display     - Font display strategy for performance (default: swap).
 ///
 =======
+=======
+>>>>>>> 2cf2840 (layout and typography fixes)
 @mixin flex($direction, $justify, $align, $wrap: nowrap) {
     display: flex;
     flex-direction: $direction;

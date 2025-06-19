@@ -1,49 +1,149 @@
-@use '../abstract/mixins' as abstract;
-@use '../base/typography' as typography;
-@use '../components/buttons' as buttons;
+@use '../abstract' as abs;
+@use '../components/' as comp;
+@use '../base/' as base;
 
 .navbar {
-    @include abstract.full-width;
-    @include abstract.flex-row;
-    justify-content: center;
+    display: flex;
+    @include abs.flex(row, center, center);
 
     &__container {
-        @include abstract.flex-row;
-        width: 95rem;
-        height: 14.5rem;
-        position: relative;
-        justify-content: space-between;
-        align-items: center;
-        padding-left: 2rem;
-        // Logo
-        & .navbar__logo {
-            width: 3.2rem;
-            height: 3.2rem;
+        @include abs.flex(column, center, center);
+        width: 100%;
+
+        @include abs.breakpoint(medium) {
+            @include abs.flex(row, space-between, center);
+            max-width: 56rem;
         }
 
-        // Nav links
-        & ul {
-            @include abstract.flex-row;
-            justify-content: space-between;
-            width: 34rem;
-            position: relative;
-            left: 1rem;
-            li {
-                @include typography.circular-std-regular;
-            }
+        @include abs.breakpoint(large) {
+            max-width: 78rem;
+        }
+    }
+
+    &__left-sub-container {
+        @include abs.flex(row-reverse, space-between, center);
+        width: 100%;
+        height: 7.5rem;
+        padding: 0 1.1rem;
+
+        @include abs.breakpoint(medium) {
+            width: 52%;
+            @include abs.flex(row, space-between, center);
+            padding: 0;
+            height: 7rem;
         }
 
-        // Actions (like login)
-        & .navbar__actions {
-            position: relative;
-            left: 2rem;
-            & .navbar__login {
-                @include buttons.secondary-button;
-            }
+        @include abs.breakpoint(large) {
+            height: 11.5rem;
+            width: 9rem;
+            @include abs.flex(row, center, center);
+        }
+    }
 
-            & .navbar__signup {
-                @include buttons.primary-button;
-            }
+    &__logo {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    &__menu {
+        @include abs.breakpoint(large) {
+            display: none;
+        }
+    }
+
+    &__links {
+        max-height: 0;
+        opacity: 0;
+        visibility: hidden;
+        overflow: hidden;
+        transition: all 0.4s ease-in-out;
+
+        width: 100%;
+        @include abs.flex(column, center, center);
+        &--open {
+            max-height: 15rem;
+            opacity: 1;
+            visibility: visible;
+        }
+        @include abs.breakpoint(medium) {
+            position: absolute;
+            top: 7rem;
+            left: 0rem;
+            border: solid white 2rem;
+        }
+
+        @include abs.breakpoint(large) {
+            max-height: 15rem;
+            opacity: 1;
+            visibility: visible;
+            position: relative;
+            top: 0;
+            @include abs.flex(row, space-between, center);
+            width: 100%;
+            max-width: 31rem;
+            background-color: #ffffff;
+        }
+    }
+
+    &__link {
+        @include base.circular-std-regular(14);
+        color: #19182580;
+        padding: 1rem;
+        cursor: pointer;
+        transition: color 0.3s ease;
+
+        @include abs.breakpoint(large) {
+            padding: 0;
+        }
+
+        &:hover {
+            color: abs.$custom-black;
+        }
+
+        &--active {
+            color: abs.$custom-black;
+            font-weight: bold;
+        }
+    }
+
+    &__actions {
+        max-height: 0;
+        opacity: 0;
+        visibility: hidden;
+        overflow: hidden;
+        transition: all 0.4s ease-in-out;
+        width: 100%;
+        @include abs.flex(column, center, center);
+        gap: 1rem;
+        &--open {
+            max-height: 15rem;
+            opacity: 1;
+            visibility: visible;
+        }
+        @include abs.breakpoint(medium) {
+            max-height: 15rem;
+            opacity: 1;
+            visibility: visible;
+            @include abs.flex(row, center, center);
+            width: fit-content;
+            background-color: #ffffff;
+            display: flex;
+            padding-left: 3.8rem;
+            gap: 0rem;
+        }
+    }
+
+    &__login {
+        @include comp.button-template(1, 2, 14);
+        background-color: #ffffff;
+    }
+
+    &__signup {
+        @include comp.button-template(1, 2, 14, secondary);
+
+        &:hover {
+            background-color: rgba(abs.$secondary-color, 0.9);
+            color: abs.$custom-black;
         }
     }
 }

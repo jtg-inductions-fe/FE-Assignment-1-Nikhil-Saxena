@@ -1,5 +1,5 @@
-@use '../base' as base;
-@use '../abstract' as *;
+@use '../base/' as base;
+@use '../abstract/' as abs;
 
 @mixin button-template(
     $padding-y,
@@ -22,4 +22,6 @@
         background-color: $primary-color;
         color: #ffffff;
     }
+
+    @include base.circular-std-regular($font-size);
 }

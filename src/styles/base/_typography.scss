@@ -1,5 +1,7 @@
-@mixin circular-std-regular {
-    font-family: 'circular-std-bold';
+@use '../abstract' as abs;
+
+@mixin circular-std-regular($font-size) {
+    font-family: 'circular-std';
     font-style: normal;
     font-weight: 700;
     font-size: #{$font-size}px;
@@ -17,17 +19,17 @@
     font-family: 'inter';
     color: abs.$custom-light-gray;
     text-align: center;
-    @include abs.breakpoint(medium) {
+    @include abs.breakpoint(tablet) {
         font-size: 18px;
     }
 }
 
 h1 {
     @include circular-std-regular(40);
-    @include abs.breakpoint(medium) {
+    @include abs.breakpoint(tablet) {
         @include circular-std-regular(57);
     }
-    @include abs.breakpoint(large) {
+    @include abs.breakpoint(desktop) {
         @include circular-std-regular(66);
     }
 }

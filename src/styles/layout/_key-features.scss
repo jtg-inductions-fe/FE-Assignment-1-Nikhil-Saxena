@@ -9,13 +9,15 @@
 
     @include abs.breakpoint(large) {
         margin-top: 3rem;
-        @include abs.flex(row, flex-start, center);
+        padding: 0 5rem;
+        @include abs.flex(row-reverse, center, center);
     }
 
     &__image-wrapper {
         width: 100%;
         @include abs.flex(row, center, center);
-        padding: 0 1rem;
+        padding: 2rem 3rem;
+        margin-bottom: 3rem;
         @include abs.breakpoint(medium) {
             width: 100%;
             padding: 1.5rem 2rem;
@@ -24,7 +26,7 @@
         @include abs.breakpoint(large) {
             padding: 0;
             height: 45rem;
-            width: 60%;
+            width: 50%;
         }
         img {
             height: 100%;
@@ -35,9 +37,9 @@
         width: 100%;
         @include abs.flex(column, center, center);
         @include abs.breakpoint(large) {
-            width: 40%;
+            width: 50%;
             align-items: flex-start;
-            padding: 2rem 0rem;
+            padding: 2rem 0 2rem 4rem;
         }
     }
 
@@ -49,7 +51,7 @@
     }
 
     &__section-heading {
-        padding: 1rem 0 2.5rem 0;
+        padding: 1rem 0 2rem 0;
         text-align: center;
         @include base.section-description;
         @include abs.breakpoint(large) {
@@ -61,59 +63,102 @@
     &__section-description {
         max-width: 22rem;
         @include base.card-description-regular;
+        @include abs.breakpoint(small) {
+            text-align: center;
+        }
         @include abs.breakpoint(medium) {
+            text-align: center;
             max-width: 50rem;
         }
         @include abs.breakpoint(large) {
+            text-align: center;
             text-align: left;
             max-width: 30rem;
         }
     }
 
     &__card-wrapper {
-        margin-top: 1rem;
+        margin-top: 2rem;
         width: 100%;
         display: grid;
         grid-template-columns: 1fr;
-        padding: 1rem;
-        row-gap: 1rem;
+        padding: 1rem 3rem;
+        row-gap: 0.2rem;
 
         @include abs.breakpoint(medium) {
-            margin-top: 4rem;
-            grid-template-columns: 1fr 1fr;
+            margin-top: 5rem;
+            grid-template-columns: 1fr;
             column-gap: 2.5rem;
             row-gap: 2rem;
             padding: 0 6rem;
         }
 
         @include abs.breakpoint(large) {
-            padding: 0 7rem 0 0;
+            padding: 0;
         }
     }
 
     &__card {
         width: 100%;
-        border: 1px solid #{abs.$shadow-color};
-        padding: 2.5rem 3rem;
         border-radius: 1.5rem;
+        padding: 2rem;
         gap: 2.5rem;
-        @include abs.flex(column, space-around, center);
+        @include abs.flex(column, space-around, flex-start);
 
         @include abs.breakpoint(medium) {
-            padding: 2.5rem 1rem;
+            @include abs.flex(row, flex-start, flex-start);
+            padding: 1rem;
+        }
+        i {
+            font-size: 2.5rem;
+            padding: 2rem;
+            border-radius: 2rem;
+        }
+
+        &:hover {
+            border: 1px solid #{abs.$shadow-color};
+        }
+    }
+
+    &__card:nth-child(1) {
+        i {
+            background-color: abs.$accent-orange;
+        }
+    }
+    &__card:nth-child(2) {
+        i {
+            background-color: abs.$accent-yellow;
+        }
+    }
+    &__card:nth-child(3) {
+        i {
+            background-color: abs.$secondary-color;
+        }
+    }
+
+    &__card-content {
+        @include abs.breakpoint(medium) {
+            height: 100%;
+            @include abs.flex(column, center, flex-start);
         }
     }
 
     &__card-heading {
-        @include base.circular-std-regular(35);
-        line-height: 0%;
-        color: abs.$accent-orange;
+        @include base.circular-std-regular(23);
+        line-height: 120%;
+        text-wrap: nowrap;
     }
 
     &__card-description {
         color: abs.$dark;
         line-height: 0%;
-        font-size: 1.2rem;
-        @include base.card-description-regular;
+        font-size: 6rem;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 160%;
+        letter-spacing: 0%;
+        font-family: 'inter';
+        color: abs.$transparent-gray;
     }
 }

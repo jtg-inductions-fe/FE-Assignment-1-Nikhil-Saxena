@@ -17,7 +17,7 @@
     letter-spacing: 0%;
     font-family: 'inter';
     color: abs.$transparent-gray;
-    text-align: center;
+    text-align: left;
     @include abs.breakpoint(medium) {
         font-size: 18px;
     }

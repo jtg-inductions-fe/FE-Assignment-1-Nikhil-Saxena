@@ -11,6 +11,7 @@ export function initNavbarToggle() {
     navbarMenuButton.addEventListener('click', () => {
         const screenWidth = window.innerWidth;
         isMenuOpen = !isMenuOpen;
+        navbarMenuButton.setAttribute('aria-expanded', String(isMenuOpen));
         // For Large Screens
         if (screenWidth > 1440) return;
         // For Medium Screens

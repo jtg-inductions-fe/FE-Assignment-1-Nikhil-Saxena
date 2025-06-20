@@ -8,7 +8,6 @@
 /// @param {String} $style       - Font style (default: normal).
 /// @param {String} $display     - Font display strategy for performance (default: swap).
 ///
-// Font mixin
 @mixin font-face(
     $name,
     $file,
@@ -25,12 +24,6 @@
         font-style: $style;
         font-display: $display;
     }
-}
-
-@mixin images-cover {
-    height: 100%;
-    width: 100%;
-    background-size: cover;
 }
 
 @mixin flex($direction, $justify, $align, $wrap: nowrap) {

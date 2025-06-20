@@ -1,27 +1,29 @@
+@use './variables' as *;
 /// Breakpoint Mixin
 /// ----------------
-/// Provides media queries for 3 screen sizes:
-/// - mobile: max-width 630px
-/// - tablet: 631px to 1024px
-/// - desktop: 1025px and up
+/// Provides media queries for 4 screen sizes:
+/// - mobile: max-width $breakpoint-mobile
+/// - mobile-lg: min-width $breakpoint-mobile-lg
+/// - tablet: min-width $breakpoint-tablet
+/// - desktop: min-width $breakpoint-desktop
 ///
-/// @param {String} $point - Accepts 'mobile', 'tablet', or 'desktop'
+/// @param {String} $point - Accepts 'mobile', 'mobile-lg', 'tablet', or 'desktop'
 ///
 @mixin breakpoint($point) {
     @if $point == mobile {
-        @media (max-width: 430px) {
+        @media (max-width: $breakpoint-mobile) {
             @content;
         }
     } @else if $point == mobile-lg {
-        @media (min-width: 431px) {
+        @media (min-width: $breakpoint-mobile-lg) {
             @content;
         }
     } @else if $point == tablet {
-        @media (min-width: 631px) {
+        @media (min-width: $breakpoint-tablet) {
             @content;
         }
     } @else if $point == desktop {
-        @media (min-width: 1025px) {
+        @media (min-width: $breakpoint-desktop) {
             @content;
         }
     }

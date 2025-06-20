@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-## Fill in all TODOs and update the checklist. Remove non-applicable TODO items and this line before raising PR.
->>>>>>> 9dc2efe (updated folder structure)
 
 ### Issue: <ref(branch-name)>
 
@@ -27,8 +23,4 @@
 - [ ] Tested Cross-browser / Cross-platform
 - [ ] UI & Responsiveness verified if needed
 - [ ] Pixel Perfection
-<<<<<<< HEAD
 - [ ] Documentation added at appropriate places
-=======
-- [ ] Documentation added at appropriate places
->>>>>>> 9dc2efe (updated folder structure)

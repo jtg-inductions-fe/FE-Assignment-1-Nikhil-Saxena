@@ -57,8 +57,13 @@
 
     &__menu {
         border: 0;
+        background-color: transparent;
         @include abs.breakpoint(desktop) {
             display: none;
+        }
+
+        &:hover {
+            transform: scale(1.1);
         }
     }
 
@@ -97,7 +102,7 @@
             position: relative;
             top: 0;
             @include abs.flex(row, space-between, center);
-            max-width: 31rem;
+            max-width: 27rem;
         }
     }
 
@@ -148,6 +153,10 @@
             display: flex;
             gap: 0rem;
         }
+        @include abs.breakpoint(desktop) {
+            width: 17rem;
+            justify-content: flex-end;
+        }
     }
 
     &__login {
@@ -156,10 +165,10 @@
     }
 
     &__signup {
-        @include comp.button-template(1, 2, 14, secondary);
+        @include comp.button-template(1, 1.8, 14, secondary);
 
         &:hover {
-            background-color: rgba(abs.$secondary-color, 0.9);
+            background-color: abs.$secondary-color;
             color: abs.$dark;
         }
     }

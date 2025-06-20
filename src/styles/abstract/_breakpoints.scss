@@ -1,0 +1,24 @@
+/// Breakpoint Mixin
+/// ----------------
+/// Provides media queries for 3 screen sizes:
+/// - mobile: max-width 430px
+/// - tablet: 431px to 1024px
+/// - desktop: 1025px and up
+///
+/// @param {String} $point - Accepts 'mobile', 'tablet', or 'desktop'
+///
+@mixin breakpoint($point) {
+    @if $point == mobile {
+        @media (max-width: 430px) {
+            @content;
+        }
+    } @else if $point == tablet {
+        @media (min-width: 431px) and (max-width: 1024px) {
+            @content;
+        }
+    } @else if $point == desktop {
+        @media (min-width: 1025px) {
+            @content;
+        }
+    }
+}

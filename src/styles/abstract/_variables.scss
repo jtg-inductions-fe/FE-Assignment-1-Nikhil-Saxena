@@ -1,0 +1,56 @@
+// Icon Fonts
+$icomoon-font-family: 'icomoon';
+// Path to the IcoMoon font files
+$icomoon-font-path: '../../assets/icomoon' !default;
+
+// Theme Colors (Linked to CSS Variables)
+$primary-color: var(--color-primary);
+$secondary-color: var(--color-secondary);
+
+$accent-orange: var(--color-accent-orange);
+$accent-yellow: var(--color-accent-yellow);
+
+$black: var(--color-black);
+$dark: var(--color-dark);
+$deep-gray: var(--color-deep-gray);
+$light-gray: var(--color-light-gray);
+$transparent-gray: var(--color-transparent-gray);
+$shadow-color: var(--color-shadow);
+$white: var(--color-white);
+
+// Font Configuration
+// Base path for all font files
+$font-path: '../assets/fonts/';
+
+// Font-face configuration map
+// Each font entry includes:
+// - `name`: font-family name to be used in CSS
+// - `path`: relative path to font file (without extension)
+// - `weight`: font-weight value
+$fonts: (
+    'circular-std-regular': (
+        name: 'circular-std',
+        path: $font-path + 'CircularStd-Book',
+        weight: 400,
+    ),
+    'circular-std-semibold': (
+        name: 'circular-std',
+        path: $font-path + 'CircularStd-Book',
+        weight: 450,
+    ),
+    'circular-std-bold': (
+        name: 'circular-std',
+        path: $font-path + 'CircularStd-Bold',
+        weight: 700,
+    ),
+    'circular-std-extrabold': (
+        name: 'circular-std',
+        path: $font-path + 'CircularStd-Black',
+        weight: 900,
+    ),
+    'inter-regular': (
+        name: 'inter',
+        path: $font-path + 'Inter-Regular',
+        weight: 400,
+    ),
+);

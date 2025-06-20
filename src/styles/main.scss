@@ -1,1 +1,9 @@
-// TODO: Add styles as per the requirement
+// Core layer imports
+@use 'abstract' as *;
+@use 'base' as *;
+@use 'themes' as *;
+@use 'vendors' as *;
+
+// Layout and Components
+@use 'layout' as *;
+@use 'components' as *;

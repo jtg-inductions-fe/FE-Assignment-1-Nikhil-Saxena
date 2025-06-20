@@ -1,24 +1,25 @@
-@use './icon-variables' as *;
+@use './icon-variables' as icon;
 
 @font-face {
-    font-family: $icomoon-font-family;
-    src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot');
+    font-family: icon.$icomoon-font-family;
+    src: url('#{icon.$icomoon-font-path}/#{icon.$icomoon-font-family}.eot');
     src:
-        url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?#iefix')
+        url('#{icon.$icomoon-font-path}/#{icon.$icomoon-font-family}.eot?#iefix')
             format('embedded-opentype'),
-        url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf')
+        url('#{icon.$icomoon-font-path}/#{icon.$icomoon-font-family}.ttf')
             format('truetype'),
-        url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff') format('woff'),
-        url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?#{$icomoon-font-family}')
+        url('#{icon.$icomoon-font-path}/#{icon.$icomoon-font-family}.woff')
+            format('woff'),
+        url('#{icon.$icomoon-font-path}/#{icon.$icomoon-font-family}.svg?#{icon.$icomoon-font-family}')
             format('svg');
     font-weight: normal;
     font-style: normal;
-    font-display: block;
+    font-display: swap;
 }
 
 [class^='icon-'],
 [class*=' icon-'] {
-    font-family: $icomoon-font-family !important;
+    font-family: icon.$icomoon-font-family !important;
     font-style: normal;
     font-weight: normal;
     line-height: 1;
@@ -29,68 +30,63 @@
 }
 
 .icon-twitter::before {
-    content: $icon-twitter;
+    content: icon.$icon-twitter;
     color: #f1f2f2;
 }
 
-.icon-instagram::before {
-    content: $icon-instagram;
-    color: #fff;
-}
-
 .icon-arrow-left::before {
-    content: $icon-arrow-left;
+    content: icon.$icon-arrow-left;
 }
 
 .icon-arrow-right::before {
-    content: $icon-arrow-right;
+    content: icon.$icon-arrow-right;
     color: #fff;
 }
 
 .icon-suitcase::before {
-    content: $icon-suitcase;
+    content: icon.$icon-suitcase;
     color: #f85e9f;
 }
 
-.icon-calender::before {
-    content: $icon-calender;
+.icon-calendar::before {
+    content: icon.$icon-calendar;
     color: #fff;
 }
 
 .icon-card-clip::before {
-    content: $icon-card-clip;
+    content: icon.$icon-card-clip;
     color: #fff;
 }
 
 .icon-facebook::before {
-    content: $icon-facebook;
+    content: icon.$icon-facebook;
     color: #5d50c6;
 }
 
 .icon-instagram::before {
-    content: $icon-instagram;
+    content: icon.$icon-instagram;
     color: #fff;
 }
 
 .icon-location::before {
-    content: $icon-location;
+    content: icon.$icon-location;
     color: #fff;
 }
 
 .icon-logo::before {
-    content: $icon-logo;
+    content: icon.$icon-logo;
 }
 
 .icon-mail::before {
-    content: $icon-mail;
+    content: icon.$icon-mail;
 }
 
 .icon-play::before {
-    content: $icon-play;
+    content: icon.$icon-play;
     color: #5d50c6;
 }
 
 .icon-star::before {
-    content: $icon-star;
+    content: icon.$icon-star;
     color: #facd49;
 }

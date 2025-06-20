@@ -28,12 +28,12 @@ $font-path: '../assets/fonts/';
 // - `path`: relative path to font file (without extension)
 // - `weight`: font-weight value
 $fonts: (
-    'circular-std-book': (
+    'circular-std-regular': (
         name: 'circular-std',
         path: $font-path + 'CircularStd-Book',
         weight: 400,
     ),
-    'circular-std-medium': (
+    'circular-std-semibold': (
         name: 'circular-std',
         path: $font-path + 'CircularStd-Book',
         weight: 450,
@@ -43,7 +43,7 @@ $fonts: (
         path: $font-path + 'CircularStd-Bold',
         weight: 700,
     ),
-    'circular-std-black': (
+    'circular-std-extrabold': (
         name: 'circular-std',
         path: $font-path + 'CircularStd-Black',
         weight: 900,

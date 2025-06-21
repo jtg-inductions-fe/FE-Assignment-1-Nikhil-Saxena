@@ -1,7 +1,6 @@
 @use '../abstract' as abs;
 
 @mixin circular-std-regular($font-size) {
-    font-family: 'circular-std';
     font-style: normal;
     font-weight: 700;
     font-size: #{$font-size}rem;
@@ -31,4 +30,12 @@ h1 {
     @include abs.breakpoint(desktop) {
         @include circular-std-regular(66);
     }
+}
+
+.base-font {
+    font-family: 'circular-std';
+}
+
+body {
+    @extend .base-font;
 }

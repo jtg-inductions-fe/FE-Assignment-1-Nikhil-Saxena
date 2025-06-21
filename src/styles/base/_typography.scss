@@ -1,4 +1,4 @@
-@use '../abstract/mixins' as abs;
+@use '../abstract/' as abs;
 
 @mixin circular-std-regular($font-size) {
     font-style: normal;
@@ -23,12 +23,12 @@
 }
 
 h1 {
-    @include circular-std-regular(40);
+    @include circular-std-regular(3);
     @include abs.breakpoint(tablet) {
-        @include circular-std-regular(57);
+        @include circular-std-regular(3.5);
     }
     @include abs.breakpoint(desktop) {
-        @include circular-std-regular(66);
+        @include circular-std-regular(4);
     }
 }
 
@@ -39,5 +39,3 @@ h1 {
 body {
     @extend .base-font;
 }
-
-

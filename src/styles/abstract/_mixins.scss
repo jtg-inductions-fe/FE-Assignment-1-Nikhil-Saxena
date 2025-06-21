@@ -1,5 +1,4 @@
 /// Font-Face Mixin
-/// ---------------
 /// Dynamically generates a @font-face rule for custom fonts.
 ///
 /// @param {String} $name        - Font family name to be used in CSS.
@@ -24,4 +23,18 @@
         font-style: $style;
         font-display: $display;
     }
+}
+
+@mixin flex($direction, $justify, $align, $wrap: nowrap) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    flex-wrap: $wrap;
+}
+
+@mixin images-cover {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
 }

@@ -1,1 +1,41 @@
-// TODO
+@use '../abstract' as abs;
+
+@mixin circular-std-regular($font-size) {
+    font-style: normal;
+    font-weight: 700;
+    font-size: #{$font-size}rem;
+    line-height: 120%;
+    letter-spacing: 0;
+}
+
+@mixin card-description-regular {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 160%;
+    letter-spacing: 0;
+    font-family: 'inter';
+    color: abs.$custom-light-gray;
+    text-align: center;
+    @include abs.breakpoint(tablet) {
+        font-size: 1.2rem;
+    }
+}
+
+h1 {
+    @include circular-std-regular(40);
+    @include abs.breakpoint(tablet) {
+        @include circular-std-regular(57);
+    }
+    @include abs.breakpoint(desktop) {
+        @include circular-std-regular(66);
+    }
+}
+
+.base-font {
+    font-family: 'circular-std';
+}
+
+body {
+    @extend .base-font;
+}

@@ -1,1 +1,23 @@
-// TODO
+@use '../base/' as base;
+@use '../abstract/' as *;
+
+@mixin button-template(
+    $padding-y,
+    $padding-x,
+    $font-size: 8,
+    $button-type: primary
+) {
+    padding: #{$padding-y}rem #{$padding-x}rem;
+    border-radius: 5rem;
+    white-space: nowrap;
+
+    @if $button-type == primary {
+        color: $deep-gray;
+    } @else {
+        background-color: $primary-color;
+        color: #ffffff;
+    }
+    font-family: 'circular-std', 'sans-serif';
+    font-weight: 450;
+    font-size: #{$font-size}rem;
+}

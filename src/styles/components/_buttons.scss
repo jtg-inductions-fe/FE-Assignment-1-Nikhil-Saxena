@@ -9,7 +9,12 @@
 ) {
     padding: #{$padding-y}rem #{$padding-x}rem;
     border-radius: 5rem;
+    border: 0;
     white-space: nowrap;
+    font-family: 'circular-std', 'sans-serif';
+    font-weight: 450;
+    font-size: #{$font-size}rem;
+    cursor: pointer;
 
     @if $button-type == primary {
         color: $deep-gray;
@@ -17,8 +22,4 @@
         background-color: $primary-color;
         color: #ffffff;
     }
-    font-family: 'circular-std', 'sans-serif';
-    font-weight: 450;
-    font-size: #{$font-size}rem;
-    cursor: pointer;
 }

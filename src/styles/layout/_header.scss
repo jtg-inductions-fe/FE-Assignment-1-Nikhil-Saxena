@@ -2,6 +2,12 @@
 @use '../components' as comp;
 @use '../base' as base;
 
+%button-hover {
+    &:hover {
+        @include abs.drop-shadow;
+    }
+}
+
 .navbar {
     display: flex;
     @include abs.flex(row, center, center);
@@ -164,12 +170,13 @@
 
     &__login {
         @include comp.button-template(1, 2, 0.9);
+        @extend %button-hover;
         background-color: #ffffff;
     }
 
     &__signup {
         @include comp.button-template(1, 2, 0.9, secondary);
-
+        @extend %button-hover;
         &:hover {
             background-color: abs.$secondary-color;
             color: abs.$dark;

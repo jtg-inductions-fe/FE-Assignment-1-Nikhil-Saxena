@@ -1,6 +1,7 @@
 @use '../abstract' as abs;
 @use '../components/' as comp;
 @use '../base/' as base;
+
 .testimonial {
     @include abs.flex(column, center, center);
     margin-top: 4rem;
@@ -104,24 +105,6 @@
         }
     }
 
-    &__slider {
-        // background-color: aquamarine;
-        @include abs.flex(row, center, center);
-        gap: 1.5rem;
-    }
-
-    &__slider-bullets {
-        width: 1.5rem;
-        height: 1.5rem;
-        border-radius: 100%;
-        border: 0;
-        background-color: abs.$light-gray;
-
-        &--active {
-            background-color: abs.$secondary-color;
-        }
-    }
-
     &__navigation-container {
         height: 0;
         @include abs.flex(row, space-between, center);
@@ -165,6 +148,71 @@
 
         &--disabled {
             background-color: abs.$white;
+            i {
+                color: abs.$dark;
+            }
+        }
+    }
+}
+
+.splide {
+    &__pagination {
+        position: relative;
+        @include abs.flex(row, center, center);
+        gap: 1rem;
+        .is-active {
+            background-color: abs.$secondary-color;
+            width: 1rem;
+            height: 1rem;
+        }
+    }
+
+    &__pagination__page {
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 100%;
+        border: 0;
+        background-color: abs.$light-gray;
+    }
+
+    &__arrows {
+        position: absolute;
+        top: 100rem;
+        max-width: 100%;
+    }
+
+    &__arrow {
+        cursor: pointer;
+        opacity: 1;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 100%;
+        border: 1px solid abs.$light-gray;
+        background-color: abs.$primary-color;
+        @include abs.flex(row, center, center);
+
+        i {
+            font-size: 1rem;
+            color: abs.$white;
+        }
+
+        @include abs.breakpoint(medium) {
+            width: 6.5rem;
+            height: 6.5rem;
+        }
+
+        &:hover {
+            box-shadow: 0px 41px 90px #{abs.$shadow-color};
+        }
+
+        &--next {
+            i {
+                color: abs.$dark;
+            }
+        }
+        &:disabled {
+            background-color: abs.$white;
+            color: black;
             i {
                 color: abs.$dark;
             }

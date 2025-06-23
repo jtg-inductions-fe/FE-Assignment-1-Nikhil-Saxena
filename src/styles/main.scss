@@ -7,3 +7,12 @@
 // Layout and Components
 @use 'layout' as *;
 @use 'components' as *;
+
+.outer-wrapper {
+    max-width: 120rem;
+    margin: auto;
+}
+
+body {
+    @extend .outer-wrapper;
+}

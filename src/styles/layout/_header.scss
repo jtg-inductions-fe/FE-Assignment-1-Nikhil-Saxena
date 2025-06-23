@@ -9,6 +9,8 @@
 }
 
 .navbar {
+    position: relative;
+    width: 100%;
     display: flex;
     @include abs.flex(row, center, center);
 

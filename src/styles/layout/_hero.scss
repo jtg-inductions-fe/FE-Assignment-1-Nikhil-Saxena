@@ -5,6 +5,7 @@
 %hero-button {
     @include abs.flex(row, center, center);
     @include comp.button-template(1.5, 10, 0.9);
+    border: 0;
     @include abs.breakpoint(tablet) {
         @include comp.button-template(1, 2, 0.9);
     }
@@ -80,7 +81,7 @@
         background-color: transparent;
 
         gap: 1.4rem;
-        box-shadow: 0rem 2.5rem 5.6rem #{abs.$shadow-color};
+        @include abs.drop-shadow(0, 2.5, 5.6);
         margin-bottom: 1.1rem;
 
         @include comp.button-template(1, 2, 0.9);
@@ -170,7 +171,7 @@
         @extend %hero-button;
         background-color: abs.$primary-color;
         color: abs.$white;
-        box-shadow: 0rem 2.5625rem 5.625rem #{abs.$shadow-color};
+        @include abs.drop-shadow(0, 2.5, 5.6);
     }
 
     &__watch-demo {

@@ -1,5 +1,5 @@
-@use '../base/' as base;
-@use '../abstract/' as *;
+@use '../base' as base;
+@use '../abstract' as *;
 
 @mixin button-template(
     $padding-y,
@@ -20,4 +20,5 @@
     font-family: 'circular-std', 'sans-serif';
     font-weight: 450;
     font-size: #{$font-size}rem;
+    cursor: pointer;
 }

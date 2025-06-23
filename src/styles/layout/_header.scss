@@ -1,6 +1,6 @@
 @use '../abstract' as abs;
-@use '../components/' as comp;
-@use '../base/' as base;
+@use '../components' as comp;
+@use '../base' as base;
 
 .navbar {
     display: flex;

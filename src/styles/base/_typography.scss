@@ -40,6 +40,38 @@ body {
     @extend .base-font;
 }
 
+@mixin section-name-heading {
+    @include circular-std-regular(1);
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    color: abs.$secondary-color;
+
+    @include abs.breakpoint(tablet) {
+        @include circular-std-regular(1.8);
+    }
+}
+
+@mixin section-description {
+    @include circular-std-regular(2);
+    color: abs.$dark;
+
+    @include abs.breakpoint(tablet) {
+        @include circular-std-regular(2.5);
+    }
+
+    @include abs.breakpoint(desktop) {
+        @include circular-std-regular(2.7);
+    }
+}
+
+.base-font {
+    font-family: 'circular-std';
+}
+
+body {
+    @extend .base-font;
+}
+
 @mixin section-title-heading {
     @include circular-std-regular(1);
     text-transform: uppercase;
@@ -62,29 +94,5 @@ body {
 
     @include abs.breakpoint(desktop) {
         @include circular-std-regular(2.75);
-    }
-}
-
-@mixin section-name-heading {
-    @include circular-std-regular(16);
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    color: abs.$secondary-color;
-
-    @include abs.breakpoint(medium) {
-        @include circular-std-regular(25);
-    }
-}
-
-@mixin section-description {
-    @include circular-std-regular(32);
-    color: abs.$dark;
-
-    @include abs.breakpoint(medium) {
-        @include circular-std-regular(41);
-    }
-
-    @include abs.breakpoint(large) {
-        @include circular-std-regular(45);
     }
 }

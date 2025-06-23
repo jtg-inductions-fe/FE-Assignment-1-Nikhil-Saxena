@@ -3,6 +3,7 @@
 @use '../base/' as base;
 
 .hero {
+    @include abs.flex(row, center, center);
     &__container {
         width: 100%;
         padding-top: 0;
@@ -13,6 +14,7 @@
         @include abs.breakpoint(desktop) {
             padding: 0 6rem;
             @include abs.flex(row-reverse, center, center);
+            max-width: 100rem;
             height: 50rem;
         }
     }

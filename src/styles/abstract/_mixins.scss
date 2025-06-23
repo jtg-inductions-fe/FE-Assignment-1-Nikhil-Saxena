@@ -33,15 +33,8 @@
     flex-wrap: $wrap;
 }
 
-@mixin responsive-layout() {
-    width: 100%;
-    @include flex(column, center, center);
-    @include breakpoint(desktop) {
-        flex-direction: $flex-direction;
-    }
-}
-
-@mixin button-drop-shadow {
+@mixin drop-shadow($color: $shadow-color, $y: 1rem, $blur: 1rem) {
+    box-shadow: 0rem #{$y} #{$blur} #{$color};
 }
 
 @mixin images-cover {

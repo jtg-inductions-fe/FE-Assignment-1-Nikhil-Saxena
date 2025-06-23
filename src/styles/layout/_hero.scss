@@ -1,6 +1,4 @@
-
 @use '../abstract' as abs;
-
 @use '../components' as comp;
 @use '../base' as base;
 
@@ -47,15 +45,10 @@
             padding: 2rem 6.7rem 0 8rem;
             margin-bottom: 0.3rem;
         }
-<<<<<<< HEAD
 
         @include abs.breakpoint(desktop) {
             max-height: 55rem;
             padding: 1rem 0 0 0;
-=======
-        @include abs.breakpoint(large) {
-            padding: 2rem 0 0 1rem;
->>>>>>> 6b9bd1e (layout fixes)
         }
     }
 
@@ -90,11 +83,7 @@
         background-color: transparent;
 
         gap: 1.4rem;
-<<<<<<< HEAD
         @include abs.drop-shadow(0, 2.5, 5.6);
-=======
-        box-shadow: 0px 41px 90px #{abs.$shadow-color};
->>>>>>> 6b9bd1e (layout fixes)
         margin-bottom: 1.1rem;
 
         @include comp.button-template(1, 2, 0.9);
@@ -109,68 +98,7 @@
             margin-bottom: 3.5rem;
         }
 
-<<<<<<< HEAD
         &__svg {
-=======
-            margin-bottom: 9rem;
-        }
-        i {
-            font-size: 1.3rem;
-        }
-    }
-
-    &__description {
-        width: 100%;
-        padding: 0 1rem;
-        margin-bottom: 2rem;
-        @include base.card-description-regular;
-        @include abs.breakpoint(medium) {
-            padding: 0;
-            max-width: 28rem;
-            margin-bottom: 2.7rem;
-        }
-        @include abs.breakpoint(large) {
-            padding-left: 2rem;
-            text-align: left;
-            max-width: 28rem;
-            margin-bottom: 5rem;
-        }
-    }
-
-    &__actions {
-        @include abs.flex(column, center, center);
-        gap: 1.6rem;
-        @include abs.breakpoint(medium) {
-            width: 100%;
-            @include abs.flex(row, center, center);
-            max-width: 28rem;
-        }
-        @include abs.breakpoint(large) {
-            justify-content: flex-start;
-            padding-left: 2rem;
-        }
-    }
-
-    &__get-started {
-        @include comp.button-template(1.5, 10, 14);
-        background-color: abs.$primary-color;
-        color: #fff;
-        box-shadow: 0px 41px 90px #{abs.$shadow-color};
-        @include abs.breakpoint(medium) {
-            @include comp.button-template(1, 2.1, 14);
-            color: #fff;
-        }
-    }
-
-    &__watch-demo {
-        @include abs.flex(row, center, center);
-        @include comp.button-template(1.5, 9, 14);
-        background-color: #fff;
-        color: abs.$dark;
-        border: 1px solid #eeeeee;
-        gap: 0.6rem;
-        i {
->>>>>>> 6b9bd1e (layout fixes)
             font-size: 1.2rem;
         }
     }

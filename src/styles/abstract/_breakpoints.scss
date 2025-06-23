@@ -9,7 +9,6 @@
 /// @param {String} $point - Accepts 'mobile', 'mobile-lg', 'tablet', or 'desktop'
 ///
 @mixin breakpoint($point) {
-<<<<<<< HEAD
     @if $point == mobile {
         @media (max-width: $breakpoint-mobile) {
             @content;
@@ -24,18 +23,6 @@
         }
     } @else if $point == desktop {
         @media (min-width: $breakpoint-desktop) {
-=======
-    @if $point == small {
-        @media (min-width: 300px) {
-            @content;
-        }
-    } @else if $point == medium {
-        @media (min-width: 600px) {
-            @content;
-        }
-    } @else if $point == large {
-        @media (min-width: 1025px) {
->>>>>>> ccb9872 (folder restructure)
             @content;
         }
     }

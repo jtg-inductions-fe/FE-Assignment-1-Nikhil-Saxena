@@ -1,8 +1,9 @@
-// TODO
+// Imports
 @use '../abstract' as abs;
 @use '../components/' as comp;
 @use '../base/' as base;
 
+// Clients Section
 .clients {
     width: 100%;
 
@@ -13,14 +14,15 @@
         row-gap: 1.9rem;
         column-gap: 1rem;
         margin-bottom: 4.2rem;
-        @include abs.breakpoint(medium) {
+
+        @include abs.breakpoint(tablet) {
             max-width: 40rem;
             row-gap: 2rem;
             column-gap: 1.5rem;
             margin-bottom: 8.2rem;
         }
 
-        @include abs.breakpoint(large) {
+        @include abs.breakpoint(desktop) {
             width: 100%;
             max-width: 80rem;
             @include abs.flex(row, space-around, center);
@@ -29,21 +31,24 @@
 
     &__item {
         height: 1.3rem;
-        @include abs.breakpoint(medium) {
+
+        @include abs.breakpoint(tablet) {
             height: 2rem;
         }
     }
 }
+
+// Services Section
 .services {
     width: 100%;
     @include abs.flex(column, center, center);
-    margin-top: 4rem;
+    margin-top: 3.7rem;
 
-    @include abs.breakpoint(medium) {
+    @include abs.breakpoint(tablet) {
         margin-top: 10rem;
     }
 
-    @include abs.breakpoint(large) {
+    @include abs.breakpoint(desktop) {
         margin-top: 4rem;
     }
 
@@ -51,7 +56,8 @@
         width: 100%;
         display: grid;
         grid-template-columns: 1fr;
-        @include abs.breakpoint(large) {
+
+        @include abs.breakpoint(desktop) {
             grid-template-columns: 1fr 2fr;
             padding: 0 6rem;
         }
@@ -59,14 +65,15 @@
 
     &__headings {
         width: 100%;
-
         text-align: center;
         margin-bottom: 2rem;
-        @include abs.breakpoint(medium) {
+
+        @include abs.breakpoint(tablet) {
             margin-bottom: 3.5rem;
         }
-        @include abs.breakpoint(large) {
-            min-height: 27.5rem;
+
+        @include abs.breakpoint(desktop) {
+            min-height: 26rem;
             text-align: left;
             @include abs.flex(column, center, flex-start);
         }
@@ -89,12 +96,12 @@
         gap: 1.2rem;
         padding: 0 1rem;
 
-        @include abs.breakpoint(medium) {
+        @include abs.breakpoint(tablet) {
             padding: 0 4rem;
             grid-template-columns: 1fr 1fr 1fr;
         }
 
-        @include abs.breakpoint(large) {
+        @include abs.breakpoint(desktop) {
             padding: 0 1rem;
             grid-template-columns: 1fr 1fr;
         }
@@ -108,44 +115,45 @@
         transition: all 0.4s ease-in-out;
         @include abs.flex(column, space-between, center);
 
-        @include abs.breakpoint(medium) {
-            padding: 4rem;
-            min-height: 28rem;
+        @include abs.breakpoint(tablet) {
+            padding: 4rem 4rem 2rem 4rem;
+            min-height: 20rem;
+            background-color: aqua;
             justify-content: flex-start;
         }
 
-        @include abs.breakpoint(large) {
-            height: 18rem;
+        @include abs.breakpoint(desktop) {
+            height: 28rem;
+            &:nth-child(3) {
+                display: none;
+            }
+        }
+
+        &:hover {
+            border: 0px;
+            box-shadow: 0px 41px 90px #{abs.$shadow-color};
         }
 
         &__heading {
-            @include base.circular-std-regular(24);
+            @include base.circular-std-regular(1.5);
             font-weight: 600;
             text-align: center;
-            @include abs.breakpoint(medium) {
-                @include base.circular-std-regular(30);
+
+            @include abs.breakpoint(tablet) {
+                @include base.circular-std-regular(1.8);
                 padding: 4rem 0 1.5rem 0;
             }
         }
 
         &__description {
-            @include base.circular-std-regular(18);
+            @include base.circular-std-regular(1.2);
             text-align: center;
             font-weight: 200;
             color: abs.$deep-gray;
-            @include abs.breakpoint(medium) {
+
+            @include abs.breakpoint(tablet) {
                 line-height: 2rem;
             }
-        }
-
-        @include abs.breakpoint(large) {
-            &:nth-child(3) {
-                display: none;
-            }
-        }
-        &:hover {
-            border: 0px;
-            box-shadow: 0px 41px 90px #{abs.$shadow-color};
         }
     }
 }

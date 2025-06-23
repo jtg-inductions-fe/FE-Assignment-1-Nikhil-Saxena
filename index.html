@@ -4,7 +4,7 @@
         <title>FE-Assignment-1-Nikhil-Saxena</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./src/assets/icomoon.css" />
+        <link rel="stylesheet" href="/src/assets/icomoon.css" />
         <link rel="icon" type="image/x-icon" href="/assets/icons/logo.ico" />
     </head>
     <body>
@@ -12,7 +12,7 @@
         <header class="navbar" aria-label="Navigation bar">
             <div class="navbar__background">
                 <img
-                    src="./assets/sections-images/navbar.png"
+                    src="/assets/sections-images/navbar.png"
                     alt="Ellipse background"
                 />
             </div>
@@ -22,6 +22,7 @@
                         id="navbar__menu"
                         class="navbar__menu"
                         aria-label="Menu Button"
+                        type="button"
                     >
                         <img
                             src="/assets/icons/menu.svg"
@@ -30,7 +31,7 @@
                     </button>
 
                     <a href="#" class="navbar__logo" aria-label="logo">
-                        <img src="./assets/icons/logo.png" alt="Logo" />
+                        <img src="/assets/icons/logo.png" alt="Logo" />
                     </a>
                 </div>
 
@@ -75,22 +76,91 @@
                 </ul>
 
                 <div id="navbar__actions" class="navbar__actions">
-                    <a
-                        href="#"
+                    <button
+                        type="button"
                         class="navbar__login"
                         aria-label="Log in to your account"
-                        >Log In</a
                     >
-                    <a
-                        href="#"
+                        Log In
+                    </button>
+                    <button
+                        type="button"
                         class="navbar__signup"
                         aria-label="Create a new account"
-                        >Sign Up</a
                     >
+                        Sign Up
+                    </button>
                 </div>
             </nav>
         </header>
+        <!-- Main -->
+        <main>
+            <!-- Hero Section -->
+            <section
+                class="hero"
+                aria-label="Hero section showcasing travel destinations"
+            >
+                <div class="hero__object" aria-hidden="true">
+                    <img
+                        src="/assets/hero-object.png"
+                        alt="triangle pattern asset"
+                    />
+                </div>
+                <div class="hero__container">
+                    <div class="hero__left-container">
+                        <img
+                            class="hero__image"
+                            src="/assets/hero.png"
+                            alt="Travel-themed illustration"
+                        />
+                    </div>
+                    <div class="hero__right-container">
+                        <button
+                            class="hero__explore-button"
+                            aria-label="Explore the world"
+                            type="button"
+                        >
+                            Explore the world!
+                            <i
+                                class="icon-suitcase hero__explore-button__svg"
+                                aria-hidden="true"
+                            ></i>
+                        </button>
+                        <h1 class="hero__main-heading">
+                            Travel
+                            <span class="hero__main-heading--highlighted">
+                                top destination
+                            </span>
+                            of the world
+                        </h1>
+                        <p class="hero__description">
+                            We always make our customers happy by providing as
+                            many choices as possible
+                        </p>
+                        <div class="hero__actions">
+                            <button
+                                class="hero__get-started"
+                                aria-label="Get started with your travel journey"
+                                type="button"
+                            >
+                                Get Started
+                            </button>
+                            <button
+                                class="hero__watch-demo"
+                                aria-label="Watch demo video about travel services"
+                            >
+                                <i
+                                    class="icon-play hero__watch-demo__svg"
+                                    aria-hidden="true"
+                                ></i
+                                >Watch Demo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
 
-        <script type="module" src="./src/script/index.js"></script>
+        <script type="module" src="/src/script/index.js"></script>
     </body>
 </html>

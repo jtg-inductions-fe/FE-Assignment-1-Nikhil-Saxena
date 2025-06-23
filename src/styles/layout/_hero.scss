@@ -1,1 +1,206 @@
-// TODO
+@use '../abstract' as abs;
+@use '../components' as comp;
+@use '../base' as base;
+
+%hero-button {
+    @include abs.flex(row, center, center);
+    @include comp.button-template(1.5, 10, 0.9);
+    border: 0;
+    @include abs.breakpoint(tablet) {
+        @include comp.button-template(1, 2, 0.9);
+    }
+
+    &:hover {
+        @include abs.drop-shadow();
+    }
+}
+
+.hero {
+    position: relative;
+    @include abs.flex(row, center, center);
+    width: 100%;
+    &__container {
+        width: 100%;
+        padding-top: 0;
+        @include abs.breakpoint(tablet) {
+            padding-top: 2rem;
+        }
+
+        @include abs.breakpoint(desktop) {
+            padding: 0 6rem;
+            @include abs.flex(row-reverse, center, center);
+            max-width: 100rem;
+            min-height: 50rem;
+        }
+    }
+
+    &__left-container {
+        width: 100%;
+        padding: 0 0.6rem 0 1.2rem;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 0.3rem;
+
+        @include abs.breakpoint(tablet) {
+            padding: 2rem 6.7rem 0 8rem;
+            margin-bottom: 0.3rem;
+        }
+
+        @include abs.breakpoint(desktop) {
+            max-height: 55rem;
+            padding: 1rem 0 0 0;
+        }
+    }
+
+    &__image {
+        object-fit: cover;
+        max-width: 100%;
+        max-height: 55rem;
+        display: block;
+    }
+
+    &__right-container {
+        @include abs.flex(column, center, center);
+
+        @include abs.breakpoint(tablet) {
+            width: 100%;
+        }
+
+        @include abs.breakpoint(desktop) {
+            @include abs.flex(column, flex-start, flex-start);
+            text-wrap: balance;
+            height: 100%;
+            min-height: 50rem;
+            width: 55%;
+            padding: 5.5rem 0 0 2.3rem;
+        }
+    }
+
+    &__explore-button {
+        @include base.circular-std-regular(1);
+        @extend %hero-button;
+        border: 0;
+        background-color: transparent;
+
+        gap: 1.4rem;
+        @include abs.drop-shadow(0, 2.5, 5.6);
+        margin-bottom: 1.1rem;
+
+        @include comp.button-template(1, 2, 0.9);
+        color: abs.$secondary-color;
+
+        @include abs.breakpoint(tablet) {
+            margin-bottom: 3rem;
+        }
+
+        @include abs.breakpoint(desktop) {
+            gap: 1.2rem;
+            margin-bottom: 3.5rem;
+        }
+
+        &__svg {
+            font-size: 1.2rem;
+        }
+    }
+
+    &__main-heading {
+        width: 100%;
+        max-width: 24rem;
+        text-align: center;
+        margin-bottom: 1.5rem;
+        font-size: 2.5rem;
+
+        @include abs.breakpoint(tablet) {
+            max-width: 37rem;
+            margin-bottom: 2.4rem;
+            font-size: 3.5rem;
+        }
+
+        @include abs.breakpoint(desktop) {
+            text-align: left;
+            letter-spacing: 0.1rem;
+            line-height: 125%;
+            font-size: 4.1rem;
+            font-style: bold;
+            margin-bottom: 2.4rem;
+        }
+
+        &--highlighted {
+            color: abs.$secondary-color;
+        }
+    }
+
+    &__description {
+        width: 100%;
+        padding: 0 1rem;
+        margin-bottom: 2rem;
+        @include base.card-description-regular;
+
+        @include abs.breakpoint(tablet) {
+            letter-spacing: 0.01rem;
+            line-height: 170%;
+            padding: 0;
+            max-width: 28rem;
+            margin-bottom: 2.7rem;
+            font-size: 1.1rem;
+        }
+
+        @include abs.breakpoint(desktop) {
+            text-align: left;
+            max-width: 28rem;
+            margin-bottom: 4.2rem;
+        }
+    }
+
+    &__actions {
+        @include abs.flex(column, center, center);
+        gap: 1.6rem;
+
+        @include abs.breakpoint(tablet) {
+            width: 100%;
+            @include abs.flex(row, center, center);
+            max-width: 28rem;
+            gap: 1rem;
+        }
+
+        @include abs.breakpoint(desktop) {
+            justify-content: flex-start;
+            gap: 1.2rem;
+        }
+    }
+
+    &__get-started {
+        @extend %hero-button;
+        background-color: abs.$primary-color;
+        color: abs.$white;
+        @include abs.drop-shadow(0, 2.5, 5.6);
+    }
+
+    &__watch-demo {
+        @extend %hero-button;
+        background-color: abs.$white;
+        color: abs.$dark;
+        border: 0.06rem solid #eeeeee;
+        gap: 0.6rem;
+        &__svg {
+            font-size: 1.2rem;
+        }
+    }
+
+    &__object {
+        position: absolute;
+        height: 0;
+        display: none;
+
+        @include abs.breakpoint(tablet) {
+            display: block;
+            top: 72rem;
+            left: 2.3rem;
+        }
+
+        @include abs.breakpoint(desktop) {
+            left: 2.5rem;
+            top: 43rem;
+        }
+    }
+}

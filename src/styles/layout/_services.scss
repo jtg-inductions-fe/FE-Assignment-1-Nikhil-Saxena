@@ -60,7 +60,7 @@
 
         @include abs.breakpoint(desktop) {
             grid-template-columns: 1fr 2fr;
-            padding: 0 auto;
+            padding: 0 6rem;
         }
     }
 
@@ -112,7 +112,7 @@
         }
 
         @include abs.breakpoint(tablet) {
-            padding: 0 auto;
+            padding: 0 4rem;
             grid-template-columns: 1fr 1fr 1fr;
         }
 
@@ -131,7 +131,7 @@
         @include abs.flex(column, space-between, center);
 
         @include abs.breakpoint(tablet) {
-            padding: 4.2rem auto 2rem auto;
+            padding: 4.2rem 2rem 2rem;
             min-height: 20rem;
             justify-content: flex-start;
         }
@@ -147,7 +147,7 @@
 
         &:hover {
             cursor: pointer;
-            border: 0.1rem solid abs.$white;
+            border: 0.1rem solid transparent;
             box-shadow: 0 2.6rem 5.6rem #{abs.$shadow-color};
         }
 

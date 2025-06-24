@@ -12,21 +12,12 @@
         <header class="navbar" aria-label="Navigation bar">
             <div class="navbar__background">
                 <img
-<<<<<<< HEAD
                     src="/assets/sections-images/navbar.png"
-=======
-                    src="./assets/sections-images/navbar.png"
->>>>>>> 67ec6da (Added key features section styling)
                     alt="Ellipse background"
                 />
             </div>
-<<<<<<< HEAD
             <nav class="navbar__container">
-=======
-            <div class="navbar__container">
->>>>>>> faa0894 (layout and typography fixes)
                 <div class="navbar__left-sub-container">
-<<<<<<< HEAD
                     <button
                         id="navbar__menu"
                         class="navbar__menu"
@@ -41,14 +32,6 @@
 
                     <a href="#" class="navbar__logo" aria-label="logo">
                         <img src="/assets/icons/logo.png" alt="Logo" />
-=======
-                    <a id="navbar__menu" href="#" class="navbar__menu">
-                        <img src="./assets/icons/menu.png" alt="Menu  Bar" />
-                    </a>
-
-                    <a href="#" class="navbar__logo">
-                        <img src="./assets/icons/logo.png" alt="Logo" />
->>>>>>> 67ec6da (Added key features section styling)
                     </a>
                 </div>
 
@@ -86,7 +69,7 @@
                         <a
                             href="#"
                             class="navbar__link"
-                            aria-label="Contact Information Paae"
+                            aria-label="Contact Information Pgae"
                             >Contact</a
                         >
                     </li>
@@ -369,61 +352,94 @@
                     />
                 </div>
             </section>
-        </main>
 
-        <!-- Key Features -->
-        <section class="features">
-            <div class="features__image-wrapper">
-                <img
-                    src="/assets/sections-images/features.png"
-                    alt="features"
-                />
-            </div>
-            <div class="features__content">
-                <p class="features__section-name">Key Features</p>
-                <p class="features__section-heading">We offer best services</p>
-                <p class="features__section-description">
-                    Contrary to popular belief, Lorem Ipsum is not simply random
-                    text. It has roots in a piece of classical Latin literature
-                    from 45 BC.
-                </p>
-                <div class="features__card-wrapper">
-                    <div class="features__card">
-                        <i class="icon-location"></i>
-                        <div class="features__card-content">
-                            <div class="features__card-heading">
-                                We offer best services
-                            </div>
-                            <div class="features__card-description">
-                                Lorem Ipsum is not simply random text
+            <!-- Key Features -->
+            <section class="features" aria-label="features-section">
+                <div class="features__image-wrapper">
+                    <img
+                        src="/assets/sections-images/features.png"
+                        alt="Illustration showcasing key features"
+                    />
+                </div>
+                <div class="features__content">
+                    <p
+                        id="features-section-name"
+                        class="features__section-name"
+                    >
+                        Key Features
+                    </p>
+                    <p id="features-heading" class="features__section-heading">
+                        We offer best services
+                    </p>
+                    <p class="features__section-description">
+                        Contrary to popular belief, Lorem Ipsum is not simply
+                        random text. It has roots in a piece of classical Latin
+                        literature from 45 BC.
+                    </p>
+                    <div
+                        class="features__card-wrapper"
+                        role="list"
+                        aria-label="Feature highlights"
+                    >
+                        <div
+                            class="features__card"
+                            role="listitem"
+                            aria-labelledby="feature1-heading"
+                        >
+                            <i class="icon-location" aria-hidden="true"></i>
+                            <div class="features__card-content">
+                                <div
+                                    id="feature1-heading"
+                                    class="features__card-heading"
+                                >
+                                    We offer best services
+                                </div>
+                                <div class="features__card-description">
+                                    Lorem Ipsum is not simply random text
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="features__card">
-                        <i class="icon-calender"></i>
-                        <div class="features__card-content">
-                            <div class="features__card-heading">
-                                Schedule your trip
-                            </div>
-                            <div class="features__card-description">
-                                It has roots in a piece of classical
+                        <div
+                            class="features__card"
+                            role="listitem"
+                            aria-labelledby="feature2-heading"
+                        >
+                            <i class="icon-calender" aria-hidden="true"></i>
+                            <div class="features__card-content">
+                                <div
+                                    id="feature2-heading"
+                                    class="features__card-heading"
+                                >
+                                    Schedule your trip
+                                </div>
+                                <div class="features__card-description">
+                                    It has roots in a piece of classical
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="features__card card__logo">
-                        <i class="icon-card-clip"></i>
-                        <div class="features__card-content">
-                            <div class="features__card-heading">
-                                Get discounted coupons
-                            </div>
-                            <div class="features__card-description">
-                                Lorem Ipsum is not simply random text
+                        <div
+                            class="features__card card__logo"
+                            role="listitem"
+                            aria-labelledby="feature3-heading"
+                        >
+                            <i class="icon-card-clip" aria-hidden="true"></i>
+                            <div class="features__card-content">
+                                <div
+                                    id="feature3-heading"
+                                    class="features__card-heading"
+                                >
+                                    Get discounted coupons
+                                </div>
+                                <div class="features__card-description">
+                                    Lorem Ipsum is not simply random text
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <script type="module" src="./src/script/index.js"></script>
+            </section>
+        </main>
+
+        <script type="module" src="/src/script/index.js"></script>
     </body>
 </html>

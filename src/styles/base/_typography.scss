@@ -39,3 +39,28 @@ h1 {
 body {
     @extend .base-font;
 }
+
+@mixin section-title-heading {
+    @include circular-std-regular(1);
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    color: abs.$secondary-color;
+
+    @include abs.breakpoint(tablet) {
+        @include circular-std-regular(1.6);
+        letter-spacing: 0.2rem;
+    }
+}
+
+@mixin section-description {
+    @include circular-std-regular(2);
+    color: abs.$dark;
+
+    @include abs.breakpoint(tablet) {
+        @include circular-std-regular(2.5);
+    }
+
+    @include abs.breakpoint(desktop) {
+        @include circular-std-regular(2.75);
+    }
+}

@@ -110,6 +110,11 @@
         @include abs.breakpoint(tablet) {
             gap: 2.2rem;
         }
+
+        &:hover {
+            @include abs.drop-shadow();
+            cursor: pointer;
+        }
     }
 
     &__card-heading {

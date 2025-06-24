@@ -139,10 +139,6 @@
         @include abs.breakpoint(desktop) {
             height: 27.5rem;
             padding-top: 3.5rem;
-
-            &:nth-child(3) {
-                display: none;
-            }
         }
 
         &:hover {
@@ -176,6 +172,13 @@
 
             @include abs.breakpoint(desktop) {
                 padding: 0 1.9rem;
+            }
+        }
+
+        &--display-hidden {
+            display: block;
+            @include abs.breakpoint(desktop) {
+                display: none;
             }
         }
     }

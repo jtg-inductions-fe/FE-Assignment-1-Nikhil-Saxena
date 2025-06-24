@@ -24,9 +24,9 @@
 
         @include abs.breakpoint(desktop) {
             width: 100%;
-            max-width: 74rem;
-            @include abs.flex(row, flex-start, center);
-            gap: 6.2rem;
+            max-width: 74.5rem;
+            margin-left: 0.5rem;
+            @include abs.flex(row, space-between, center);
         }
     }
 
@@ -54,13 +54,13 @@
     }
 
     &__container {
-        max-width: 100%;
+        width: 100%;
         display: grid;
         grid-template-columns: 1fr;
 
         @include abs.breakpoint(desktop) {
             grid-template-columns: 1fr 2fr;
-            padding: 0 6rem;
+            padding: 0 auto;
         }
     }
 
@@ -106,10 +106,13 @@
         grid-template-columns: 1fr;
         gap: 1.2rem;
         padding: 0 1rem;
-        overflow: auto;
+
+        @include abs.breakpoint(mobile-lg) {
+            grid-template-columns: 1fr;
+        }
 
         @include abs.breakpoint(tablet) {
-            padding: 0 4rem;
+            padding: 0 auto;
             grid-template-columns: 1fr 1fr 1fr;
         }
 
@@ -128,7 +131,7 @@
         @include abs.flex(column, space-between, center);
 
         @include abs.breakpoint(tablet) {
-            padding: 4.2rem 2rem 2rem 2rem;
+            padding: 4.2rem auto 2rem auto;
             min-height: 20rem;
             justify-content: flex-start;
         }
@@ -144,7 +147,7 @@
 
         &:hover {
             cursor: pointer;
-            border: 0;
+            border: 0.1rem solid abs.$white;
             box-shadow: 0 2.6rem 5.6rem #{abs.$shadow-color};
         }
 

@@ -54,7 +54,7 @@
     }
 
     &__container {
-        width: 100%;
+        max-width: 100%;
         display: grid;
         grid-template-columns: 1fr;
 
@@ -106,6 +106,7 @@
         grid-template-columns: 1fr;
         gap: 1.2rem;
         padding: 0 1rem;
+        overflow: auto;
 
         @include abs.breakpoint(tablet) {
             padding: 0 4rem;

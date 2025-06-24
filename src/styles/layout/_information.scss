@@ -7,7 +7,7 @@
     gap: 2rem;
     @include abs.flex(column, center, center);
 
-    @include abs.breakpoint(large) {
+    @include abs.breakpoint(desktop) {
         margin-top: 3rem;
         @include abs.flex(row, flex-start, center);
     }
@@ -16,12 +16,12 @@
         width: 100%;
         @include abs.flex(row, center, center);
         padding: 0 1rem;
-        @include abs.breakpoint(medium) {
+        @include abs.breakpoint(tablet) {
             width: 100%;
             padding: 1.5rem 2rem;
         }
 
-        @include abs.breakpoint(large) {
+        @include abs.breakpoint(desktop) {
             padding: 0;
             height: 45rem;
             width: 60%;
@@ -34,7 +34,7 @@
     &__content {
         width: 100%;
         @include abs.flex(column, center, center);
-        @include abs.breakpoint(large) {
+        @include abs.breakpoint(desktop) {
             width: 40%;
             align-items: flex-start;
             padding: 2rem 0rem;
@@ -43,7 +43,7 @@
 
     &__section-name {
         @include base.section-name-heading;
-        @include abs.breakpoint(large) {
+        @include abs.breakpoint(desktop) {
             text-align: left;
         }
     }
@@ -52,7 +52,7 @@
         padding: 1rem 0 2.5rem 0;
         text-align: center;
         @include base.section-description;
-        @include abs.breakpoint(large) {
+        @include abs.breakpoint(desktop) {
             text-align: left;
             max-width: 30rem;
         }
@@ -61,10 +61,10 @@
     &__section-description {
         max-width: 22rem;
         @include base.card-description-regular;
-        @include abs.breakpoint(medium) {
+        @include abs.breakpoint(tablet) {
             max-width: 50rem;
         }
-        @include abs.breakpoint(large) {
+        @include abs.breakpoint(desktop) {
             text-align: left;
             max-width: 30rem;
         }
@@ -78,7 +78,7 @@
         padding: 1rem;
         row-gap: 1rem;
 
-        @include abs.breakpoint(medium) {
+        @include abs.breakpoint(tablet) {
             margin-top: 4rem;
             grid-template-columns: 1fr 1fr;
             column-gap: 2.5rem;
@@ -86,7 +86,7 @@
             padding: 0 6rem;
         }
 
-        @include abs.breakpoint(large) {
+        @include abs.breakpoint(desktop) {
             padding: 0 7rem 0 0;
         }
     }
@@ -99,13 +99,13 @@
         gap: 2.5rem;
         @include abs.flex(column, space-around, center);
 
-        @include abs.breakpoint(medium) {
+        @include abs.breakpoint(tablet) {
             padding: 2.5rem 1rem;
         }
     }
 
     &__card-heading {
-        @include base.circular-std-regular(35);
+        @include base.circular-std-regular(2);
         line-height: 0%;
         color: abs.$accent-orange;
     }

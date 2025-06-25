@@ -9,33 +9,37 @@
     position: relative;
     @include abs.flex(column, center, center);
     @include abs.breakpoint(desktop) {
-        gap: 4rem;
-        margin-top: 3.5rem;
+        gap: 5rem;
+        margin-top: 0rem;
         @include abs.flex(row, flex-start, center);
     }
 
     &__image-wrapper {
         width: 100%;
         @include abs.flex(row, flex-start, flex-start);
-        padding: 0.4rem 0;
+        padding: 0.5rem 0;
         max-width: 25rem;
 
         @include abs.breakpoint(tablet) {
-            max-width: 60rem;
+            max-width: 55rem;
             width: 100%;
-            padding: 4rem 2rem 2rem 4rem;
+            padding: 4rem 2rem 3rem 1.5rem;
         }
 
         @include abs.breakpoint(desktop) {
             padding: 0 0 0 0.1rem;
             margin-top: 0;
-            width: auto;
-            max-width: 54.5rem;
+            max-width: 49.5rem;
         }
         &-image {
-            max-width: 23rem;
+            width: 100%;
+            max-width: 22.5rem;
             height: 100%;
             @include abs.breakpoint(tablet) {
+                margin-top: 0;
+                max-width: 49rem;
+            }
+            @include abs.breakpoint(tablet-lg) {
                 max-width: 50.5rem;
             }
             @include abs.breakpoint(desktop) {
@@ -46,13 +50,13 @@
 
     &__content {
         width: 100%;
-        z-index: 2;
+        margin-top: 0.1rem;
         @include abs.flex(column, center, center);
         @include abs.breakpoint(desktop) {
             width: 40%;
             align-items: flex-start;
-            padding: 2rem 0;
-            margin: 0.5rem auto 0;
+            padding: 3rem 0;
+            margin: 2rem auto 0;
         }
     }
 
@@ -61,6 +65,7 @@
         @include abs.breakpoint(desktop) {
             text-align: left;
             padding-top: 1rem;
+            padding-top: 2rem;
         }
     }
 
@@ -149,7 +154,7 @@
             display: block;
             position: absolute;
             right: 0;
-            top: 17.5rem;
+            top: 21rem;
             z-index: 1;
         }
     }

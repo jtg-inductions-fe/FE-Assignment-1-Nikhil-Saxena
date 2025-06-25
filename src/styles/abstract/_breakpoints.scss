@@ -1,12 +1,13 @@
 @use './variables' as *;
 /// Breakpoint Mixin
-/// Provides media queries for 4 screen sizes:
+/// Provides media queries for 5 screen sizes:
 /// - mobile: max-width $breakpoint-mobile
 /// - mobile-lg: min-width $breakpoint-mobile-lg
 /// - tablet: min-width $breakpoint-tablet
+/// - tablet-lg: min-width $breakpoint-tablet-lg
 /// - desktop: min-width $breakpoint-desktop
 ///
-/// @param {String} $point - Accepts 'mobile', 'mobile-lg', 'tablet', or 'desktop'
+/// @param {String} $point - Accepts 'mobile', 'mobile-lg', 'tablet', 'tablet-lg' or 'desktop'
 ///
 @mixin breakpoint($point) {
     @if $point == mobile {
@@ -19,6 +20,10 @@
         }
     } @else if $point == tablet {
         @media (min-width: $breakpoint-tablet) {
+            @content;
+        }
+    } @else if $point == tablet-lg {
+        @media (min-width: $breakpoint-desktop) {
             @content;
         }
     } @else if $point == desktop {

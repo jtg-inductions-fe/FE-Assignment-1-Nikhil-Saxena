@@ -102,7 +102,7 @@
             >
                 <div class="hero__object" aria-hidden="true">
                     <img
-                        src="/assets/hero-object.png"
+                        src="/assets/ui-elements/ui-el1.png"
                         alt="triangle pattern asset"
                     />
                 </div>
@@ -110,7 +110,7 @@
                     <div class="hero__left-container">
                         <img
                             class="hero__image"
-                            src="/assets/hero.png"
+                            src="/assets/sections-images/hero.png"
                             alt="Travel-themed illustration"
                         />
                     </div>
@@ -119,6 +119,7 @@
                             class="hero__explore-button"
                             aria-label="Explore the world"
                             type="button"
+                            tabindex="0"
                         >
                             Explore the world!
                             <i
@@ -167,31 +168,26 @@
                         src="/assets/clients/tripadvisor.svg"
                         alt="Tripadvisor logo"
                         class="clients__item"
-                        tabindex="0"
                     />
                     <img
                         src="/assets/clients/expedia.svg"
                         alt="Expedia logo"
                         class="clients__item"
-                        tabindex="0"
                     />
                     <img
                         src="/assets/clients/bookingdotcom.svg"
                         alt="Booking.com logo"
                         class="clients__item"
-                        tabindex="0"
                     />
                     <img
                         src="/assets/clients/airbnb.svg"
                         alt="Airbnb logo"
                         class="clients__item"
-                        tabindex="0"
                     />
                     <img
                         src="/assets/clients/orabitz.svg"
                         alt="Orabitz logo"
                         class="clients__item"
-                        tabindex="0"
                     />
                 </div>
 
@@ -213,11 +209,7 @@
                         role="list"
                         aria-label="Service offerings"
                     >
-                        <div
-                            class="services__card"
-                            role="listitem"
-                            tabindex="0"
-                        >
+                        <div class="services__card" role="listitem">
                             <img
                                 src="/assets/ui-elements/destination-service.svg"
                                 alt="Destination service icon"
@@ -231,11 +223,7 @@
                                 above five feet.
                             </p>
                         </div>
-                        <div
-                            class="services__card"
-                            role="listitem"
-                            tabindex="0"
-                        >
+                        <div class="services__card" role="listitem">
                             <img
                                 src="/assets/ui-elements/booking-service.svg"
                                 alt="Booking service icon"
@@ -250,7 +238,6 @@
                         <div
                             class="services__card services__card--display-hidden"
                             role="listitem"
-                            tabindex="0"
                         >
                             <img
                                 src="/assets/ui-elements/cloud-service.svg"
@@ -266,6 +253,103 @@
                             </p>
                         </div>
                     </div>
+                </div>
+            </section>
+
+            <!-- Information Section -->
+            <section class="information" aria-label="information-section">
+                <div
+                    class="information__image-wrapper"
+                    aria-label="Travel and vacation illustration"
+                >
+                    <img
+                        class="information__image-wrapper-image"
+                        src="/assets/sections-images/information.png"
+                        alt="A travel illustration"
+                    />
+                </div>
+
+                <div class="information__content">
+                    <h4
+                        id="information-section-name"
+                        class="information__section-name"
+                        aria-label="Section category"
+                    >
+                        travel point
+                    </h4>
+
+                    <h2
+                        id="information-heading"
+                        class="information__section-heading"
+                    >
+                        We helping you find your dream location
+                    </h2>
+
+                    <p
+                        class="information__section-description"
+                        aria-label="Section description"
+                    >
+                        Contrary to popular belief, Lorem Ipsum is not simply
+                        random text. It has roots in a piece of classical Latin
+                        literature from 45 BC.
+                    </p>
+
+                    <ul
+                        class="information__card-wrapper"
+                        role="list"
+                        aria-label="Travel statistics"
+                    >
+                        <li
+                            class="information__card"
+                            role="listitem"
+                            aria-label="500+ Holiday Packages"
+                        >
+                            <h5 class="information__card-heading">500+</h5>
+                            <p class="information__card-description">
+                                Holiday Package
+                            </p>
+                        </li>
+
+                        <li
+                            class="information__card"
+                            role="listitem"
+                            aria-label="100 Luxury Hotels"
+                        >
+                            <h5 class="information__card-heading">100</h5>
+                            <p class="information__card-description">
+                                Luxury Hotel
+                            </p>
+                        </li>
+
+                        <li
+                            class="information__card"
+                            role="listitem"
+                            aria-label="7 Premium Airlines"
+                        >
+                            <h5 class="information__card-heading">7</h5>
+                            <p class="information__card-description">
+                                Premium Airlines
+                            </p>
+                        </li>
+
+                        <li
+                            class="information__card"
+                            role="listitem"
+                            aria-label="2,000+ Happy Customers"
+                        >
+                            <h5 class="information__card-heading">2k+</h5>
+                            <p class="information__card-description">
+                                Happy Customer
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="information__background-asset">
+                    <img
+                        src="/assets/ui-elements/ui-el2.png"
+                        alt=""
+                        aria-hidden="true"
+                    />
                 </div>
             </section>
         </main>

@@ -102,6 +102,7 @@
     }
 
     &__cards-container {
+        width: 100%;
         display: grid;
         grid-template-columns: 1fr;
         gap: 1.2rem;
@@ -112,7 +113,8 @@
         }
 
         @include abs.breakpoint(tablet) {
-            padding: 0 4rem;
+            margin-inline: auto;
+            max-width: 58rem;
             grid-template-columns: 1fr 1fr 1fr;
         }
 
@@ -176,7 +178,7 @@
         }
 
         &--display-hidden {
-            display: block;
+            display: flex;
             @include abs.breakpoint(desktop) {
                 display: none;
             }

@@ -1,1 +1,161 @@
-// TODO
+@use '../abstract' as abs;
+@use '../base' as base;
+
+.information {
+    margin-top: 4rem;
+    width: 100%;
+    max-width: 100rem;
+    gap: 2rem;
+    position: relative;
+    @include abs.flex(column, center, center);
+    @include abs.breakpoint(desktop) {
+        gap: 5rem;
+        margin-top: 0rem;
+        @include abs.flex(row, flex-start, center);
+    }
+
+    &__image-wrapper {
+        width: 100%;
+        @include abs.flex(row, flex-start, flex-start);
+        padding: 0.5rem 0;
+        max-width: 25rem;
+
+        @include abs.breakpoint(tablet) {
+            max-width: 55rem;
+            width: 100%;
+            padding: 4rem 2rem 3rem 1.5rem;
+        }
+
+        @include abs.breakpoint(desktop) {
+            padding: 0 0 0 0.1rem;
+            margin-top: 0;
+            max-width: 49.5rem;
+        }
+        &-image {
+            width: 100%;
+            max-width: 22.5rem;
+            height: 100%;
+            @include abs.breakpoint(tablet) {
+                margin-top: 0;
+                max-width: 49rem;
+            }
+            @include abs.breakpoint(tablet-lg) {
+                max-width: 50.5rem;
+            }
+            @include abs.breakpoint(desktop) {
+                object-fit: contain;
+            }
+        }
+    }
+
+    &__content {
+        width: 100%;
+        margin-top: 0.1rem;
+        @include abs.flex(column, center, center);
+        @include abs.breakpoint(desktop) {
+            width: 40%;
+            align-items: flex-start;
+            padding: 3rem 0;
+            margin: 2rem auto 0;
+        }
+    }
+
+    &__section-name {
+        @include base.section-title-heading;
+        @include abs.breakpoint(desktop) {
+            text-align: left;
+            padding-top: 1rem;
+            padding-top: 2rem;
+        }
+    }
+
+    &__section-heading {
+        padding: 1rem 0 1.9rem 0;
+        text-align: center;
+        @include base.section-description;
+        @include abs.breakpoint(desktop) {
+            text-align: left;
+            max-width: 30rem;
+        }
+    }
+
+    &__section-description {
+        max-width: 22.5rem;
+        padding: 0;
+        @include base.card-description-regular;
+        @include abs.breakpoint(tablet) {
+            font-size: 1.15rem;
+            max-width: 51rem;
+        }
+        @include abs.breakpoint(desktop) {
+            text-align: left;
+            width: 100%;
+            max-width: 30rem;
+        }
+    }
+
+    &__card-wrapper {
+        margin-top: 1rem;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 1rem;
+        row-gap: 1rem;
+
+        @include abs.breakpoint(tablet) {
+            margin-top: 4rem;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 2rem;
+            row-gap: 2rem;
+            padding: 0 6rem;
+        }
+
+        @include abs.breakpoint(desktop) {
+            padding: 0 7rem 0 0;
+        }
+    }
+
+    &__card {
+        width: 100%;
+        border: 0.1rem solid #{abs.$shadow-color};
+        padding: 3.2rem 1rem 1.9rem;
+        border-radius: 1.5rem;
+        gap: 2.5rem;
+        background-color: abs.$white;
+        @include abs.flex(column, space-around, center);
+        @include abs.breakpoint(tablet) {
+            gap: 2.2rem;
+        }
+
+        &:hover {
+            @include abs.drop-shadow();
+            cursor: pointer;
+        }
+    }
+
+    &__card-heading {
+        @include base.circular-std-regular(2.2);
+        line-height: 0;
+        color: abs.$accent-orange;
+    }
+
+    &__card-description {
+        color: abs.$dark;
+        line-height: 0;
+        @include base.card-description-regular;
+        @include abs.breakpoint(mobile) {
+            font-size: 1.1rem;
+        }
+    }
+
+    &__background-asset {
+        display: none;
+        @include abs.breakpoint(desktop) {
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 21rem;
+            z-index: 1;
+        }
+    }
+}

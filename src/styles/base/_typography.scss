@@ -32,14 +32,6 @@ h1 {
     }
 }
 
-.base-font {
-    font-family: 'circular-std';
-}
-
-body {
-    @extend .base-font;
-}
-
 @mixin section-title-heading {
     @include circular-std-regular(1);
     text-transform: uppercase;
@@ -63,4 +55,12 @@ body {
     @include abs.breakpoint(desktop) {
         @include circular-std-regular(2.75);
     }
+}
+
+.base-font {
+    font-family: 'circular-std';
+}
+
+body {
+    @extend .base-font;
 }

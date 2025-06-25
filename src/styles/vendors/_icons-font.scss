@@ -29,64 +29,82 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-twitter::before {
-    content: icon.$icon-twitter;
-    color: #f1f2f2;
+.icon-arrow-circle-down9-1 {
+    &:before {
+        content: icon.$icon-arrow-circle-down9-1;
+    }
 }
-
-.icon-arrow-left::before {
-    content: icon.$icon-arrow-left;
+.icon-twitter {
+    &:before {
+        content: icon.$icon-twitter;
+        color: #f1f2f2;
+    }
 }
-
-.icon-arrow-right::before {
-    content: icon.$icon-arrow-right;
-    color: #fff;
+.icon-instagram {
+    &:before {
+        content: icon.$icon-instagram;
+        color: #fff;
+    }
 }
-
-.icon-suitcase::before {
-    content: icon.$icon-suitcase;
-    color: #f85e9f;
+.icon-arrow-left {
+    &:before {
+        content: icon.$icon-arrow-left;
+    }
 }
-
-.icon-calendar::before {
-    content: icon.$icon-calendar;
-    color: #fff;
+.icon-arrow-right {
+    &:before {
+        content: icon.$icon-arrow-right;
+        color: #fff;
+    }
 }
-
-.icon-card-clip::before {
-    content: icon.$icon-card-clip;
-    color: #fff;
+.icon-breifcase {
+    &:before {
+        content: icon.$icon-breifcase;
+        color: #f85e9f;
+    }
 }
-
-.icon-facebook::before {
-    content: icon.$icon-facebook;
-    color: #5d50c6;
+.icon-calender {
+    &:before {
+        content: icon.$icon-calender;
+        color: #fff;
+    }
 }
-
-.icon-instagram::before {
-    content: icon.$icon-instagram;
-    color: #fff;
+.icon-card-clip {
+    &:before {
+        content: icon.$icon-card-clip;
+        color: #fff;
+    }
 }
-
-.icon-location::before {
-    content: icon.$icon-location;
-    color: #fff;
+.icon-location {
+    &:before {
+        content: icon.$icon-location;
+        color: #fff;
+    }
 }
-
-.icon-logo::before {
-    content: icon.$icon-logo;
+.icon-logo {
+    &:before {
+        content: icon.$icon-logo;
+    }
 }
-
-.icon-mail::before {
-    content: icon.$icon-mail;
+.icon-mail {
+    &:before {
+        content: icon.$icon-mail;
+    }
 }
-
-.icon-play::before {
-    content: icon.$icon-play;
-    color: #5d50c6;
+.icon-play {
+    &:before {
+        content: icon.$icon-play;
+        color: #5d50c6;
+    }
 }
-
-.icon-star::before {
-    content: icon.$icon-star;
-    color: #facd49;
+.icon-star {
+    &:before {
+        content: icon.$icon-star;
+        color: #facd49;
+    }
+}
+.icon-facebook {
+    &:before {
+        content: icon.$icon-facebook;
+    }
 }

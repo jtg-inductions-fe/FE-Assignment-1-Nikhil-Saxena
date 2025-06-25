@@ -1,6 +1,7 @@
 @use '../abstract' as abs;
 @use '../components' as comp;
 @use '../base' as base;
+
 .features {
     margin-top: 2rem;
     width: 100%;
@@ -9,7 +10,7 @@
 
     @include abs.breakpoint(desktop) {
         gap: 0;
-        margin-top: 1rem;
+        margin-top: 0;
         padding: 0;
         @include abs.flex(row-reverse, center, center);
     }
@@ -17,31 +18,32 @@
     &__image-wrapper {
         width: 100%;
         @include abs.flex(row, flex-start, flex-start);
-        padding: 2.5rem 2rem;
+        padding: 2.5rem;
         max-width: 27rem;
-        margin-bottom: 2rem;
+        margin-bottom: 2.5rem;
         @include abs.breakpoint(tablet) {
             width: 100%;
             padding: 6rem 1rem 2rem;
             max-width: 45rem;
-            margin-bottom: 0;
+            margin-bottom: 0.5rem;
         }
 
         @include abs.breakpoint(desktop) {
             padding: 4rem 0 0 0;
-            height: 55rem;
+            height: 59rem;
             width: 100%;
             max-width: 37rem;
         }
         &-image {
             height: 100%;
             width: 100%;
-            max-width: 19rem;
+            max-width: 18.5rem;
             @include abs.breakpoint(tablet) {
-                max-width: 37rem;
+                max-width: 36.5rem;
             }
             @include abs.breakpoint(desktop) {
-                max-width: 35rem;
+                padding-top: 1rem;
+                max-width: 38rem;
             }
         }
     }
@@ -50,10 +52,10 @@
         width: 100%;
         @include abs.flex(column, center, center);
         @include abs.breakpoint(desktop) {
-            max-width: 45rem;
+            max-width: 43rem;
             width: 100%;
             align-items: flex-start;
-            padding: 2rem 2rem 2rem 5rem;
+            padding: 0 0 2rem 4rem;
         }
     }
 
@@ -71,7 +73,7 @@
         @include base.section-description;
         @include abs.breakpoint(desktop) {
             text-align: left;
-            max-width: 30rem;
+            max-width: 38rem;
         }
     }
 
@@ -82,34 +84,34 @@
             text-align: center;
         }
         @include abs.breakpoint(tablet) {
+            font-size: 1.125rem;
             text-align: center;
-            max-width: 52rem;
+            max-width: 51rem;
         }
         @include abs.breakpoint(desktop) {
-            text-align: center;
             text-align: left;
-            max-width: 30rem;
+            max-width: 33rem;
         }
     }
 
     &__card-wrapper {
-        margin-top: 0.5rem;
+        margin-top: 1rem;
         width: 100%;
         display: grid;
         grid-template-columns: 1fr;
         padding: 1rem 3rem;
-        row-gap: 0.2rem;
+        row-gap: 0.3rem;
 
         @include abs.breakpoint(tablet) {
-            margin-top: 4.5rem;
+            margin-top: 5rem;
             grid-template-columns: 1fr;
             column-gap: 2.5rem;
-            row-gap: 1.7rem;
+            row-gap: 1.8rem;
             padding: 0 6rem;
         }
 
         @include abs.breakpoint(desktop) {
-            padding: 0;
+            padding: 0 2rem 0 0;
         }
     }
 
@@ -117,7 +119,7 @@
         width: 100%;
         border-radius: 1.5rem;
         padding: 2rem;
-        gap: 2.4rem;
+        gap: 2.3rem;
         @include abs.flex(column, space-around, flex-start);
 
         @include abs.breakpoint(tablet) {
@@ -131,7 +133,7 @@
         }
 
         &:hover {
-            outline: 1px solid #{abs.$shadow-color};
+            outline: 0.1rem solid #{abs.$shadow-color};
             cursor: pointer;
         }
         &-icon-yellow {
@@ -143,13 +145,14 @@
         }
 
         &-icon-pink {
+            font-size: 2.3rem;
             background-color: abs.$secondary-color;
         }
     }
 
     &__card-content {
         @include abs.breakpoint(tablet) {
-            gap: 1rem;
+            gap: 0.5rem;
             height: 100%;
             @include abs.flex(column, center, flex-start);
         }
@@ -159,18 +162,16 @@
         @include base.circular-std-regular(1.42);
         line-height: 120%;
         padding-bottom: 0.2rem;
-        text-wrap: nowrap;
+        white-space: nowrap;
     }
 
     &__card-description {
         color: abs.$dark;
-        line-height: 0%;
-        font-size: 6rem;
         font-style: normal;
         font-weight: 400;
-        font-size: 18px;
+        font-size: 1.125rem;
         line-height: 160%;
-        letter-spacing: 0%;
+        letter-spacing: 0;
         font-family: 'inter';
         color: abs.$transparent-gray;
     }

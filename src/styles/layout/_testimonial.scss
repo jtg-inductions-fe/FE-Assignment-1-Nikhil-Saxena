@@ -7,19 +7,17 @@
     margin-top: 3.8rem;
     width: 100%;
     position: relative;
-    overflow: hidden;
-    min-height: 60rem;
 
     @include abs.breakpoint(tablet) {
-        min-height: 50rem;
         margin-top: 9rem;
     }
 
     @include abs.breakpoint(desktop) {
-        min-height: 45rem;
         margin-top: 4.5rem;
     }
     &__background {
+        // display: none;
+        height: 0;
         position: absolute;
         opacity: 0;
         z-index: -1;
@@ -102,9 +100,9 @@
     &__rating {
         margin-bottom: 4.5rem;
         @include abs.flex(row, center, center);
-        gap: 1.5rem;
+        gap: 1.2rem;
         &-icon {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
         }
 
         @include abs.breakpoint(tablet) {
@@ -148,7 +146,7 @@
         }
 
         @include abs.breakpoint(desktop) {
-            top: 0;
+            top: 3rem;
         }
     }
 

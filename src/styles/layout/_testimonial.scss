@@ -1,5 +1,4 @@
 @use '../abstract' as abs;
-@use '../components' as comp;
 @use '../base' as base;
 
 .testimonial {
@@ -7,7 +6,6 @@
     margin-top: 3.8rem;
     width: 100%;
     position: relative;
-
     @include abs.breakpoint(tablet) {
         margin-top: 9rem;
     }
@@ -16,27 +14,22 @@
         margin-top: 4.5rem;
     }
     &__background {
-        // display: none;
-        height: 0;
         position: absolute;
         opacity: 0;
         z-index: -1;
-        left: -15rem;
-
         @include abs.breakpoint(tablet) {
-            opacity: 10%;
-            top: -20rem;
+            opacity: 0.1;
+            height: fit-content;
+            top: -10%;
         }
 
         @include abs.breakpoint(desktop) {
-            top: -11rem;
-            left: -10rem;
+            top: -30%;
         }
 
         &-image {
             height: 100%;
             width: 100%;
-            min-width: 100rem;
         }
     }
     &__section-name {
@@ -55,11 +48,11 @@
         max-width: 25rem;
 
         @include abs.breakpoint(tablet) {
-            max-width: 35rem;
+            max-width: 56rem;
         }
 
         @include abs.breakpoint(desktop) {
-            max-width: 53rem;
+            max-width: 75rem;
         }
     }
 
@@ -68,10 +61,11 @@
         max-width: 25rem;
         height: 100%;
         padding: 4rem 0;
+        margin-inline: auto;
         @include abs.flex(column, center, center);
         @include abs.breakpoint(tablet) {
             max-width: 35rem;
-            padding: 3rem 0;
+            padding: 3.5rem 0;
         }
         @include abs.breakpoint(desktop) {
             padding: 3rem 0 0 1rem;
@@ -98,7 +92,7 @@
     }
 
     &__rating {
-        margin-bottom: 4.5rem;
+        margin-bottom: 4rem;
         @include abs.flex(row, center, center);
         gap: 1.2rem;
         &-icon {
@@ -106,7 +100,7 @@
         }
 
         @include abs.breakpoint(tablet) {
-            margin-bottom: 4rem;
+            margin-bottom: 3.5rem;
         }
     }
 
@@ -135,14 +129,12 @@
         position: relative;
         @include abs.flex(row, center, center);
         gap: 1rem;
-        .is-active {
-            background-color: abs.$secondary-color;
-            width: 1rem;
-            height: 1rem;
-        }
 
-        @include abs.breakpoint(tablet) {
-            top: 1rem;
+        top: 0.2rem;
+        .is-active {
+            width: 1.2rem;
+            height: 1.2rem;
+            background-color: abs.$secondary-color;
         }
 
         @include abs.breakpoint(desktop) {
@@ -161,7 +153,6 @@
 
     &__arrows {
         position: relative;
-        top: 0;
         max-width: 100%;
     }
 
@@ -200,20 +191,13 @@
 
         &--next {
             right: 0;
-            @include abs.breakpoint(tablet) {
-                right: -10.5rem;
-            }
         }
 
         &--prev {
             left: 0;
-            @include abs.breakpoint(tablet) {
-                left: -10.5rem;
-            }
         }
         &:disabled {
-            background-color: abs.$white;
-            outline: 0.1rem solid abs.$deep-gray;
+            opacity: 50%;
         }
     }
 }

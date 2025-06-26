@@ -1,33 +1,50 @@
 @use '../abstract' as abs;
-@use '../components/' as comp;
-@use '../base/' as base;
+@use '../components' as comp;
+@use '../base' as base;
 
 .testimonial {
     @include abs.flex(column, center, center);
-    margin-top: 4rem;
+    margin-top: 3.8rem;
     width: 100%;
+    position: relative;
+    overflow: hidden;
+    min-height: 60rem;
 
-    @include abs.breakpoint(medium) {
-        margin-top: 8.7rem;
+    @include abs.breakpoint(tablet) {
+        min-height: 50rem;
+        margin-top: 9rem;
+    }
+
+    @include abs.breakpoint(desktop) {
+        min-height: 45rem;
+        margin-top: 4.5rem;
     }
     &__background {
-        position: relative;
-        height: 0;
-        opacity: 0%;
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+        left: -15rem;
 
-        @include abs.breakpoint(medium) {
+        @include abs.breakpoint(tablet) {
             opacity: 10%;
-            bottom: 6rem;
+            top: -20rem;
         }
 
-        @include abs.breakpoint(large) {
-            bottom: 11rem;
+        @include abs.breakpoint(desktop) {
+            top: -11rem;
+            left: -10rem;
+        }
+
+        &-image {
+            height: 100%;
+            width: 100%;
+            min-width: 100rem;
         }
     }
     &__section-name {
         text-align: center;
         margin-bottom: 1rem;
-        @include base.section-name-heading;
+        @include base.section-title-heading;
     }
 
     &__section-heading {
@@ -37,39 +54,47 @@
 
     &__card-wrapper {
         width: 100%;
-        @include abs.flex(row, center, center);
-        max-width: 70rem;
-        overflow: hidden;
+        max-width: 25rem;
+
+        @include abs.breakpoint(tablet) {
+            max-width: 35rem;
+        }
+
+        @include abs.breakpoint(desktop) {
+            max-width: 53rem;
+        }
     }
 
     &__card {
         width: 100%;
-        min-width: 70rem;
+        max-width: 25rem;
         height: 100%;
         padding: 4rem 0;
         @include abs.flex(column, center, center);
-        @include abs.breakpoint(medium) {
+        @include abs.breakpoint(tablet) {
+            max-width: 35rem;
             padding: 3rem 0;
         }
-        @include abs.breakpoint(large) {
-            padding: 3.5rem 0;
+        @include abs.breakpoint(desktop) {
+            padding: 3rem 0 0 1rem;
+            max-width: 53rem;
         }
     }
 
     &__avatar {
         width: 8rem;
         margin-bottom: 4rem;
-        @include abs.breakpoint(medium) {
-            margin-bottom: 3.8rem;
+        @include abs.breakpoint(tablet) {
+            margin-bottom: 3.7rem;
         }
     }
 
     &__username {
         margin-bottom: 2rem;
         color: abs.$transparent-gray;
-        @include base.circular-std-regular(22);
+        @include base.circular-std-regular(1.5);
         &--highlighted {
-            @include base.circular-std-regular(30);
+            @include base.circular-std-regular(1.7);
             color: abs.$accent-orange;
         }
     }
@@ -78,11 +103,11 @@
         margin-bottom: 4.5rem;
         @include abs.flex(row, center, center);
         gap: 1.5rem;
-        i {
+        &-icon {
             font-size: 1.5rem;
         }
 
-        @include abs.breakpoint(medium) {
+        @include abs.breakpoint(tablet) {
             margin-bottom: 4rem;
         }
     }
@@ -95,67 +120,19 @@
         max-width: 24.2rem;
         color: abs.$transparent-gray;
 
-        @include abs.breakpoint(medium) {
+        @include abs.breakpoint(tablet) {
             font-size: 1.4rem;
-            max-width: 36rem;
+            max-width: 54rem;
         }
 
-        @include abs.breakpoint(large) {
+        @include abs.breakpoint(desktop) {
             max-width: 51rem;
-        }
-    }
-
-    &__navigation-container {
-        height: 0;
-        @include abs.flex(row, space-between, center);
-        width: 100%;
-        padding: 0 1rem;
-        position: relative;
-        top: 42rem;
-
-        @include abs.breakpoint(medium) {
-            top: 15rem;
-            padding: 0 4rem;
-        }
-
-        @include abs.breakpoint(large) {
-            padding: 0 7.2rem;
-            top: 14.2rem;
-        }
-    }
-
-    &__navigation {
-        cursor: pointer;
-        width: 4rem;
-        height: 4rem;
-        border-radius: 100%;
-        border: 1px solid abs.$light-gray;
-        background-color: abs.$primary-color;
-        @include abs.flex(row, center, center);
-        i {
-            font-size: 1rem;
-            color: abs.$white;
-        }
-
-        @include abs.breakpoint(medium) {
-            width: 6.5rem;
-            height: 6.5rem;
-        }
-
-        &:hover {
-            box-shadow: 0px 41px 90px #{abs.$shadow-color};
-        }
-
-        &--disabled {
-            background-color: abs.$white;
-            i {
-                color: abs.$dark;
-            }
         }
     }
 }
 
 .splide {
+    position: relative;
     &__pagination {
         position: relative;
         @include abs.flex(row, center, center);
@@ -165,9 +142,18 @@
             width: 1rem;
             height: 1rem;
         }
+
+        @include abs.breakpoint(tablet) {
+            top: 1rem;
+        }
+
+        @include abs.breakpoint(desktop) {
+            top: 0;
+        }
     }
 
     &__pagination__page {
+        opacity: 1;
         width: 1.5rem;
         height: 1.5rem;
         border-radius: 100%;
@@ -176,46 +162,60 @@
     }
 
     &__arrows {
-        position: absolute;
-        top: 100rem;
+        position: relative;
+        top: 0;
         max-width: 100%;
     }
 
     &__arrow {
+        position: absolute;
         cursor: pointer;
         opacity: 1;
         width: 4rem;
         height: 4rem;
+        top: 42rem;
         border-radius: 100%;
-        border: 1px solid abs.$light-gray;
+        border: 0.1rem solid abs.$light-gray;
         background-color: abs.$primary-color;
         @include abs.flex(row, center, center);
+        @include abs.breakpoint(tablet) {
+            top: 15rem;
+        }
 
-        i {
+        @include abs.breakpoint(desktop) {
+            top: 14rem;
+        }
+
+        &-icon {
             font-size: 1rem;
             color: abs.$white;
         }
 
-        @include abs.breakpoint(medium) {
+        @include abs.breakpoint(tablet) {
             width: 6.5rem;
             height: 6.5rem;
         }
 
         &:hover {
-            box-shadow: 0px 41px 90px #{abs.$shadow-color};
+            @include abs.drop-shadow();
         }
 
         &--next {
-            i {
-                color: abs.$dark;
+            right: 0;
+            @include abs.breakpoint(tablet) {
+                right: -10.5rem;
+            }
+        }
+
+        &--prev {
+            left: 0;
+            @include abs.breakpoint(tablet) {
+                left: -10.5rem;
             }
         }
         &:disabled {
             background-color: abs.$white;
-            color: black;
-            i {
-                color: abs.$dark;
-            }
+            outline: 0.1rem solid abs.$deep-gray;
         }
     }
 }

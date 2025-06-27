@@ -10,7 +10,7 @@
 }
 
 .newsletter {
-    margin-top: 10rem;
+    margin-top: 10.5rem;
     width: 100%;
     @include abs.flex(row, center, center);
 
@@ -52,6 +52,7 @@
         }
 
         @include abs.breakpoint(desktop) {
+            padding-top: 8.5rem;
             padding-left: 1rem;
             margin-top: 3rem;
             max-width: 74rem;
@@ -95,7 +96,7 @@
         }
         @include abs.breakpoint(desktop) {
             gap: 3.5rem;
-            padding: 4rem 3.5rem;
+            padding: 3.5rem;
         }
     }
 
@@ -108,7 +109,7 @@
         border-radius: 1rem;
         background-color: abs.$white;
         @include abs.breakpoint(tablet) {
-            padding: 2rem 3rem;
+            padding: 2rem;
         }
         @include abs.breakpoint(desktop) {
             padding: 2rem;
@@ -120,6 +121,7 @@
         color: abs.$deep-gray;
         font-size: 1.3rem;
         @include abs.breakpoint(tablet) {
+            font-size: 1.7rem;
         }
     }
 

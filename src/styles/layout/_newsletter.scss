@@ -64,6 +64,12 @@
         margin-bottom: 2rem;
         max-width: 15rem;
         @include base.section-title-heading;
+        @include abs.breakpoint(mobile) {
+            @include abs.line-clamp(2);
+        }
+        @include abs.breakpoint(mobile-lg) {
+            @include abs.line-clamp(2);
+        }
         @include abs.breakpoint(tablet) {
             max-width: 35rem;
         }

@@ -22,6 +22,5 @@
         background-color: $primary-color;
         color: #ffffff;
     }
-
     @include circular-std-regular($font-size);
 }

@@ -39,6 +39,7 @@
     }
 
     &__section-heading {
+        max-width: 30rem;
         text-align: center;
         @include base.section-description;
     }
@@ -82,6 +83,8 @@
     }
 
     &__username {
+        @include abs.line-clamp(1);
+        max-width: 30rem;
         margin-bottom: 2rem;
         color: abs.$transparent-gray;
         @include base.circular-std-regular(1.5);
@@ -105,6 +108,7 @@
     }
 
     &__comment {
+        @include abs.line-clamp(4);
         font-family: 'inter';
         font-size: 1.1rem;
         text-align: center;

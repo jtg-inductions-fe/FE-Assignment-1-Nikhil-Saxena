@@ -37,6 +37,8 @@ h1 {
     text-transform: uppercase;
     letter-spacing: 0.2rem;
     color: abs.$secondary-color;
+    max-width: 20rem;
+    @include abs.line-clamp(1);
 
     @include abs.breakpoint(tablet) {
         @include circular-std-regular(1.6);
@@ -45,6 +47,7 @@ h1 {
 }
 
 @mixin section-description {
+    @include abs.line-clamp(3);
     @include circular-std-regular(2);
     color: abs.$dark;
 

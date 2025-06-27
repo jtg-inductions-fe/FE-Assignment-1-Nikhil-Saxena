@@ -70,16 +70,22 @@
     }
 
     &__section-heading {
+        width: 100%;
+        max-width: 30rem;
         padding: 1rem 0 1.9rem 0;
         text-align: center;
         @include base.section-description;
+        @include abs.breakpoint(tablet) {
+            max-width: 55rem;
+        }
         @include abs.breakpoint(desktop) {
-            text-align: left;
             max-width: 30rem;
+            text-align: left;
         }
     }
 
     &__section-description {
+        @include abs.line-clamp(3);
         max-width: 22.5rem;
         padding: 0;
         @include base.card-description-regular;
@@ -134,12 +140,16 @@
     }
 
     &__card-heading {
+        @include abs.breakpoint(1);
+        max-width: 7rem;
         @include base.circular-std-regular(2.2);
         line-height: 0;
         color: abs.$accent-orange;
     }
 
     &__card-description {
+        @include abs.line-clamp(1);
+        max-width: 10rem;
         color: abs.$dark;
         line-height: 0;
         @include base.card-description-regular;

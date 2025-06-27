@@ -23,6 +23,7 @@
         }
 
         @include abs.breakpoint(desktop) {
+            margin-top: 0;
             width: 100%;
             max-width: 74.5rem;
             margin-left: 0.5rem;
@@ -68,6 +69,7 @@
         width: 100%;
         text-align: center;
         margin-bottom: 2rem;
+        @include abs.flex(column, center, center);
 
         @include abs.breakpoint(tablet) {
             margin-bottom: 3.5rem;
@@ -150,6 +152,8 @@
         }
 
         &-heading {
+            @include abs.line-clamp(2);
+            max-width: 20rem;
             @include base.circular-std-regular(1.5);
             font-weight: 600;
             text-align: center;
@@ -161,6 +165,8 @@
         }
 
         &-description {
+            @include abs.line-clamp(5);
+            max-width: 25rem;
             @include base.circular-std-regular(1.2);
             text-align: center;
             font-weight: 200;

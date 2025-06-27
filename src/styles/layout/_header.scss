@@ -12,6 +12,7 @@
     position: fixed;
     z-index: 2;
     width: 100%;
+    margin-inline: auto;
     display: flex;
     @include abs.flex(row, center, center);
 
@@ -131,6 +132,8 @@
         padding: 1rem;
         cursor: pointer;
         transition: color 0.3s ease;
+        max-width: 8rem;
+        @include abs.line-clamp(1);
 
         @include abs.breakpoint(desktop) {
             padding: 0;
@@ -184,11 +187,15 @@
         @include comp.button-template(1, 2, 0.9);
         @extend %button-hover;
         background-color: #ffffff;
+        max-width: 7rem;
+        @include abs.line-clamp(1);
     }
 
     &__signup {
         @include comp.button-template(1, 2, 0.9, secondary);
         @extend %button-hover;
+        max-width: 9rem;
+        @include abs.line-clamp(1);
         &:hover {
             background-color: abs.$secondary-color;
             color: abs.$dark;

@@ -1,4 +1,4 @@
-@use '../base' as base;
+@use '../base' as *;
 @use '../abstract' as *;
 
 @mixin button-template(
@@ -22,4 +22,6 @@
         background-color: $primary-color;
         color: #ffffff;
     }
+
+    @include circular-std-regular($font-size);
 }

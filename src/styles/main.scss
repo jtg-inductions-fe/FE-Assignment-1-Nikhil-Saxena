@@ -8,6 +8,8 @@
 @use 'layout' as *;
 @use 'components' as *;
 
+@import '@splidejs/splide/dist/css/splide.min.css';
+
 .outer-wrapper {
     max-width: 120rem;
     margin: auto;
@@ -20,5 +22,3 @@
 body {
     @extend .outer-wrapper;
 }
-
-@import '@splidejs/splide/dist/css/splide.min.css';

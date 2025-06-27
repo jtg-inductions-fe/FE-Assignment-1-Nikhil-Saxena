@@ -197,6 +197,7 @@
             left: 0;
         }
         &:disabled {
+            cursor: not-allowed;
             opacity: 50%;
         }
     }

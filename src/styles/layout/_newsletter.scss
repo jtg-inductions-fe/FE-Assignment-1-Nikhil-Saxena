@@ -1,1 +1,165 @@
-// TODO
+@use '../abstract' as abs;
+@use '../components' as comp;
+@use '../base' as base;
+
+%newsletter-fonts {
+    font-size: 1rem;
+    @include abs.breakpoint(tablet) {
+        font-size: 1.5rem;
+    }
+}
+
+.newsletter {
+    margin-top: 10.5rem;
+    width: 100%;
+    @include abs.flex(row, center, center);
+
+    @include abs.breakpoint(tablet) {
+        padding: 0 4rem;
+        margin-top: 7rem;
+    }
+
+    @include abs.breakpoint(desktop) {
+        margin-top: 11rem;
+        padding: 0 7rem;
+    }
+
+    &__background-asset {
+        display: none;
+        @include abs.breakpoint(tablet) {
+            display: block;
+            position: absolute;
+            top: -2.5rem;
+            left: -2.5rem;
+            height: 0;
+        }
+        @include abs.breakpoint(desktop) {
+            right: 33.3rem;
+        }
+    }
+
+    &__container {
+        position: relative;
+        width: 100%;
+        @include abs.flex(column, center, center);
+        padding-top: 0.6rem;
+
+        @include abs.breakpoint(tablet) {
+            max-width: 56rem;
+            padding: 8rem 0 4rem 0;
+            background-color: abs.$accent-yellow-bg;
+            border-radius: 2rem;
+        }
+
+        @include abs.breakpoint(desktop) {
+            padding-top: 8.5rem;
+            padding-left: 1rem;
+            margin-top: 3rem;
+            max-width: 74rem;
+        }
+    }
+
+    &__section-name {
+        text-align: center;
+        margin-bottom: 2rem;
+        max-width: 15rem;
+        @include base.section-title-heading;
+        @include abs.breakpoint(tablet) {
+            max-width: 35rem;
+        }
+    }
+
+    &__section-heading {
+        text-align: center;
+        max-width: 20rem;
+        margin-bottom: 2rem;
+        @include base.section-description;
+        @include abs.breakpoint(tablet) {
+            max-width: 45rem;
+            margin-bottom: 0.5rem;
+        }
+        @include abs.breakpoint(desktop) {
+            margin-bottom: 0.5rem;
+            font-size: 3.4rem;
+            max-width: 60rem;
+        }
+    }
+
+    &__form {
+        width: 100%;
+        padding: 2rem 3rem 3rem;
+        gap: 2.3rem;
+        @include abs.flex(column, center, center);
+        @include abs.breakpoint(tablet) {
+            @include abs.flex(row, center, center);
+            padding: 3rem 4rem;
+        }
+        @include abs.breakpoint(desktop) {
+            gap: 3.5rem;
+            padding: 3.5rem;
+        }
+    }
+
+    &__input-wrapper {
+        width: 100%;
+        @include abs.flex(row, center, center);
+        gap: 1rem;
+        color: abs.$deep-gray;
+        padding: 1rem 2rem;
+        border-radius: 1rem;
+        background-color: abs.$white;
+        @include abs.breakpoint(tablet) {
+            padding: 2rem;
+        }
+        @include abs.breakpoint(desktop) {
+            padding: 2rem;
+        }
+    }
+
+    &__input-icon {
+        @extend %newsletter-fonts;
+        color: abs.$deep-gray;
+        font-size: 1.3rem;
+        @include abs.breakpoint(tablet) {
+            font-size: 1.7rem;
+        }
+    }
+
+    &__input {
+        width: 100%;
+        border: none;
+        min-height: 2rem;
+        @extend %newsletter-fonts;
+        @include base.circular-std-regular(1.5);
+        @include abs.breakpoint(tablet) {
+            min-width: 15rem;
+        }
+
+        &::placeholder {
+            @extend %newsletter-fonts;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__subscribe {
+        width: 100%;
+        padding: 1.5rem 4rem;
+        border-radius: 1rem;
+        border: 0;
+        white-space: nowrap;
+        font-family: 'circular-std', 'sans-serif';
+        font-weight: 450;
+        @extend %newsletter-fonts;
+        cursor: pointer;
+        background-color: abs.$primary-color;
+        color: abs.$white;
+        @include abs.breakpoint(tablet) {
+            padding: 2rem;
+            border-radius: 2rem;
+            max-width: 14.5rem;
+        }
+    }
+}

@@ -21,13 +21,6 @@
         --webkit-backdrop-filter: blur(10px);
     }
 
-    &__background {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-    }
-
     &__container {
         @include abs.flex(column, center, center);
         width: 100%;
@@ -93,7 +86,7 @@
     &__links {
         max-height: 0;
         opacity: 0;
-        visibility: hidden;
+        display: none;
         overflow: hidden;
         width: 100%;
         gap: 1rem;
@@ -106,7 +99,7 @@
             opacity: 1;
             visibility: visible;
             background-color: transparent;
-            transition: all 0.4s ease-in-out;
+            transition: display 0.4s ease-in-out;
         }
 
         @include abs.breakpoint(tablet) {

@@ -39,7 +39,7 @@ export function initNavbarToggle() {
     });
 
     document.addEventListener('scroll', () => {
-        if (window.scrollY > 5) {
+        if (window.scrollY > 10) {
             navbar.classList.add('navbar--scrolled');
         }
     });

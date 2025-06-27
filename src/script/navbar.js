@@ -1,4 +1,7 @@
 export function initNavbarToggle() {
+    const body = document.body;
+    const navbar = document.getElementById('navbar');
+    const navbarContainer = document.getElementById('navbar__container');
     const navbarMenuButton = document.getElementById('navbar__menu');
     const navigationLinks = document.getElementById('navbar__links');
     const navbarMenuActionButtons = document.getElementById('navbar__actions');
@@ -17,6 +20,11 @@ export function initNavbarToggle() {
         // For Medium Screens
         if (screenWidth >= 1024 && screenWidth <= 1440) {
             navigationLinks.classList.toggle('navbar__links--open', isMenuOpen);
+            navbarContainer.classList.toggle(
+                'navbar__container--open',
+                isMenuOpen,
+            );
+            body.classList.toggle('.no-scroll');
             return;
         }
 
@@ -26,6 +34,14 @@ export function initNavbarToggle() {
             'navbar__actions--open',
             isMenuOpen,
         );
+        navbarContainer.classList.toggle('navbar__container--open', isMenuOpen);
+        body.classList.toggle('.no-scroll');
+    });
+
+    document.addEventListener('scroll', () => {
+        if (window.scrollY > 5) {
+            navbar.classList.add('navbar--scrolled');
+        }
     });
 
     // Enter Key Function of Navbar Toggle Button

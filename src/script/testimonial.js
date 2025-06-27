@@ -1,4 +1,5 @@
 import Splide from '@splidejs/splide';
+
 export function initTestimonialSlider() {
     const testimonialCarousel = document.querySelector('.splide');
     if (testimonialCarousel) {

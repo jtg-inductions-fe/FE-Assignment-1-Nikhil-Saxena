@@ -199,13 +199,18 @@
     &__watch-demo {
         @include abs.line-clamp(1);
         max-width: 27rem;
+
         @extend %hero-button;
         background-color: abs.$white;
         color: abs.$dark;
-        border: 0.06rem solid #eeeeee;
+        border: 0.06rem solid abs.$white;
         gap: 0.6rem;
         &__svg {
             font-size: 1.2rem;
+            padding-right: 0.2rem;
+        }
+        @include abs.breakpoint(tablet) {
+            max-width: 15rem;
         }
     }
 

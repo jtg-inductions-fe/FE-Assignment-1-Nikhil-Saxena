@@ -1,1 +1,204 @@
-// TODO
+@use '../abstract' as abs;
+@use '../base' as base;
+
+.testimonial {
+    @include abs.flex(column, center, center);
+    margin-top: 3.8rem;
+    width: 100%;
+    position: relative;
+    @include abs.breakpoint(tablet) {
+        margin-top: 9rem;
+    }
+
+    @include abs.breakpoint(desktop) {
+        margin-top: 4.5rem;
+    }
+    &__background {
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+        @include abs.breakpoint(tablet) {
+            opacity: 0.1;
+            height: fit-content;
+            top: -10%;
+        }
+
+        @include abs.breakpoint(desktop) {
+            top: -30%;
+        }
+
+        &-image {
+            height: 100%;
+            width: 100%;
+        }
+    }
+    &__section-name {
+        text-align: center;
+        margin-bottom: 1rem;
+        @include base.section-title-heading;
+    }
+
+    &__section-heading {
+        text-align: center;
+        @include base.section-description;
+    }
+
+    &__card-wrapper {
+        width: 100%;
+        max-width: 25rem;
+
+        @include abs.breakpoint(tablet) {
+            max-width: 56rem;
+        }
+
+        @include abs.breakpoint(desktop) {
+            max-width: 75rem;
+        }
+    }
+
+    &__card {
+        width: 100%;
+        max-width: 25rem;
+        height: 100%;
+        padding: 4rem 0;
+        margin-inline: auto;
+        @include abs.flex(column, center, center);
+        @include abs.breakpoint(tablet) {
+            max-width: 35rem;
+            padding: 3.5rem 0;
+        }
+        @include abs.breakpoint(desktop) {
+            padding: 3rem 0 0 1rem;
+            max-width: 53rem;
+        }
+    }
+
+    &__avatar {
+        width: 8rem;
+        margin-bottom: 4rem;
+        @include abs.breakpoint(tablet) {
+            margin-bottom: 3.7rem;
+        }
+    }
+
+    &__username {
+        margin-bottom: 2rem;
+        color: abs.$transparent-gray;
+        @include base.circular-std-regular(1.5);
+        &--highlighted {
+            @include base.circular-std-regular(1.7);
+            color: abs.$accent-orange;
+        }
+    }
+
+    &__rating {
+        margin-bottom: 4rem;
+        @include abs.flex(row, center, center);
+        gap: 1.2rem;
+        &-icon {
+            font-size: 1.8rem;
+        }
+
+        @include abs.breakpoint(tablet) {
+            margin-bottom: 3.5rem;
+        }
+    }
+
+    &__comment {
+        font-family: 'inter';
+        font-size: 1.1rem;
+        text-align: center;
+        line-height: 160%;
+        max-width: 24.2rem;
+        color: abs.$transparent-gray;
+
+        @include abs.breakpoint(tablet) {
+            font-size: 1.4rem;
+            max-width: 54rem;
+        }
+
+        @include abs.breakpoint(desktop) {
+            max-width: 51rem;
+        }
+    }
+}
+
+.splide {
+    position: relative;
+    &__pagination {
+        position: relative;
+        @include abs.flex(row, center, center);
+        gap: 1rem;
+
+        top: 0.2rem;
+        .is-active {
+            width: 1.2rem;
+            height: 1.2rem;
+            background-color: abs.$secondary-color;
+        }
+
+        @include abs.breakpoint(desktop) {
+            top: 3rem;
+        }
+    }
+
+    &__pagination__page {
+        opacity: 1;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 100%;
+        border: 0;
+        background-color: abs.$light-gray;
+    }
+
+    &__arrows {
+        position: relative;
+        max-width: 100%;
+    }
+
+    &__arrow {
+        position: absolute;
+        cursor: pointer;
+        opacity: 1;
+        width: 4rem;
+        height: 4rem;
+        top: 42rem;
+        border-radius: 100%;
+        border: 0.1rem solid abs.$light-gray;
+        background-color: abs.$primary-color;
+        @include abs.flex(row, center, center);
+        @include abs.breakpoint(tablet) {
+            top: 15rem;
+        }
+
+        @include abs.breakpoint(desktop) {
+            top: 14rem;
+        }
+
+        &-icon {
+            font-size: 1rem;
+            color: abs.$white;
+        }
+
+        @include abs.breakpoint(tablet) {
+            width: 6.5rem;
+            height: 6.5rem;
+        }
+
+        &:hover {
+            @include abs.drop-shadow();
+        }
+
+        &--next {
+            right: 0;
+        }
+
+        &--prev {
+            left: 0;
+        }
+        &:disabled {
+            cursor: not-allowed;
+            opacity: 50%;
+        }
+    }
+}

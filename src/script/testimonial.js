@@ -1,6 +1,6 @@
 import Splide from '@splidejs/splide';
 
-export function initTestimonialSlider() {
+export const initTestimonialSlider = () => {
     const testimonialCarousel = document.querySelector('.splide');
     if (testimonialCarousel) {
         const splide = new Splide(testimonialCarousel, {
@@ -9,4 +9,4 @@ export function initTestimonialSlider() {
         });
         splide.mount();
     }
-}
+};

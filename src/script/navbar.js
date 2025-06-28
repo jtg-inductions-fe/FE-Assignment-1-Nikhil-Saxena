@@ -1,4 +1,4 @@
-export function initNavbarToggle() {
+export const initNavbarToggle = () => {
     const body = document.body;
     const navbar = document.getElementById('navbar');
     const navbarContainer = document.getElementById('navbar__container');
@@ -51,4 +51,4 @@ export function initNavbarToggle() {
             navbarMenuButton.click();
         }
     });
-}
+};

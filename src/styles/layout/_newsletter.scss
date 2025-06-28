@@ -3,25 +3,25 @@
 @use '../base' as base;
 
 %newsletter-fonts {
-    font-size: 1rem;
+    font-size: abs.ptr(16);
     @include abs.breakpoint(tablet) {
-        font-size: 1.5rem;
+        font-size: abs.ptr(24);
     }
 }
 
 .newsletter {
-    margin-top: 10.5rem;
+    margin-top: abs.ptr(168);
     width: 100%;
     @include abs.flex(row, center, center);
 
     @include abs.breakpoint(tablet) {
-        padding: 0 4rem;
-        margin-top: 7rem;
+        padding: 0 abs.ptr(64);
+        margin-top: abs.ptr(112);
     }
 
     @include abs.breakpoint(desktop) {
-        margin-top: 11rem;
-        padding: 0 7rem;
+        margin-top: abs.ptr(176);
+        padding: 0 abs.ptr(112);
     }
 
     &__background-asset {
@@ -29,12 +29,12 @@
         @include abs.breakpoint(tablet) {
             display: block;
             position: absolute;
-            top: -2.5rem;
-            left: -2.5rem;
+            top: abs.ptr(-40);
+            left: abs.ptr(-40);
             height: 0;
         }
         @include abs.breakpoint(desktop) {
-            right: 33.3rem;
+            right: abs.ptr(532.8);
         }
     }
 
@@ -42,27 +42,27 @@
         position: relative;
         width: 100%;
         @include abs.flex(column, center, center);
-        padding-top: 0.6rem;
+        padding-top: abs.ptr(9.6);
 
         @include abs.breakpoint(tablet) {
-            max-width: 56rem;
-            padding: 8rem 0 4rem 0;
+            max-width: abs.ptr(896);
+            padding: abs.ptr(128) 0 abs.ptr(64) 0;
             background-color: abs.$accent-yellow-bg;
-            border-radius: 2rem;
+            border-radius: abs.ptr(32);
         }
 
         @include abs.breakpoint(desktop) {
-            padding-top: 8.5rem;
-            padding-left: 1rem;
-            margin-top: 3rem;
-            max-width: 74rem;
+            padding-top: abs.ptr(136);
+            padding-left: abs.ptr(16);
+            margin-top: abs.ptr(48);
+            max-width: abs.ptr(1184);
         }
     }
 
     &__section-name {
         text-align: center;
-        margin-bottom: 2rem;
-        max-width: 15rem;
+        margin-bottom: abs.ptr(32);
+        max-width: abs.ptr(240);
         @include base.section-title-heading;
         @include abs.breakpoint(mobile) {
             @include abs.line-clamp(2);
@@ -71,74 +71,74 @@
             @include abs.line-clamp(2);
         }
         @include abs.breakpoint(tablet) {
-            max-width: 35rem;
+            max-width: abs.ptr(560);
         }
     }
 
     &__section-heading {
         text-align: center;
-        max-width: 20rem;
-        margin-bottom: 2rem;
+        max-width: abs.ptr(320);
+        margin-bottom: abs.ptr(32);
         @include base.section-description;
         @include abs.breakpoint(tablet) {
-            max-width: 45rem;
-            margin-bottom: 0.5rem;
+            max-width: abs.ptr(720);
+            margin-bottom: abs.ptr(8);
         }
         @include abs.breakpoint(desktop) {
-            margin-bottom: 0.5rem;
-            font-size: 3.4rem;
-            max-width: 60rem;
+            margin-bottom: abs.ptr(8);
+            font-size: abs.ptr(54.4);
+            max-width: abs.ptr(960);
         }
     }
 
     &__form {
         width: 100%;
-        padding: 2rem 3rem 3rem;
-        gap: 2.3rem;
+        padding: abs.ptr(32) abs.ptr(48) abs.ptr(48);
+        gap: abs.ptr(36.8);
         @include abs.flex(column, center, center);
         @include abs.breakpoint(tablet) {
             @include abs.flex(row, center, center);
-            padding: 3rem 4rem;
+            padding: abs.ptr(48) abs.ptr(64);
         }
         @include abs.breakpoint(desktop) {
-            gap: 3.5rem;
-            padding: 3.5rem;
+            gap: abs.ptr(56);
+            padding: abs.ptr(56);
         }
     }
 
     &__input-wrapper {
         width: 100%;
         @include abs.flex(row, center, center);
-        gap: 1rem;
+        gap: abs.ptr(16);
         color: abs.$deep-gray;
-        padding: 1rem 2rem;
-        border-radius: 1rem;
+        padding: abs.ptr(16) abs.ptr(32);
+        border-radius: abs.ptr(16);
         background-color: abs.$white;
         @include abs.breakpoint(tablet) {
-            padding: 2rem;
+            padding: abs.ptr(32);
         }
         @include abs.breakpoint(desktop) {
-            padding: 2rem;
+            padding: abs.ptr(32);
         }
     }
 
     &__input-icon {
         @extend %newsletter-fonts;
         color: abs.$deep-gray;
-        font-size: 1.3rem;
+        font-size: abs.ptr(20.8);
         @include abs.breakpoint(tablet) {
-            font-size: 1.7rem;
+            font-size: abs.ptr(27.2);
         }
     }
 
     &__input {
         width: 100%;
         border: none;
-        min-height: 2rem;
+        min-height: abs.ptr(32);
         @extend %newsletter-fonts;
         @include base.circular-std-regular(1.5);
         @include abs.breakpoint(tablet) {
-            min-width: 15rem;
+            min-width: abs.ptr(240);
         }
 
         &::placeholder {
@@ -152,8 +152,8 @@
 
     &__subscribe {
         width: 100%;
-        padding: 1.5rem 4rem;
-        border-radius: 1rem;
+        padding: abs.ptr(24) abs.ptr(64);
+        border-radius: abs.ptr(16);
         border: 0;
         white-space: nowrap;
         font-family: 'circular-std', 'sans-serif';
@@ -164,9 +164,9 @@
         background-color: abs.$primary-color;
         color: abs.$white;
         @include abs.breakpoint(tablet) {
-            padding: 2rem;
-            border-radius: 2rem;
-            max-width: 14.5rem;
+            padding: abs.ptr(32);
+            border-radius: abs.ptr(32);
+            max-width: abs.ptr(232);
         }
     }
 }

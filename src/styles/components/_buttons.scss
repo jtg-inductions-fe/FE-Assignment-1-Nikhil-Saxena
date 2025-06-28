@@ -9,7 +9,7 @@
 ) {
     @include circular-std-regular($font-size);
     padding: #{$padding-y}rem #{$padding-x}rem;
-    border-radius: 5rem;
+    border-radius: ptr(80);
     border: 0;
     white-space: nowrap;
     font-family: 'circular-std', 'sans-serif';

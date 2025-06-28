@@ -2,45 +2,45 @@
 @use '../base' as base;
 
 .information {
-    margin-top: 4rem;
+    margin-top: abs.ptr(64);
     width: 100%;
-    max-width: 100rem;
-    gap: 2rem;
+    max-width: abs.ptr(1600);
+    gap: abs.ptr(32);
     position: relative;
     @include abs.flex(column, center, center);
     @include abs.breakpoint(desktop) {
-        gap: 5rem;
-        margin-top: 0rem;
+        gap: abs.ptr(80);
+        margin-top: abs.ptr(0);
         @include abs.flex(row, flex-start, center);
     }
 
     &__image-wrapper {
         width: 100%;
         @include abs.flex(row, flex-start, flex-start);
-        padding: 0.5rem 0;
-        max-width: 25rem;
+        padding: abs.ptr(8) 0;
+        max-width: abs.ptr(400);
 
         @include abs.breakpoint(tablet) {
-            max-width: 55rem;
+            max-width: abs.ptr(880);
             width: 100%;
-            padding: 4rem 2rem 3rem 1.5rem;
+            padding: abs.ptr(64) abs.ptr(32) abs.ptr(48) abs.ptr(24);
         }
 
         @include abs.breakpoint(desktop) {
-            padding: 0 0 0 0.1rem;
+            padding: 0 0 0 abs.ptr(1.6);
             margin-top: 0;
-            max-width: 49.5rem;
+            max-width: abs.ptr(792);
         }
         &-image {
             width: 100%;
-            max-width: 22.5rem;
+            max-width: abs.ptr(360);
             height: 100%;
             @include abs.breakpoint(tablet) {
                 margin-top: 0;
-                max-width: 49rem;
+                max-width: abs.ptr(784);
             }
             @include abs.breakpoint(tablet-lg) {
-                max-width: 50.5rem;
+                max-width: abs.ptr(808);
             }
             @include abs.breakpoint(desktop) {
                 object-fit: contain;
@@ -50,13 +50,13 @@
 
     &__content {
         width: 100%;
-        margin-top: 0.1rem;
+        margin-top: abs.ptr(1.6);
         @include abs.flex(column, center, center);
         @include abs.breakpoint(desktop) {
             width: 40%;
             align-items: flex-start;
-            padding: 3rem 0;
-            margin: 2rem auto 0;
+            padding: abs.ptr(48) 0;
+            margin: abs.ptr(32) auto 0;
         }
     }
 
@@ -64,73 +64,73 @@
         @include base.section-title-heading;
         @include abs.breakpoint(desktop) {
             text-align: left;
-            padding-top: 1rem;
-            padding-top: 2rem;
+            padding-top: abs.ptr(16);
+            padding-top: abs.ptr(32);
         }
     }
 
     &__section-heading {
         width: 100%;
-        max-width: 30rem;
-        padding: 1rem 0 1.9rem 0;
+        max-width: abs.ptr(480);
+        padding: abs.ptr(16) 0 abs.ptr(30.4) 0;
         text-align: center;
         @include base.section-description;
         @include abs.breakpoint(tablet) {
-            max-width: 55rem;
+            max-width: abs.ptr(880);
         }
         @include abs.breakpoint(desktop) {
-            max-width: 30rem;
+            max-width: abs.ptr(480);
             text-align: left;
         }
     }
 
     &__section-description {
         @include abs.line-clamp(3);
-        max-width: 22.5rem;
+        max-width: abs.ptr(360);
         padding: 0;
         @include base.card-description-regular;
         @include abs.breakpoint(tablet) {
-            font-size: 1.15rem;
-            max-width: 51rem;
+            font-size: abs.ptr(18.4);
+            max-width: abs.ptr(816);
         }
         @include abs.breakpoint(desktop) {
             text-align: left;
             width: 100%;
-            max-width: 30rem;
+            max-width: abs.ptr(480);
         }
     }
 
     &__card-wrapper {
-        margin-top: 1rem;
+        margin-top: abs.ptr(16);
         width: 100%;
         display: grid;
         grid-template-columns: 1fr;
-        padding: 1rem;
-        row-gap: 1rem;
+        padding: abs.ptr(16);
+        row-gap: abs.ptr(16);
 
         @include abs.breakpoint(tablet) {
-            margin-top: 4rem;
+            margin-top: abs.ptr(64);
             grid-template-columns: 1fr 1fr;
-            column-gap: 2rem;
-            row-gap: 2rem;
-            padding: 0 6rem;
+            column-gap: abs.ptr(32);
+            row-gap: abs.ptr(32);
+            padding: 0 abs.ptr(96);
         }
 
         @include abs.breakpoint(desktop) {
-            padding: 0 7rem 0 0;
+            padding: 0 abs.ptr(112) 0 0;
         }
     }
 
     &__card {
         width: 100%;
-        border: 0.1rem solid #{abs.$shadow-color};
-        padding: 3.2rem 1rem 1.9rem;
-        border-radius: 1.5rem;
-        gap: 2.5rem;
+        border: abs.ptr(1.6) solid #{abs.$shadow-color};
+        padding: abs.ptr(51.2) abs.ptr(16) abs.ptr(30.4);
+        border-radius: abs.ptr(24);
+        gap: abs.ptr(40);
         background-color: abs.$white;
         @include abs.flex(column, space-around, center);
         @include abs.breakpoint(tablet) {
-            gap: 2.2rem;
+            gap: abs.ptr(35.2);
         }
 
         &:hover {
@@ -141,7 +141,7 @@
 
     &__card-heading {
         @include abs.breakpoint(1);
-        max-width: 7rem;
+        max-width: abs.ptr(112);
         @include base.circular-std-regular(2.2);
         line-height: 0;
         color: abs.$accent-orange;
@@ -149,12 +149,12 @@
 
     &__card-description {
         @include abs.line-clamp(1);
-        max-width: 10rem;
+        max-width: abs.ptr(160);
         color: abs.$dark;
         line-height: 0;
         @include base.card-description-regular;
         @include abs.breakpoint(mobile) {
-            font-size: 1.1rem;
+            font-size: abs.ptr(17.6);
         }
     }
 
@@ -164,7 +164,7 @@
             display: block;
             position: absolute;
             right: 0;
-            top: 21rem;
+            top: abs.ptr(336);
             z-index: 1;
         }
     }

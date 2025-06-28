@@ -3,7 +3,7 @@
 @mixin circular-std-regular($font-size) {
     font-style: normal;
     font-weight: 700;
-    font-size: #{$font-size}rem;
+    font-size: abs.ptr($font-size * 16);
     line-height: 120%;
     letter-spacing: 0;
 }
@@ -11,14 +11,14 @@
 @mixin card-description-regular {
     font-style: normal;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: abs.ptr(16);
     line-height: 160%;
     letter-spacing: 0;
     font-family: 'inter';
     color: abs.$transparent-gray;
     text-align: center;
     @include abs.breakpoint(tablet) {
-        font-size: 1.2rem;
+        font-size: abs.ptr(19.2);
     }
 }
 
@@ -35,14 +35,14 @@ h1 {
 @mixin section-title-heading {
     @include circular-std-regular(1);
     text-transform: uppercase;
-    letter-spacing: 0.2rem;
+    letter-spacing: abs.ptr(3.2);
     color: abs.$secondary-color;
-    max-width: 20rem;
+    max-width: abs.ptr(320);
     @include abs.line-clamp(1);
 
     @include abs.breakpoint(tablet) {
         @include circular-std-regular(1.6);
-        letter-spacing: 0.2rem;
+        letter-spacing: abs.ptr(3.2);
     }
 }
 

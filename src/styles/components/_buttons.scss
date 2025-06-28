@@ -7,6 +7,7 @@
     $font-size: 8,
     $button-type: primary
 ) {
+    @include circular-std-regular($font-size);
     padding: #{$padding-y}rem #{$padding-x}rem;
     border-radius: 5rem;
     border: 0;
@@ -22,5 +23,10 @@
         background-color: $primary-color;
         color: #ffffff;
     }
-    @include circular-std-regular($font-size);
+}
+
+.button-hover {
+    &:hover {
+        opacity: 0.5;
+    }
 }

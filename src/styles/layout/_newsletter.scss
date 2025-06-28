@@ -159,6 +159,7 @@
         font-family: 'circular-std', 'sans-serif';
         font-weight: 450;
         @extend %newsletter-fonts;
+        @extend .button-hover;
         cursor: pointer;
         background-color: abs.$primary-color;
         color: abs.$white;

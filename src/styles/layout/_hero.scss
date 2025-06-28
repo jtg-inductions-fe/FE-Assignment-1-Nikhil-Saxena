@@ -10,6 +10,7 @@
         @include comp.button-template(1, 2, 0.9);
     }
 
+    @extend .button-hover;
     &:hover {
         @include abs.drop-shadow();
     }
@@ -91,10 +92,12 @@
         @include base.circular-std-regular(1);
         @extend %hero-button;
         border: 0;
+        outline: 0.1rem solid abs.$secondary-color;
         background-color: transparent;
 
         max-width: 17rem;
         @include abs.line-clamp(1);
+        @include abs.flex(row, center, center);
 
         gap: 1.4rem;
         @include abs.drop-shadow(0, 2.5, 5.6);
@@ -115,6 +118,11 @@
         &__svg {
             font-size: 1.2rem;
         }
+    }
+
+    &__explore-button-text {
+        max-width: 10rem;
+        @include abs.line-clamp(1);
     }
 
     &__main-heading {
@@ -194,20 +202,27 @@
         background-color: abs.$primary-color;
         color: abs.$white;
         @include abs.drop-shadow(0, 2.5, 5.6);
+        padding-top: 1.2rem;
+        padding-bottom: 1.2rem;
+
+        &:hover {
+            background-color: abs.$secondary-color;
+            color: abs.$black;
+        }
     }
 
     &__watch-demo {
         @include abs.line-clamp(1);
-        max-width: 27rem;
-
+        max-width: 29rem;
+        outline: 0.1rem solid abs.$deep-gray;
         @extend %hero-button;
         background-color: abs.$white;
+        @include abs.flex(row, center, center);
         color: abs.$dark;
-        border: 0.06rem solid abs.$white;
-        gap: 0.6rem;
+        gap: 0.5rem;
         &__svg {
             font-size: 1.2rem;
-            padding-right: 0.2rem;
+            padding-right: 0 0.2rem;
         }
         @include abs.breakpoint(tablet) {
             max-width: 15rem;

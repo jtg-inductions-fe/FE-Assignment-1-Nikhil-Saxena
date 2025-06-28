@@ -2,23 +2,29 @@
 @use '../components' as comp;
 @use '../base' as base;
 
+.links-hover {
+    &:hover {
+        background-color: abs.$secondary-color;
+    }
+}
+
 .footer {
     width: 100%;
     &__container {
         width: 100%;
         @include abs.flex(column, center, flex-start);
         margin-top: 2.5rem;
-        padding: 0 1rem;
+        padding: 0 1rem 5rem;
 
         @include abs.breakpoint(tablet) {
             margin-top: 4rem;
-            padding: 0 4rem;
+            padding: 0 4rem 5rem;
         }
 
         @include abs.breakpoint(desktop) {
             margin-top: 10rem;
             @include abs.flex(row, flex-start, center);
-            padding: 0 8rem;
+            padding: 0 8rem 5rem;
             gap: 4rem;
         }
     }
@@ -89,11 +95,16 @@
     }
 
     &__social-icon {
+        @extend .button-hover;
+        @include abs.drop-shadow();
         background-color: abs.$primary-color;
         width: 2rem;
         height: 2rem;
         border-radius: 100%;
         @include abs.flex(row, center, center);
+        &:hover {
+            background-color: abs.$secondary-color;
+        }
     }
 
     &__list-wrapper {
@@ -182,5 +193,8 @@
         max-width: 15rem;
         font-family: 'circular-std';
         color: abs.$deep-gray;
+        &:hover {
+            color: abs.$secondary-color;
+        }
     }
 }

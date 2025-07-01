@@ -1,4 +1,5 @@
 export const handleFooterList = () => {
+
     const headingWrappers = document.querySelectorAll(
         '.footer__list-heading-wrapper',
     );
@@ -17,3 +18,4 @@ export const handleFooterList = () => {
         });
     });
 };
+

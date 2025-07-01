@@ -1,4 +1,5 @@
-export function handleFooterList() {
+export const handleFooterList = () => {
+
     const headingWrappers = document.querySelectorAll(
         '.footer__list-heading-wrapper',
     );
@@ -16,4 +17,5 @@ export function handleFooterList() {
             }
         });
     });
-}
+};
+

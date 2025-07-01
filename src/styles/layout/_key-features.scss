@@ -3,9 +3,9 @@
 @use '../base' as base;
 
 .features {
-    margin-top: 2rem;
+    margin-top: abs.ptr(32);
     width: 100%;
-    gap: 2rem;
+    gap: abs.ptr(32);
     @include abs.flex(column, center, center);
 
     @include abs.breakpoint(desktop) {
@@ -18,32 +18,32 @@
     &__image-wrapper {
         width: 100%;
         @include abs.flex(row, flex-start, flex-start);
-        padding: 2.5rem;
-        max-width: 27rem;
-        margin-bottom: 2.5rem;
+        padding: abs.ptr(40);
+        max-width: abs.ptr(432);
+        margin-bottom: abs.ptr(40);
         @include abs.breakpoint(tablet) {
             width: 100%;
-            padding: 6rem 1rem 2rem;
-            max-width: 45rem;
-            margin-bottom: 0.5rem;
+            padding: abs.ptr(96) abs.ptr(16) abs.ptr(32);
+            max-width: abs.ptr(720);
+            margin-bottom: abs.ptr(8);
         }
 
         @include abs.breakpoint(desktop) {
-            padding: 4rem 0 0 0;
-            height: 59rem;
+            padding: abs.ptr(64) 0 0 0;
+            height: abs.ptr(944);
             width: 100%;
-            max-width: 37rem;
+            max-width: abs.ptr(592);
         }
         &-image {
             height: 100%;
             width: 100%;
-            max-width: 18.5rem;
+            max-width: abs.ptr(296);
             @include abs.breakpoint(tablet) {
-                max-width: 36.5rem;
+                max-width: abs.ptr(584);
             }
             @include abs.breakpoint(desktop) {
-                padding-top: 1rem;
-                max-width: 38rem;
+                padding-top: abs.ptr(16);
+                max-width: abs.ptr(608);
             }
         }
     }
@@ -52,15 +52,15 @@
         width: 100%;
         @include abs.flex(column, center, center);
         @include abs.breakpoint(desktop) {
-            max-width: 43rem;
+            max-width: abs.ptr(688);
             width: 100%;
             align-items: flex-start;
-            padding: 0 0 2rem 4rem;
+            padding: 0 0 abs.ptr(32) abs.ptr(64);
         }
     }
 
     &__section-name {
-        margin-bottom: 1rem;
+        margin-bottom: abs.ptr(16);
         @include base.section-title-heading;
         @include abs.breakpoint(desktop) {
             text-align: left;
@@ -68,72 +68,78 @@
     }
 
     &__section-heading {
-        padding: 0 0 2rem 0;
+        padding: 0 0 abs.ptr(32) 0;
         text-align: center;
+        max-width: abs.ptr(400);
         @include base.section-description;
+
+        @include abs.breakpoint(tablet) {
+            max-width: abs.ptr(640);
+        }
         @include abs.breakpoint(desktop) {
             text-align: left;
-            max-width: 38rem;
+            max-width: abs.ptr(608);
         }
     }
 
     &__section-description {
-        max-width: 20rem;
+        @include abs.line-clamp(5);
+        max-width: abs.ptr(320);
         @include base.card-description-regular;
         @include abs.breakpoint(small) {
             text-align: center;
         }
         @include abs.breakpoint(tablet) {
-            font-size: 1.125rem;
+            font-size: abs.ptr(18);
             text-align: center;
-            max-width: 51rem;
+            max-width: abs.ptr(816);
         }
         @include abs.breakpoint(desktop) {
             text-align: left;
-            max-width: 33rem;
+            max-width: abs.ptr(528);
         }
     }
 
     &__card-wrapper {
-        margin-top: 1rem;
+        margin-top: abs.ptr(16);
         width: 100%;
         display: grid;
         grid-template-columns: 1fr;
-        padding: 1rem 3rem;
-        row-gap: 0.3rem;
+        padding: abs.ptr(16) abs.ptr(48);
+        row-gap: abs.ptr(4.8);
 
         @include abs.breakpoint(tablet) {
-            margin-top: 5rem;
+            margin-top: abs.ptr(80);
             grid-template-columns: 1fr;
-            column-gap: 2.5rem;
-            row-gap: 1.8rem;
-            padding: 0 6rem;
+            column-gap: abs.ptr(40);
+            row-gap: abs.ptr(28.8);
+            padding: 0 abs.ptr(96);
         }
 
         @include abs.breakpoint(desktop) {
-            padding: 0 2rem 0 0;
+            padding: 0 abs.ptr(32) 0 0;
         }
     }
 
     &__card {
         width: 100%;
-        border-radius: 1.5rem;
-        padding: 2rem;
-        gap: 2.3rem;
+        border-radius: abs.ptr(24);
+        padding: abs.ptr(32);
+        gap: abs.ptr(36.8);
         @include abs.flex(column, space-around, flex-start);
 
         @include abs.breakpoint(tablet) {
             @include abs.flex(row, flex-start, flex-start);
-            padding: 1rem 2rem;
+            padding: abs.ptr(16) abs.ptr(32);
         }
         &-icon {
-            font-size: 2.4rem;
-            padding: 2rem;
-            border-radius: 2rem;
+            font-size: abs.ptr(38.4);
+            padding: abs.ptr(32);
+            border-radius: abs.ptr(32);
         }
 
         &:hover {
-            outline: 0.1rem solid #{abs.$shadow-color};
+            outline: abs.ptr(1.6) solid #{abs.$shadow-color};
             cursor: pointer;
         }
         &-icon-yellow {
@@ -145,31 +151,35 @@
         }
 
         &-icon-pink {
-            font-size: 2.3rem;
+            font-size: abs.ptr(36.8);
             background-color: abs.$secondary-color;
         }
     }
 
     &__card-content {
         @include abs.breakpoint(tablet) {
-            gap: 0.5rem;
+            gap: abs.ptr(8);
             height: 100%;
             @include abs.flex(column, center, flex-start);
         }
     }
 
     &__card-heading {
+        @include abs.line-clamp(1);
+        max-width: abs.ptr(320);
         @include base.circular-std-regular(1.42);
         line-height: 120%;
-        padding-bottom: 0.2rem;
+        padding-bottom: abs.ptr(3.2);
         white-space: nowrap;
     }
 
     &__card-description {
+        @include abs.line-clamp(3);
+        max-width: abs.ptr(400);
         color: abs.$dark;
         font-style: normal;
         font-weight: 400;
-        font-size: 1.125rem;
+        font-size: abs.ptr(18);
         line-height: 160%;
         letter-spacing: 0;
         font-family: 'inter';

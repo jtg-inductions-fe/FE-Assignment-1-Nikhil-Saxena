@@ -2,127 +2,142 @@
 @use '../components' as comp;
 @use '../base' as base;
 
+.links-hover {
+    &:hover {
+        background-color: abs.$secondary-color;
+    }
+}
+
 .footer {
     width: 100%;
     &__container {
         width: 100%;
         @include abs.flex(column, center, flex-start);
-        margin-top: 2.5rem;
-        padding: 0 1rem;
+        margin-top: abs.ptr(40);
+        padding: 0 abs.ptr(16) abs.ptr(80);
 
         @include abs.breakpoint(tablet) {
-            margin-top: 4rem;
-            padding: 0 4rem;
+            margin-top: abs.ptr(64);
+            padding: 0 abs.ptr(64) abs.ptr(80);
         }
 
         @include abs.breakpoint(desktop) {
-            margin-top: 10rem;
+            margin-top: abs.ptr(160);
             @include abs.flex(row, flex-start, center);
-            padding: 0 8rem;
-            gap: 4rem;
+            padding: 0 abs.ptr(128) abs.ptr(80);
+            gap: abs.ptr(64);
         }
     }
 
     &__content {
         width: 100%;
         @include abs.breakpoint(desktop) {
-            padding-top: 1.5rem;
+            padding-top: abs.ptr(24);
         }
     }
 
     &__company {
-        margin-top: 0.5rem;
+        margin-top: abs.ptr(8);
         width: 100%;
-        gap: 1rem;
-        margin-bottom: 2rem;
+        gap: abs.ptr(16);
+        margin-bottom: abs.ptr(32);
         @include abs.flex(row, flex-start, center);
         @include abs.breakpoint(tablet) {
-            padding: 0.5rem 0;
-            margin-bottom: 1.5rem;
+            padding: abs.ptr(8) 0;
+            margin-bottom: abs.ptr(24);
         }
     }
 
     &__company-logo {
-        width: 2.5rem;
-        height: 2.5rem;
+        width: abs.ptr(40);
+        height: abs.ptr(40);
     }
 
     &__company-name {
+        @include abs.line-clamp(1);
+        max-width: abs.ptr(160);
         font-family: 'circular-std';
         font-weight: 900;
-        font-size: 1.5rem;
-        line-height: 2.5rem;
+        font-size: abs.ptr(24);
+        line-height: abs.ptr(40);
         color: abs.$dark;
     }
 
     &__description {
+        @include abs.line-clamp(3);
+        max-width: abs.ptr(720);
         @include base.circular-std-regular(1);
         width: 100%;
-        min-height: 4rem;
+        min-height: abs.ptr(64);
         line-height: 160%;
         font-weight: 450;
         letter-spacing: 0;
         color: abs.$deep-gray;
-        margin-bottom: 2rem;
+        margin-bottom: abs.ptr(32);
         @include abs.breakpoint(tablet) {
             padding-top: 0;
-            max-width: 55rem;
-            font-size: 1.45rem;
+            max-width: abs.ptr(880);
+            font-size: abs.ptr(23.2);
         }
         @include abs.breakpoint(desktop) {
-            margin-bottom: 4rem;
+            margin-bottom: abs.ptr(64);
         }
     }
 
     &__social-handles {
         @include abs.flex(row, flex-start, center);
-        gap: 2rem;
+        gap: abs.ptr(32);
         width: 100%;
-        margin-bottom: 3.5rem;
+        margin-bottom: abs.ptr(56);
         @include abs.breakpoint(tablet) {
-            margin-bottom: 1.5rem;
+            margin-bottom: abs.ptr(24);
         }
     }
 
     &__social-icon {
+        @extend .button-hover;
+        @include abs.drop-shadow();
         background-color: abs.$primary-color;
-        width: 2rem;
-        height: 2rem;
+        width: abs.ptr(32);
+        height: abs.ptr(32);
         border-radius: 100%;
         @include abs.flex(row, center, center);
+        &:hover {
+            background-color: abs.$secondary-color;
+        }
     }
 
     &__list-wrapper {
         width: 100%;
         @include abs.flex(column, center, flex-start);
-        gap: 2rem;
+        gap: abs.ptr(32);
 
         @include abs.breakpoint(tablet) {
             @include abs.flex(row, flex-start, flex-start);
-            gap: 2.5rem;
+            gap: abs.ptr(40);
         }
 
         @include abs.breakpoint(desktop) {
-            padding: 2rem 0 0 0.5rem;
+            padding: abs.ptr(32) 0 0 abs.ptr(8);
         }
     }
 
     &__list-heading-wrapper {
         width: 100%;
-        height: 2rem;
-        margin-top: 2.2rem;
+        height: abs.ptr(32);
+        margin-top: abs.ptr(35.2);
         cursor: pointer;
         @include abs.flex(row, space-between, center);
 
         @include abs.breakpoint(tablet) {
-            margin-top: 2.5rem;
-            min-width: 13rem;
-            margin-bottom: 2rem;
+            margin-top: abs.ptr(40);
+            min-width: abs.ptr(208);
+            margin-bottom: abs.ptr(32);
         }
 
         @include abs.breakpoint(desktop) {
             margin-top: 0;
-            min-width: 8rem;
+            min-width: abs.ptr(128);
         }
     }
 
@@ -131,13 +146,15 @@
     }
 
     &__list-heading {
+        @include abs.line-clamp(1);
+        max-width: abs.ptr(240);
         font-family: 'circular-std';
         font-weight: 700;
-        font-size: 1.4rem;
+        font-size: abs.ptr(22.4);
     }
 
     &__list-icon {
-        font-size: 1.5rem;
+        font-size: abs.ptr(24);
         &--open {
             transform: rotate(180deg);
         }
@@ -151,7 +168,7 @@
         height: 0;
         width: 0;
         overflow: hidden;
-        font-size: 1.1rem;
+        font-size: abs.ptr(17.6);
         line-height: 160%;
         @include abs.flex(column, center, flex-start);
         &--open {
@@ -163,16 +180,21 @@
             overflow: visible;
             height: fit-content;
             width: 100%;
-            gap: 2rem;
+            gap: abs.ptr(32);
         }
 
         @include abs.breakpoint(desktop) {
-            max-width: 8rem;
+            max-width: abs.ptr(128);
         }
     }
 
     &__list-item {
+        @include abs.line-clamp(3);
+        max-width: abs.ptr(240);
         font-family: 'circular-std';
         color: abs.$deep-gray;
+        &:hover {
+            color: abs.$secondary-color;
+        }
     }
 }

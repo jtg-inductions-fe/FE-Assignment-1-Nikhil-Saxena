@@ -10,6 +10,7 @@
         @include comp.button-template(1, 2, 0.9);
     }
 
+    @extend .button-hover;
     &:hover {
         @include abs.drop-shadow();
     }
@@ -19,43 +20,54 @@
     position: relative;
     @include abs.flex(row, center, center);
     width: 100%;
+    &__background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
     &__container {
         width: 100%;
-        padding-top: 0;
+        padding-top: abs.ptr(147.2);
         @include abs.breakpoint(tablet) {
-            padding-top: 2rem;
+            padding-top: abs.ptr(176);
         }
 
         @include abs.breakpoint(desktop) {
-            padding: 0 6rem;
+            padding: abs.ptr(192) abs.ptr(96) 0;
             @include abs.flex(row-reverse, center, center);
-            max-width: 100rem;
-            min-height: 50rem;
+            max-width: abs.ptr(1600);
+            min-height: abs.ptr(800);
+        }
+
+        &--open {
+            height: 100vh;
+            background-color: abs.$light-gray;
         }
     }
 
     &__left-container {
         width: 100%;
-        padding: 0 0.6rem 0 1.2rem;
+        padding: 0 abs.ptr(9.6) 0 abs.ptr(19.2);
         position: relative;
         overflow: hidden;
-        margin-bottom: 0.3rem;
+        margin-bottom: abs.ptr(4.8);
 
         @include abs.breakpoint(tablet) {
-            padding: 0rem 6.7rem 0 8rem;
-            margin-bottom: 0.3rem;
+            padding: 0 abs.ptr(107.2) 0 abs.ptr(128);
+            margin-bottom: abs.ptr(4.8);
         }
 
         @include abs.breakpoint(desktop) {
-            max-height: 55rem;
-            padding: 1rem 0 0 0;
+            max-height: abs.ptr(880);
+            padding: abs.ptr(16) 0 0 0;
         }
     }
 
     &__image {
         object-fit: cover;
         max-width: 100%;
-        max-height: 55rem;
+        max-height: abs.ptr(880);
         display: block;
     }
 
@@ -70,9 +82,9 @@
             @include abs.flex(column, flex-start, flex-start);
             text-wrap: balance;
             height: 100%;
-            min-height: 50rem;
+            min-height: abs.ptr(800);
             width: 55%;
-            padding: 5.5rem 0 0 2.3rem;
+            padding: abs.ptr(72) 0 0 abs.ptr(36.8);
         }
     }
 
@@ -80,49 +92,61 @@
         @include base.circular-std-regular(1);
         @extend %hero-button;
         border: 0;
+        outline: abs.ptr(1.6) solid abs.$secondary-color;
         background-color: transparent;
 
-        gap: 1.4rem;
+        max-width: abs.ptr(272);
+        @include abs.line-clamp(1);
+        @include abs.flex(row, center, center);
+
+        gap: abs.ptr(22.4);
         @include abs.drop-shadow(0, 2.5, 5.6);
-        margin-bottom: 1.1rem;
+        margin-bottom: abs.ptr(17.6);
 
         @include comp.button-template(1, 2, 0.9);
         color: abs.$secondary-color;
 
         @include abs.breakpoint(tablet) {
-            margin-bottom: 3rem;
+            margin-bottom: abs.ptr(48);
         }
 
         @include abs.breakpoint(desktop) {
-            gap: 1.2rem;
-            margin-bottom: 3.5rem;
+            gap: abs.ptr(19.2);
+            margin-bottom: abs.ptr(56);
         }
 
         &__svg {
-            font-size: 1.2rem;
+            font-size: abs.ptr(19.2);
         }
+    }
+
+    &__explore-button-text {
+        max-width: abs.ptr(160);
+        @include abs.line-clamp(1);
     }
 
     &__main-heading {
         width: 100%;
-        max-width: 24rem;
+        max-width: abs.ptr(384);
         text-align: center;
-        margin-bottom: 1.5rem;
-        font-size: 2.5rem;
+        margin-bottom: abs.ptr(24);
+        font-size: abs.ptr(40);
+
+        @include abs.line-clamp(4);
 
         @include abs.breakpoint(tablet) {
-            max-width: 37rem;
-            margin-bottom: 2.4rem;
-            font-size: 3.5rem;
+            max-width: abs.ptr(592);
+            margin-bottom: abs.ptr(38.4);
+            font-size: abs.ptr(56);
         }
 
         @include abs.breakpoint(desktop) {
             text-align: left;
-            letter-spacing: 0.1rem;
+            letter-spacing: abs.ptr(1.6);
             line-height: 125%;
-            font-size: 4.1rem;
+            font-size: abs.ptr(65.6);
             font-style: bold;
-            margin-bottom: 2.4rem;
+            margin-bottom: abs.ptr(38.4);
         }
 
         &--highlighted {
@@ -132,58 +156,80 @@
 
     &__description {
         width: 100%;
-        padding: 0 1rem;
-        margin-bottom: 2rem;
+        padding: 0 abs.ptr(16);
+        margin-bottom: abs.ptr(32);
+        max-width: abs.ptr(480);
+        @include abs.line-clamp();
         @include base.card-description-regular;
 
         @include abs.breakpoint(tablet) {
-            letter-spacing: 0.01rem;
+            letter-spacing: abs.ptr(0.16);
             line-height: 170%;
             padding: 0;
-            max-width: 28rem;
-            margin-bottom: 2.7rem;
-            font-size: 1.1rem;
+            max-width: abs.ptr(448);
+            margin-bottom: abs.ptr(38.4);
+            font-size: abs.ptr(17.6);
         }
 
         @include abs.breakpoint(desktop) {
             text-align: left;
-            max-width: 28rem;
-            margin-bottom: 4.2rem;
+            max-width: abs.ptr(448);
+            margin-bottom: abs.ptr(67.2);
         }
     }
 
     &__actions {
         @include abs.flex(column, center, center);
-        gap: 1.6rem;
+        gap: abs.ptr(25.6);
 
         @include abs.breakpoint(tablet) {
             width: 100%;
             @include abs.flex(row, center, center);
-            max-width: 28rem;
-            gap: 1rem;
+            max-width: abs.ptr(448);
+            gap: abs.ptr(16);
         }
 
         @include abs.breakpoint(desktop) {
             justify-content: flex-start;
-            gap: 1.2rem;
+            gap: abs.ptr(19.2);
         }
     }
 
     &__get-started {
+        @include abs.line-clamp(1);
+        max-width: abs.ptr(432);
         @extend %hero-button;
         background-color: abs.$primary-color;
         color: abs.$white;
         @include abs.drop-shadow(0, 2.5, 5.6);
+        padding-top: abs.ptr(25);
+        padding-bottom: abs.ptr(25);
+        @include abs.breakpoint(tablet) {
+            padding-top: abs.ptr(19.2);
+            padding-bottom: abs.ptr(19.2);
+        }
+
+        &:hover {
+            background-color: abs.$secondary-color;
+            color: abs.$black;
+        }
     }
 
     &__watch-demo {
+        @include abs.line-clamp(1);
+        max-width: abs.ptr(464);
+        outline: abs.ptr(1.6) solid abs.$deep-gray;
         @extend %hero-button;
         background-color: abs.$white;
+        @include abs.flex(row, center, center);
         color: abs.$dark;
-        border: 0.06rem solid #eeeeee;
-        gap: 0.6rem;
+        gap: abs.ptr(8);
         &__svg {
-            font-size: 1.2rem;
+            font-size: abs.ptr(19.2);
+            padding-right: 0 abs.ptr(3.2);
+        }
+        @include abs.breakpoint(tablet) {
+            max-width: abs.ptr(240);
         }
     }
 
@@ -194,13 +240,13 @@
 
         @include abs.breakpoint(tablet) {
             display: block;
-            top: 72rem;
-            left: 2.3rem;
+            top: abs.ptr(1264);
+            left: abs.ptr(36.8);
         }
 
         @include abs.breakpoint(desktop) {
-            left: 2.5rem;
-            top: 43rem;
+            left: abs.ptr(40);
+            top: abs.ptr(864);
         }
     }
 }

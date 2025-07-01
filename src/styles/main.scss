@@ -19,6 +19,10 @@
     outline: 0.1rem solid $deep-gray;
 }
 
+.no-scroll {
+    overflow: hidden;
+}
+
 body {
     @extend .outer-wrapper;
 }

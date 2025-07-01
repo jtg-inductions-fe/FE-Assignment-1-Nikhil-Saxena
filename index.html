@@ -4,19 +4,12 @@
         <title>FE-Assignment-1-Nikhil-Saxena</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="/src/assets/icomoon.css" />
         <link rel="icon" type="image/x-icon" href="/assets/icons/logo.ico" />
     </head>
     <body>
         <!-- Navbar -->
-        <header class="navbar" aria-label="Navigation bar">
-            <div class="navbar__background">
-                <img
-                    src="/assets/sections-images/navbar.png"
-                    alt="Ellipse background"
-                />
-            </div>
-            <nav class="navbar__container">
+        <header id="navbar" class="navbar" aria-label="Navigation bar">
+            <nav class="navbar__container" id="navbar__container">
                 <div class="navbar__left-sub-container">
                     <button
                         id="navbar__menu"
@@ -100,6 +93,12 @@
                 class="hero"
                 aria-label="Hero section showcasing travel destinations"
             >
+                <div class="hero__background">
+                    <img
+                        src="/assets/sections-images/navbar.webp"
+                        alt="Ellipse background"
+                    />
+                </div>
                 <div class="hero__object" aria-hidden="true">
                     <img
                         src="/assets/ui-elements/ui-el1.png"
@@ -110,7 +109,7 @@
                     <div class="hero__left-container">
                         <img
                             class="hero__image"
-                            src="/assets/sections-images/hero.png"
+                            src="/assets/sections-images/hero.webp"
                             alt="Travel-themed illustration"
                         />
                     </div>
@@ -121,7 +120,9 @@
                             type="button"
                             tabindex="0"
                         >
-                            Explore the world!
+                            <p class="hero__explore-button-text">
+                                Explore the world!
+                            </p>
                             <i
                                 class="icon-bag hero__explore-button__svg"
                                 aria-hidden="true"
@@ -264,7 +265,7 @@
                 >
                     <img
                         class="information__image-wrapper-image"
-                        src="/assets/sections-images/information.png"
+                        src="/assets/sections-images/information.webp"
                         alt="A travel illustration"
                     />
                 </div>
@@ -358,7 +359,7 @@
                 <div class="features__image-wrapper">
                     <img
                         class="features__image-wrapper-image"
-                        src="/assets/sections-images/features.png"
+                        src="/assets/sections-images/features.webp"
                         alt="Illustration showcasing key features"
                     />
                 </div>
@@ -458,7 +459,7 @@
                 <div class="testimonial__background">
                     <img
                         class="testimonial__background-image"
-                        src="/assets/sections-images/testimonial.png"
+                        src="/assets/sections-images/testimonial.webp"
                         alt="Background used for testimonials"
                     />
                 </div>
@@ -512,7 +513,7 @@
                                     >
                                         <div class="testimonial__avatar">
                                             <img
-                                                src="/assets/ui-elements/avatar.png"
+                                                src="./assets/ui-elements/avatar.png"
                                                 alt="Avatar of Mark Smith"
                                             />
                                         </div>
@@ -577,7 +578,7 @@
                                     >
                                         <div class="testimonial__avatar">
                                             <img
-                                                src="/assets/ui-elements/avatar.png"
+                                                src="./assets/ui-elements/avatar.png"
                                                 alt="Avatar of Mark Smith"
                                             />
                                         </div>
@@ -642,7 +643,7 @@
                                     >
                                         <div class="testimonial__avatar">
                                             <img
-                                                src="/assets/ui-elements/avatar.png"
+                                                src="./assets/ui-elements/avatar.png"
                                                 alt="Avatar of Mark Smith"
                                             />
                                         </div>
@@ -742,7 +743,6 @@
                 </div>
             </section>
         </main>
-
         <!-- Footer -->
         <footer class="footer__container">
             <div class="footer__content">

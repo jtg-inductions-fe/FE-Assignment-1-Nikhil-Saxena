@@ -33,7 +33,7 @@
     flex-wrap: $wrap;
 }
 
-@mixin drop-shadow($color: $shadow-color, $y: 1rem, $blur: 1rem) {
+@mixin drop-shadow($color: $shadow-color, $y: ptr(16), $blur: ptr(16)) {
     box-shadow: 0rem #{$y} #{$blur} #{$color};
 }
 
@@ -41,4 +41,13 @@
     height: 100%;
     width: 100%;
     background-size: cover;
+}
+
+@mixin line-clamp($line-clamp: 3) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: $line-clamp;
+    overflow: hidden;
+    line-clamp: $line-clamp;
 }

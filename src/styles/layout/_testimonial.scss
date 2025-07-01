@@ -3,15 +3,15 @@
 
 .testimonial {
     @include abs.flex(column, center, center);
-    margin-top: 3.8rem;
+    margin-top: abs.ptr(60.8);
     width: 100%;
     position: relative;
     @include abs.breakpoint(tablet) {
-        margin-top: 9rem;
+        margin-top: abs.ptr(144);
     }
 
     @include abs.breakpoint(desktop) {
-        margin-top: 4.5rem;
+        margin-top: abs.ptr(72);
     }
     &__background {
         position: absolute;
@@ -34,55 +34,58 @@
     }
     &__section-name {
         text-align: center;
-        margin-bottom: 1rem;
+        margin-bottom: abs.ptr(16);
         @include base.section-title-heading;
     }
 
     &__section-heading {
+        max-width: abs.ptr(480);
         text-align: center;
         @include base.section-description;
     }
 
     &__card-wrapper {
         width: 100%;
-        max-width: 25rem;
+        max-width: abs.ptr(400);
 
         @include abs.breakpoint(tablet) {
-            max-width: 56rem;
+            max-width: abs.ptr(896);
         }
 
         @include abs.breakpoint(desktop) {
-            max-width: 75rem;
+            max-width: abs.ptr(1200);
         }
     }
 
     &__card {
         width: 100%;
-        max-width: 25rem;
+        max-width: abs.ptr(400);
         height: 100%;
-        padding: 4rem 0;
+        padding: abs.ptr(64) 0;
         margin-inline: auto;
         @include abs.flex(column, center, center);
         @include abs.breakpoint(tablet) {
-            max-width: 35rem;
-            padding: 3.5rem 0;
+            max-width: abs.ptr(560);
+            padding: abs.ptr(56) 0;
         }
         @include abs.breakpoint(desktop) {
-            padding: 3rem 0 0 1rem;
-            max-width: 53rem;
+            padding: abs.ptr(48) 0 0 abs.ptr(16);
+            max-width: abs.ptr(848);
         }
     }
 
     &__avatar {
-        width: 8rem;
-        margin-bottom: 4rem;
+        width: abs.ptr(128);
+        margin-bottom: abs.ptr(64);
         @include abs.breakpoint(tablet) {
-            margin-bottom: 3.7rem;
+            margin-bottom: abs.ptr(59.2);
         }
     }
 
     &__username {
-        margin-bottom: 2rem;
+        @include abs.line-clamp(1);
+        max-width: abs.ptr(480);
+        margin-bottom: abs.ptr(32);
         color: abs.$transparent-gray;
         @include base.circular-std-regular(1.5);
         &--highlighted {
@@ -92,33 +95,34 @@
     }
 
     &__rating {
-        margin-bottom: 4rem;
+        margin-bottom: abs.ptr(64);
         @include abs.flex(row, center, center);
-        gap: 1.2rem;
+        gap: abs.ptr(19.2);
         &-icon {
-            font-size: 1.8rem;
+            font-size: abs.ptr(28.8);
         }
 
         @include abs.breakpoint(tablet) {
-            margin-bottom: 3.5rem;
+            margin-bottom: abs.ptr(56);
         }
     }
 
     &__comment {
+        @include abs.line-clamp(4);
         font-family: 'inter';
-        font-size: 1.1rem;
+        font-size: abs.ptr(17.6);
         text-align: center;
         line-height: 160%;
-        max-width: 24.2rem;
+        max-width: abs.ptr(387.2);
         color: abs.$transparent-gray;
 
         @include abs.breakpoint(tablet) {
-            font-size: 1.4rem;
-            max-width: 54rem;
+            font-size: abs.ptr(22.4);
+            max-width: abs.ptr(864);
         }
 
         @include abs.breakpoint(desktop) {
-            max-width: 51rem;
+            max-width: abs.ptr(816);
         }
     }
 }
@@ -128,24 +132,24 @@
     &__pagination {
         position: relative;
         @include abs.flex(row, center, center);
-        gap: 1rem;
+        gap: abs.ptr(16);
 
-        top: 0.2rem;
+        top: abs.ptr(3.2);
         .is-active {
-            width: 1.2rem;
-            height: 1.2rem;
+            width: abs.ptr(19.2);
+            height: abs.ptr(19.2);
             background-color: abs.$secondary-color;
         }
 
         @include abs.breakpoint(desktop) {
-            top: 3rem;
+            top: abs.ptr(48);
         }
     }
 
     &__pagination__page {
         opacity: 1;
-        width: 1.5rem;
-        height: 1.5rem;
+        width: abs.ptr(24);
+        height: abs.ptr(24);
         border-radius: 100%;
         border: 0;
         background-color: abs.$light-gray;
@@ -160,29 +164,29 @@
         position: absolute;
         cursor: pointer;
         opacity: 1;
-        width: 4rem;
-        height: 4rem;
-        top: 42rem;
+        width: abs.ptr(64);
+        height: abs.ptr(64);
+        top: abs.ptr(672);
         border-radius: 100%;
-        border: 0.1rem solid abs.$light-gray;
+        border: abs.ptr(1.6) solid abs.$light-gray;
         background-color: abs.$primary-color;
         @include abs.flex(row, center, center);
         @include abs.breakpoint(tablet) {
-            top: 15rem;
+            top: abs.ptr(240);
         }
 
         @include abs.breakpoint(desktop) {
-            top: 14rem;
+            top: abs.ptr(224);
         }
 
         &-icon {
-            font-size: 1rem;
+            font-size: abs.ptr(16);
             color: abs.$white;
         }
 
         @include abs.breakpoint(tablet) {
-            width: 6.5rem;
-            height: 6.5rem;
+            width: abs.ptr(104);
+            height: abs.ptr(104);
         }
 
         &:hover {

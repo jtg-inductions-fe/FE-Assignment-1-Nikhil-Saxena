@@ -9,16 +9,19 @@
 }
 
 .navbar {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
     width: 100%;
+    margin-inline: auto;
     display: flex;
     @include abs.flex(row, center, center);
 
-    &__background {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
+    &--scrolled {
+        background-color: transparent;
+        backdrop-filter: blur(10px);
+        --webkit-backdrop-filter: blur(10px);
     }
 
     &__container {
@@ -27,40 +30,48 @@
 
         @include abs.breakpoint(tablet) {
             @include abs.flex(row, space-between, center, wrap);
-            max-width: 58rem;
-            padding: 0 1rem;
+            max-width: abs.ptr(928);
+            padding: 0 abs.ptr(16);
         }
 
         @include abs.breakpoint(desktop) {
             @include abs.flex(row, space-between, center);
-            max-width: 80rem;
-            padding: 0 1rem;
+            max-width: abs.ptr(1280);
+            padding: 0 abs.ptr(16);
+        }
+
+        &--open {
+            padding-bottom: abs.ptr(80);
+            height: fit-content;
+            background-color: transparent;
+            backdrop-filter: blur(10px);
+            --webkit-backdrop-filter: blur(10px);
         }
     }
 
     &__left-sub-container {
         @include abs.flex(row-reverse, space-between, center);
         width: 100%;
-        height: 7.5rem;
-        padding: 0 1.1rem;
+        height: abs.ptr(112);
+        padding: 0 abs.ptr(17.6);
 
         @include abs.breakpoint(tablet) {
             width: 52%;
             @include abs.flex(row, space-between, center);
             padding: 0;
-            height: 7rem;
+            height: abs.ptr(112);
         }
 
         @include abs.breakpoint(desktop) {
-            height: 11.5rem;
-            width: 9rem;
+            height: abs.ptr(184);
+            width: abs.ptr(144);
             @include abs.flex(row, center, center);
         }
     }
 
     &__logo {
-        width: 2.5rem;
-        height: 2.5rem;
+        width: abs.ptr(40);
+        height: abs.ptr(40);
     }
 
     &__menu {
@@ -78,61 +89,70 @@
     &__links {
         max-height: 0;
         opacity: 0;
-        visibility: hidden;
+        display: none;
         overflow: hidden;
         width: 100%;
-        gap: 1rem;
-        padding: 1rem 0;
+        gap: abs.ptr(16);
 
         @include abs.flex(column, center, center);
 
-        &--open {
-            max-height: 15rem;
-            opacity: 1;
-            visibility: visible;
-            transition: all 0.4s ease-in-out;
-        }
-
         @include abs.breakpoint(tablet) {
+            height: 0;
             order: 4;
-            top: 7rem;
+            top: abs.ptr(112);
             left: 0;
         }
 
         @include abs.breakpoint(desktop) {
             order: 0;
-            padding: 0 0.2rem;
+            padding: abs.ptr(11.2) abs.ptr(3.2);
             gap: 0;
             transition: unset;
-            max-height: 15rem;
+            max-height: abs.ptr(240);
             opacity: 1;
             visibility: visible;
             position: relative;
             top: 0;
             @include abs.flex(row, space-between, center);
-            max-width: 27rem;
+            max-width: abs.ptr(432);
+        }
+
+        &--open {
+            max-height: abs.ptr(240);
+            opacity: 1;
+            visibility: visible;
+            background-color: transparent;
+            transition: display 0.4s ease-in-out;
+            padding: abs.ptr(16) 0;
+
+            @include abs.breakpoint(tablet) {
+                height: abs.ptr(240);
+            }
         }
     }
 
     &__link {
         font-family: 'circular-std';
         font-weight: 700;
-        font-size: 15px;
-        color: #19182580;
-        padding: 1rem;
+        font-size: abs.ptr(15);
+        color: abs.$dark;
+        opacity: 0.5;
+        padding: abs.ptr(16);
         cursor: pointer;
         transition: color 0.3s ease;
+        max-width: abs.ptr(128);
+        @include abs.line-clamp(1);
 
         @include abs.breakpoint(desktop) {
             padding: 0;
         }
 
         &:hover {
-            color: abs.$dark;
+            opacity: 1;
         }
 
         &--active {
-            color: abs.$dark;
+            opacity: 1;
             font-weight: bold;
         }
     }
@@ -145,40 +165,46 @@
         transition: visibility 0.4s ease-in-out;
         width: 100%;
         @include abs.flex(column, center, center);
-        gap: 1rem;
+        gap: abs.ptr(16);
 
         &--open {
-            max-height: 15rem;
+            padding: abs.ptr(32) 0;
+            max-height: abs.ptr(240);
             opacity: 1;
             visibility: visible;
         }
         @include abs.breakpoint(tablet) {
-            padding: 0.1rem;
-            max-height: 15rem;
+            padding: abs.ptr(1.6);
+            max-height: abs.ptr(240);
             opacity: 1;
             visibility: visible;
             @include abs.flex(row, center, center);
             width: fit-content;
             display: flex;
-            gap: 0rem;
+            gap: abs.ptr(16);
         }
         @include abs.breakpoint(desktop) {
-            height: 8rem;
-            width: 17rem;
-            gap: 0.1rem;
-            padding: 0.2rem;
+            width: abs.ptr(272);
+            gap: abs.ptr(8);
+            padding: abs.ptr(32) 0;
             justify-content: flex-end;
         }
     }
 
     &__login {
         @include comp.button-template(1, 2, 0.9);
+        @extend .button-hover;
+        outline: 0.05rem solid abs.$deep-gray;
         @extend %button-hover;
-        background-color: #ffffff;
+        background-color: abs.$white;
+        max-width: abs.ptr(112);
+        @include abs.line-clamp(1);
     }
 
     &__signup {
-        @include comp.button-template(1, 2, 0.9, secondary);
+        @include comp.button-template(1.2, 2, 0.9, secondary);
+        max-width: abs.ptr(144);
+        @include abs.line-clamp(1);
         @extend %button-hover;
         &:hover {
             background-color: abs.$secondary-color;
